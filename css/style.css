@@ -49,7 +49,7 @@ body{
     padding: 0%;
     width: 100%;
     height: 60vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)) ,url('/images/HomePage/main.jpg') no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)) ,url('images/HomePage/main.jpg') no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
@@ -303,6 +303,10 @@ div.row section.footer span {
 /* For XS mobile phones */
 
 @media (min-width: 300px) and (max-width:515px){
+    /* FOR NAVIGATION BAR */
+    .navbar-brand {
+        font-size: 1rem;
+    }
     .menu-select-img a img , .menu-select-img{
         width: 250px;
         height: 250px;
