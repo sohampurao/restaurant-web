@@ -27,6 +27,7 @@ body{
 .nav-item {
     color: #ffffff ;
     margin-left: 30px; 
+    word-spacing: 3px;
 }
 
 #nav-ul {
@@ -42,6 +43,11 @@ body{
 }
 
 /* HOME PAGE */
+#main-content {
+    background-color: #e7e2df;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 /* main image */
 
@@ -76,9 +82,6 @@ body{
 }
 
 /* menu card items */
-#menu-img {
-    background-color: #e7e2df;
-}
 
 .menu-pics {
     width: 100%;
@@ -118,24 +121,14 @@ transform: scale(1.09,1.09);
 }
 
 /* MENU CATEGORY PAGE*/
-
-#menu-category h1 {
-    width: 100%;
-    margin: 0px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    background-color: #343a409e;
-    padding: 5px 0px;
-    border-bottom: 3px solid #ffd700;
-    text-transform: uppercase;
-    word-spacing: 3px;
+#menu-category-content {
+    background-color: #e7e2df;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #menu-category-imgs {
     width: 100%;
-    background-color: #e7e2df;
-    border-radius: 1em;
 }
 
 .menu-select-img {
@@ -146,9 +139,7 @@ transform: scale(1.09,1.09);
     height: 200px;
     color: #ffffff;
     border-radius: 3px;
-    box-shadow: 0.2rem .2rem 1rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .menu-select-img span {
@@ -191,6 +182,7 @@ transform: scale(1.09,1.09);
     text-align: center;
     width: 400px;
     margin: auto;
+    text-transform: capitalize;
 }
 
 #item-title-sub {
@@ -249,6 +241,7 @@ transform: scale(1.09,1.09);
 .menu-items-discription-title {
     font-size: 1.3rem;
     font-weight: 500;
+    text-decoration: underline;
 }
 .menu-items-discription-title p {
     font-size: 0.9rem;
@@ -303,6 +296,7 @@ div.row section.footer span {
 /* For XS mobile phones */
 
 @media (min-width: 300px) and (max-width:515px){
+
     /* FOR NAVIGATION BAR */
     .navbar-brand {
         font-size: 1rem;
@@ -312,8 +306,16 @@ div.row section.footer span {
         height: 250px;
     }
 
+    /* FOR HOME PAGE */
+    #main-img {
+        height: 40vh;
+    }
+    #map {
+        height: 300px;
+    }
   /* FOR MENU ITEMS PAGE */
     #item-title-main {
+        width: 200px;
         font-size: 0.8rem;
         width: 250px;
     }
@@ -331,6 +333,10 @@ div.row section.footer span {
     .nav-item {
         display: block;
         width: 100%;
+    }
+    /* FOR HOME PAGE */
+    #map {
+        max-height: 500px;
     }
     /* FOR MENU CATEGORY PAGE*/
 
