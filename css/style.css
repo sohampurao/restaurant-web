@@ -6,38 +6,78 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-dark : #343a40;
+    --primary-light:  #e7e2df;
+    --gold--: #ffd700;
+    --gradient--menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    --menu-sr: linear-gradient(to right, #434343, #000000); 
+}
+
 body{
     font-size: 16px;
     background-color: #ffffff;
 }
 
+.menu-title-main {
+    width: 340px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color:var(--primary-dark);
+    padding: 5px 0px;
+    border-radius: 20px;
+    text-align: center;
+    margin-inline: auto;
+    text-transform: capitalize;
+}
+
+.menu-title-main span {
+background-image: var(--gradient--menu-title-main);
+}
+
+/* TEXT ANIMATI0N  */
+
+@keyframes bg-animation {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+.text-animation {
+    background-size: 400%;
+    animation: bg-animation 5s infinite alternate;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: bg-animation 10s infinite linear;
+}
 
 /* NAVIGATION BAR */
-#logo-img {
+#logo-img img {
     display: block;
     border-radius: 50%;
     border: 3px solid #d1d1d1;
     padding: 2px;
 }
-
 .navbar-brand{
-    margin-left: 10px
+    margin-inline-start: 10px;
 }
 
 .nav-item {
     color: #ffffff ;
-    margin-left: 30px; 
-    word-spacing: 3px;
 }
 
 #nav-ul {
     margin-left: auto;
-    padding-right: 50px;
+    padding-inline-end: 30px;
+    gap: 10px;
 }
 
 #nav-ul .nav-item .active{
     background-color: #ffffff;
-    color: #343a40;
+    color: var(--primary-dark);
     border-radius: 20px;
     border: 2px solid #898989;
 }
@@ -52,72 +92,76 @@ body{
 /* main image */
 
 #main-img {
-    padding: 0%;
+    position: relative;
     width: 100%;
     height: 60vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)) ,url('images/HomePage/main.jpg') no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    margin: 0 auto 5px auto ;
     text-transform: capitalize;
-    position: relative;
-    border-top: 3px solid #ffffff;
-    border-bottom: 3px solid #343a40;
+    border-top: 3px solid #e7e2df;
+    border-bottom: 3px solid var(--primary-dark);
 }
 
-#main-img span {
+#main-img > span {
     position: absolute;
+    width: 470px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2vw;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: rgb(255, 255, 255);
-    font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgba(255, 0, 0, 0.432);
-    padding: 5px 6px;
-    border-radius: 4px;
+    background: linear-gradient(to right, rgba(255, 78, 81, 0.65), rgba(249, 213, 35, 0.65));
+    padding: 0.4rem 0;
+    border-radius: 6px;
     border: 3px solid #ffffff;
 }
 
 /* menu card items */
 
 .menu-pics {
+    display: block;
     width: 100%;
     height: auto;
     position: relative;
     overflow: hidden;
-    margin: 0%;
-    padding: 0%;
     color: #ffffff;
+    padding: 0%;
+    margin: 0%;
+    border-radius: 2px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .menu-pics .title {
     display: block;
     position: absolute;
-    margin: 0;
-    padding-bottom: 10px;
     width: 100%;
     height: 30px;
     bottom: 0px;
-    background: #000000b6;
+    background: var(--menu-sr);
+    padding-bottom: 0.4rem;
     text-align: center;
     border-radius: 10px 10px 0 0;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1rem;
+}
+#map {
+    max-height: 500px;
+}
+#map a iframe {
+    border:0; 
+    width: 100vw; 
+    height: 60vh;
 }
 
 .menu-pics:hover {
-    color: #ffd700;
-}
-
-.menu-pics:hover {
-    box-shadow: 0px 0px 5px 3px  #ffd700;
-}
-
-.menu-pics a img:hover {
-transform: scale(1.09,1.09);
+    color: var(--gold--);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transform: scale(1.05);
 }
 
 /* MENU CATEGORY PAGE*/
@@ -133,13 +177,14 @@ transform: scale(1.09,1.09);
 
 .menu-select-img {
     position: relative;
-    margin: 25px auto 25px;
+    margin: 25px auto;
     overflow: hidden;
     width: 200px;
     height: 200px;
     color: #ffffff;
-    border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 2.5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .menu-select-img span {
@@ -147,22 +192,16 @@ transform: scale(1.09,1.09);
     width: 100%;
     left: 0%;
     bottom: 0%;
-    text-align: center;
-    background: #000000b6;
-    padding: 3px 0;
+    background: var(--menu-sr);
+    padding-block: 3px;
     border-radius: 10px 10px 0 0;
     font-weight: 700;
 }
 
-
-.menu-select-img a img:hover {
-    transform: scale(1.1);
-}
-
 .menu-select-img:hover {
-    border: 5px solid rgba(156, 243, 255, 0.68);
-    box-shadow: none;
-    color: #ffd700;
+    color: var(--gold--);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transform: scale(1.05);
 }
 
 /* MENU CATEGORY PAGE ITEMS */
@@ -170,19 +209,6 @@ transform: scale(1.09,1.09);
 #menu-items-content {
     background-color: #e7e2df;
     margin-bottom: 20px;
-}
-
-#item-title-main {
-    font-size: 1.5rem;
-    font-weight: 500;
-    background:#343a40;
-    color: white;
-    padding: 5px 0px;
-    border-radius: 20px;
-    text-align: center;
-    width: 400px;
-    margin: auto;
-    text-transform: capitalize;
 }
 
 #item-title-sub {
@@ -220,8 +246,11 @@ transform: scale(1.09,1.09);
 }
 
 .menu-item-img {
+    display: block;
+    border-radius: 2.5px;
     width: 100%;
     height:auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .menu-item-text {
@@ -243,6 +272,7 @@ transform: scale(1.09,1.09);
     font-weight: 500;
     text-decoration: underline;
 }
+
 .menu-items-discription-title p {
     font-size: 0.9rem;
 }
@@ -251,7 +281,7 @@ transform: scale(1.09,1.09);
 
 .panel-footer {
     margin-top: 10px;
-    background-color: #343a40!important;
+    background-color:var(--primary-dark)!important;
     color: #ffd700;
     padding-top: 35px;
     text-align:left;
@@ -274,7 +304,7 @@ div.row section.footer span {
     font-size: 1rem;
     padding: 5px 0;
     text-align: center;
-    background-color: #343a40!important;
+    background-color: var(--primary-dark)!important;
     color: #ffffff;
     border-top: 1px solid #ffffff;
 }
@@ -293,37 +323,16 @@ div.row section.footer span {
 
 /* MEDIA QUERIES*/
 
-/* For XS mobile phones */
 
-@media (min-width: 300px) and (max-width:515px){
+/* For Tablet devices */
 
-    /* FOR NAVIGATION BAR */
-    .navbar-brand {
-        font-size: 1rem;
-    }
-    .menu-select-img a img , .menu-select-img{
-        width: 250px;
-        height: 250px;
+@media (max-width:768px) {
+    /*FOR GENERAL STYLES */
+    .menu-title-main {
+        width: 42vw;
+        font-size: 2.7vw;
     }
 
-    /* FOR HOME PAGE */
-    #main-img {
-        height: 40vh;
-    }
-    #map {
-        height: 300px;
-    }
-  /* FOR MENU ITEMS PAGE */
-    #item-title-main {
-        width: 200px;
-        font-size: 0.8rem;
-        width: 250px;
-    }
-}
-
-/* For sm devices */
-
-@media (max-width:767px) {
     /* FOR NAVIGATION BAR */
 
     #navbarToggleExternalContent {
@@ -334,10 +343,17 @@ div.row section.footer span {
         display: block;
         width: 100%;
     }
+
     /* FOR HOME PAGE */
-    #map {
-        max-height: 500px;
+    #main-img span {
+        font-size: 3vw;
+        width: 60vw;
     }
+    .menu-pics .title {
+        height: 30px;
+        font-size: 1rem;
+    }
+
     /* FOR MENU CATEGORY PAGE*/
 
     .menu-select-img a img , .menu-select-img{
@@ -346,10 +362,7 @@ div.row section.footer span {
     }
 
     /* FOR MENU ITEMS PAGE */
-    #item-title-main {
-        width: 300px;
-        font-size: 1.2rem;
-    }
+
     .menu-item-display {
         width: 70%;
         height: auto;
@@ -376,4 +389,72 @@ div.row section.footer span {
     .row  section.footer {
         text-align: center;
     } 
+}
+
+/* For MD & LG mobile phones */
+
+@media (min-width:330px) and (max-width:570px){
+    /*FOR GENERAL STYLES */
+    .menu-title-main {
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+
+    /* FOR NAVIGATION BAR */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    .menu-select-img a img , .menu-select-img{
+        width: 250px;
+        height: 250px;
+    }
+
+    /* FOR HOME PAGE */
+    #main-img {
+        height: 40vh;
+    }
+    #main-img span {
+        font-size: 3.56vw;
+        width: 60vw;
+    }
+
+    .menu-pics .title {
+        height: 30px;
+        font-size: 1rem;
+        padding: 0.2rem 0rem;
+    }
+    
+    #map {
+        max-height: 350px;
+    }
+}
+
+/* For SM mobile phones */
+@media (min-width: 200px) and (max-width:333px) {
+    /*FOR GENERAL STYLES */
+    .menu-title-main {
+        width: 50vw;
+        font-size: 3vw;
+    }
+
+    /* FOR NAVIGATION BAR */
+    #logo-img {
+        display: none;
+    }
+    .navbar-brand{
+        margin-left: 0px;
+        font-size: 1rem;
+    }
+    
+    /* FOR HOME PAGE */
+    #main-img {
+        max-height: 30vh;
+    }
+    .menu-pics .title {
+        font-size: 1rem;
+    }
+
+    #map {
+        max-height: 250px;
+    }
 }
