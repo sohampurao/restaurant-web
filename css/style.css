@@ -1,9 +1,9 @@
 /* GENERAL STYLES */
 *{
-    font-family: 'Oxygen', sans-serif;
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    line-height: 1.5rem;
 }
 
 :root {
@@ -14,9 +14,14 @@
     --menu-sr: linear-gradient(to right, #434343, #000000); 
 }
 
-body{
+body {
     font-size: 16px;
     background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .menu-title-main {
@@ -66,20 +71,33 @@ background-image: var(--gradient--menu-title-main);
 }
 
 .nav-item {
-    color: #ffffff ;
+    color: #ffffff;
+    border-radius: 20px;
 }
 
 #nav-ul {
     margin-left: auto;
     padding-inline-end: 30px;
-    gap: 10px;
+    gap: 15px;
 }
 
-#nav-ul .nav-item .active{
+.nav-item a {
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+#nav-ul .nav-item a.active{
     background-color: #ffffff;
     color: var(--primary-dark);
-    border-radius: 20px;
-    border: 2px solid #898989;
+    border-color:#898989;
+}
+
+.nav-item a:hover {
+    background-color: #30363d;
+    border-color:#8b949e;
 }
 
 /* HOME PAGE */
@@ -94,10 +112,10 @@ background-image: var(--gradient--menu-title-main);
 #main-img {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)) ,url('images/HomePage/main.jpg') no-repeat;
     background-position: center center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-size: cover;
     text-transform: capitalize;
     border-top: 3px solid #e7e2df;
@@ -113,7 +131,6 @@ background-image: var(--gradient--menu-title-main);
     font-size: 1.5rem;
     font-weight: 600;
     color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to right, rgba(255, 78, 81, 0.65), rgba(249, 213, 35, 0.65));
     padding: 0.4rem 0;
     border-radius: 6px;
@@ -336,6 +353,7 @@ div.row section.footer span {
 
 @media (max-width: 768px) {
     /*FOR GENERAL STYLES */
+
     .menu-title-main {
         width: 42vw;
         font-size: 2.7vw;
@@ -353,9 +371,8 @@ div.row section.footer span {
     }
 
     /* FOR HOME PAGE */
-    #main-img span {
-        font-size: 3vw;
-        width: 60vw;
+    #main-img {
+        max-height: 30vh;
     }
     .menu-pics .title {
         height: 30px;
@@ -418,9 +435,6 @@ div.row section.footer span {
     }
 
     /* FOR HOME PAGE */
-    #main-img {
-        height: 30vh;
-    }
     #main-img span {
         font-size: 3.56vw;
         width: 60vw;
@@ -447,24 +461,22 @@ div.row section.footer span {
     }
 
     /* FOR NAVIGATION BAR */
-    #logo-img {
-        display: none;
-    }
     .navbar-brand{
-        margin-left: 0px;
-        font-size: 1rem;
+        display: none;
     }
     
     /* FOR HOME PAGE */
-    #main-img {
-        max-height: 25vh;
+    #main-img span {
+        font-size: 3.56vw;
+        width: 60vw;
     }
+
     .menu-pics .title {
         font-size: 1rem;
     }
 
     #map {
         width: 100%;
-        max-height: 250px;
+        max-height: 200px;
     }
 }
