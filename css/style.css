@@ -151,7 +151,6 @@ background-image: var(--gradient--menu-title-main);
 }
 #map {
     max-height: 500px;
-    border: 1px solid red;
     width: 90%;
     margin-inline: auto;
 }
