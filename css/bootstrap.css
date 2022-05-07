@@ -4072,7 +4072,7 @@ textarea.form-control-lg {
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
-    transform: rotateX(180);
+    transition: none;
   }
 }
 .navbar-toggler:hover {
