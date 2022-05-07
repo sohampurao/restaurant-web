@@ -32,7 +32,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--primary-light);
+    background-color: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -47,7 +47,7 @@ body {
     font-size: 1.5rem;
     font-weight: 500;
     background-color:var(--primary-dark);
-    padding: 5px 0px;
+    padding: 7px 0px;
     border-radius: 20px;
     text-align: center;
     margin-inline: auto;
@@ -173,6 +173,11 @@ background-image: var(--gradient--menu-title-main);
 
 .menu-pics:hover .title {
     background: #000000;
+}
+
+#map:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transform: none;
 }
 /* MENU CATEGORY PAGE*/
 
@@ -339,7 +344,7 @@ div.row section.footer span {
 
 /* For Tablet devices */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /*FOR GENERAL STYLES */
 
     .menu-title-main {
@@ -355,7 +360,10 @@ div.row section.footer span {
 
     .nav-item {
         display: block;
-        width: 100%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
     }
 
     /* FOR HOME PAGE */
