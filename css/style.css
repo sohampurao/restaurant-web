@@ -10,6 +10,7 @@
     --primary-dark : #343a40;
     --primary-light:  #e7e2df;
     --gold--: #ffd700;
+    --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2));
     --gradient--menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     --menu-sr: linear-gradient(to right, #434343, #000000); 
 }
@@ -39,23 +40,6 @@ body {
     background-color: #00DBDE;
     background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
     border-radius: 100vh;    
-}
-
-.menu-title-main {
-    margin-top: 10px;
-    width: 340px;
-    font-size: 1.5rem;
-    font-weight: 500;
-    background-color:var(--primary-dark);
-    padding: 7px 0px;
-    border-radius: 20px;
-    text-align: center;
-    margin-inline: auto;
-    text-transform: capitalize;
-}
-
-.menu-title-main span {
-background-image: var(--gradient--menu-title-main);
 }
 
 /* TEXT ANIMATI0N  */
@@ -116,6 +100,47 @@ background-image: var(--gradient--menu-title-main);
 .nav-item a:hover {
     background-color: #30363d;
     border-color:#8b949e;
+}
+
+/* For Menu Title main */
+
+.menu-title-main {
+    margin-top: 10px;
+    width: 340px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color:var(--primary-dark);
+    padding: 7px 0px;
+    border-radius: 20px;
+    text-align: center;
+    margin-inline: auto;
+    text-transform: capitalize;
+}
+
+.menu-title-main span {
+background-image: var(--gradient--menu-title-main);
+}
+
+/* for Menu Thumbnail img */
+
+.menu-thumbnail {
+    position: relative;
+    height: 50vh;
+    }
+
+.menu-thumbnail > div {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    font-size: 3rem;
+    line-height: 30px;
+    font-weight: 700;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    transform: translate(-50% -50%);
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 3px  3px black;
+    letter-spacing: 2px;
 }
 
 /* HOME PAGE */
@@ -181,6 +206,12 @@ background-image: var(--gradient--menu-title-main);
 }
 /* MENU CATEGORY PAGE*/
 
+#menu-cat-thumb-menu {
+    background: var(--bg-img-darken) , url("/images/MenuCategoryMain/menu_thumbnail.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 #menu-category-content {
     background-color: #e7e2df;
     margin-block: 20px;
@@ -197,8 +228,8 @@ background-image: var(--gradient--menu-title-main);
     margin-block: 25px;
     margin-inline: auto;
     overflow: hidden;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
     color: #ffffff;
     border-radius: 2.5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -348,8 +379,8 @@ div.row section.footer span {
     /*FOR GENERAL STYLES */
 
     .menu-title-main {
-        width: 42vw;
-        font-size: 2.7vw;
+        width: 45vw;
+        font-size: 2.9vw;
     }
 
     /* FOR NAVIGATION BAR */
@@ -373,13 +404,6 @@ div.row section.footer span {
         font-size: 1rem;
     }
 
-    /* FOR MENU CATEGORY PAGE*/
-
-    .menu-select-img a img , .menu-select-img{
-        width: 250px;
-        height: 250px;
-    }
-
     /* FOR MENU ITEMS PAGE */
 
     .menu-item-display {
@@ -388,6 +412,9 @@ div.row section.footer span {
         margin: 0px auto;
     }
 
+    .menu-items-discription-title {
+        margin-top: 15px;
+    }
     .menu-item-text .menu-items-discription {
         text-align: center;
     }
@@ -444,14 +471,15 @@ div.row section.footer span {
         width: 100%;
         max-height: 290px;
     }
+
 }
 
 /* For SM mobile phones */
 @media (min-width: 200px) and (max-width:333px) {
     /*FOR GENERAL STYLES */
     .menu-title-main {
-        width: 50vw;
-        font-size: 3vw;
+        width: 55vw;
+        font-size: 3.7vw;
     }
 
     /* FOR NAVIGATION BAR */
@@ -472,5 +500,12 @@ div.row section.footer span {
     #map {
         width: 100%;
         max-height: 200px;
+    }
+
+    /* FOR MENU CATEGORY PAGE*/
+
+    .menu-select-img a img , .menu-select-img{
+        width: 220px;
+        height: 200px;
     }
 }
