@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
 /* GENERAL STYLES */
 *{
     margin: 0%;
@@ -126,24 +128,39 @@ background-image: var(--gradient--menu-title-main);
 .menu-thumbnail {
     position: relative;
     overflow: hidden;
-    height: 60vh;
+    height: 50vh;
 }
 
 .menu-thumbnail > img {
     vertical-align: middle;
+
+}
+
+.menu-thumbnail .inner-border {
+    position: absolute;
+    border: 2px solid #cbcbcbd6;
+    left: 25px;
+    top: 25px;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    z-index: 1;
+    backdrop-filter: blur(1.5px);
+    border-radius: 5px;
 }
 
 .menu-thumbnail  div {
     position: absolute;
     top: 50%;
-    font-size: 3.5rem;
-    font-weight: 700;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    transform: translate(-50% -50%);
+    width: 100%;    
+    color: white;
+    font-size: 3rem;
+    font-family: 'Carter One', cursive;
+    font-weight: 300;
     text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 3px  3px black;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    text-shadow: 2px 2px 3px black;
+    z-index: 2;
 }
 
 /* HOME PAGE */
@@ -394,7 +411,7 @@ div.row section.footer span {
     }
 
     .menu-thumbnail  div {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     /* FOR HOME PAGE */
 
@@ -456,7 +473,7 @@ div.row section.footer span {
 
     /* for Menu Thumbnail img */
     .menu-thumbnail  div {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     .menu-thumbnail {
         height: auto;
@@ -501,7 +518,7 @@ div.row section.footer span {
     }
 
     .menu-thumbnail  div {
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     /* FOR HOME PAGE */
