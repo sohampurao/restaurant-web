@@ -135,7 +135,7 @@ background-image: var(--gradient--menu-title-main);
     position: relative;
     overflow: hidden;
     height: 280px;
-    background: var(--bg-img-darken),url("/images/MenuCategoryMain/menu_thumbnail.jpg");
+    background: var(--bg-img-darken),url("images/MenuCategoryMain/menu_thumbnail.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
