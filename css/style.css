@@ -13,7 +13,7 @@
     --primary-dark : #343a40;
     --primary-light:  #e7e2df;
     --gold--: #ffd700;
-    --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2));
+    --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
     --gradient--menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     --menu-sr: linear-gradient(to right, #434343, #000000); 
 }
@@ -134,24 +134,11 @@ background-image: var(--gradient--menu-title-main);
 .menu-thumbnail {
     position: relative;
     overflow: hidden;
-    height: 50vh;
-}
-
-.menu-thumbnail > img {
-    vertical-align: middle;
-
-}
-
-.menu-thumbnail .inner-border {
-    position: absolute;
-    border: 2px solid #cbcbcbd6;
-    left: 25px;
-    top: 25px;
-    width: calc(100% - 50px);
-    height: calc(100% - 50px);
-    z-index: 1;
-    backdrop-filter: blur(1.5px);
-    border-radius: 5px;
+    height: 280px;
+    background: var(--bg-img-darken),url("/images/MenuCategoryMain/menu_thumbnail.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .menu-thumbnail  div {
@@ -166,7 +153,6 @@ background-image: var(--gradient--menu-title-main);
     letter-spacing: 0.05em;
     vertical-align: middle;
     text-shadow: 2px 2px 3px black;
-    z-index: 2;
 }
 
 /* HOME PAGE */
@@ -283,7 +269,9 @@ background-image: var(--gradient--menu-title-main);
 
 #menu-items-content {
     background-color: #e7e2df;
+    margin-top: 20px;
     margin-bottom: 20px;
+    width: calc(100% - 100px);
 }
 
 #item-title-sub {
@@ -296,10 +284,6 @@ background-image: var(--gradient--menu-title-main);
 #item-title-sub span {
     font-size: 1rem;
     font-weight: 600;
-}
-
-#menu-items-content {
-    margin-top: 20px;
 }
 
 .menu-item-display {
@@ -436,6 +420,10 @@ div.row section.footer span {
         margin-right: auto;
         margin-top: 10px;
     }
+    
+    .menu-thumbnail {
+        height: 250px;
+    }
 
     .menu-thumbnail  div {
         font-size: 2.5rem;
@@ -448,6 +436,10 @@ div.row section.footer span {
     }
 
     /* FOR MENU ITEMS PAGE */
+
+    #menu-items-content  {
+        width: calc(100% - 50px);
+    }
 
     .menu-item-display {
         width: 70%;
@@ -508,7 +500,7 @@ div.row section.footer span {
         font-size: 1.8rem;
     }
     .menu-thumbnail {
-        height: auto;
+        height: 220px;
     }
 
     /* FOR HOME PAGE */
@@ -529,10 +521,14 @@ div.row section.footer span {
     }
 
 /* For menu category main */
-.menu-select-img a img , .menu-select-img{
-    width: 270px;
-    height: 170px;
-}
+    .menu-select-img a img , .menu-select-img{
+        width: 270px;
+        height: 170px;
+    }
+
+    #menu-items-content  {
+        width: 100%;
+    }
 }
 
 /* For SM mobile phones */
@@ -551,7 +547,7 @@ div.row section.footer span {
     /* for Menu Thumbnail img */
 
     .menu-thumbnail {
-        height: auto;
+        height: 190px;
     }
 
     .menu-thumbnail  div {
@@ -576,5 +572,9 @@ div.row section.footer span {
     .menu-select-img a img , .menu-select-img{
     width: 220px;
     height: 150px;
+    }
+
+    #menu-items-content  {
+        width: 100%;
     }
 }
