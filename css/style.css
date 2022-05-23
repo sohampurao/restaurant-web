@@ -134,7 +134,7 @@ background-image: var(--gradient--menu-title-main);
 .menu-thumbnail {
     position: relative;
     overflow: hidden;
-    height: 280px;
+    height: 270px;
     background: var(--bg-img-darken),url("/images/MenuCategoryMain/menu_thumbnail.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -429,7 +429,7 @@ div.row section.footer span {
     }
     
     .menu-thumbnail {
-        height: 250px;
+        height: 220px;
     }
 
     .menu-thumbnail  div {
@@ -510,7 +510,7 @@ div.row section.footer span {
         font-size: 1.8rem;
     }
     .menu-thumbnail {
-        height: 220px;
+        height: 200px;
     }
 
     /* FOR HOME PAGE */
@@ -557,7 +557,7 @@ div.row section.footer span {
     /* for Menu Thumbnail img */
 
     .menu-thumbnail {
-        height: 190px;
+        height: 180px;
     }
 
     .menu-thumbnail  div {
