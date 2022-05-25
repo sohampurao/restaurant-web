@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uncle Sammy's Kichten</title>
+
     <!-- Bootstrap CSS only (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!-- Custom Css (User agent) -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/Common/favicon_io/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/Common/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/Common/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="images/Common/favicon_io/site.webmanifest">
+
+    <!-- Font Awesome icons link -->
     <script src="https://kit.fontawesome.com/ad9b6196e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -83,35 +87,74 @@
         </button>
     </div>
     <!-- CAROUSEL END -->
-    <div id="main-content" class="container pt-2">
-        <h1 class="menu-title-main"><span class="text-animation">Select The Menu Category</span></h1>
-        <div class="row p-3 mt-2" id="menu-img">
-            <div class="col-md-4 col-sm-6 mt-3 mb-3">
-                <div class="menu-pics">
+    <div id="main-content" class="container-fluid pt-2 my-md-4">
+        <div class="hero-text mx-auto my-3">
+            <div class="hero-title text-center">When you sit down at Uncle Sammy's Restaurent, you're dining with the Molinari family and over 45 years of restaurant experience.</div>
+            <div class="hero-description">
+                A Scottsdale tradition for more than a quarter century, we're a little piece of Italy right in the heart of the Valley. Our casual neighborhood atmosphere,
+                combined with creative, timeless dishes make us a favorite for business lunches, casual nights out and special occasions of every kind.
+                <br>
+                From exceptional veal cuts, to fresh pasta and seafood, to an award-winning wine list, our made-from-scratch menu and warm service bring out the best in classic Italian cuisine. 
+                Whether you're from down the street or out of town, you'll find the faces friendly, the conversation lively, and the food and flavors unforgettable
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="speciality-header text-capitalize text-center my-4">also famous for</div>
+            <div class="row my-4">
+                <div class="col-md-4 col-sm-12">
+                    <div class="special-item-container mx-auto position-relative my-3">
+                        <div class="special-item-circle position-absolute"></div>
+                        <img class="special-item-img" src="images/HomePage/special item/special-burger.png" alt="burger image">
+                        <h1 class="special-item-title">Burger Bologona</h1>
+                        <div class="special-item-desciption">500 &#8377;</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="special-item-container mx-auto position-relative my-3">
+                        <div class="special-item-circle position-absolute"></div>
+                        <img class="special-item-img" src="images/HomePage/special item/special-pizza.png" alt="Pizza image">
+                        <h1 class="special-item-title">Pepperoni Pizza</h1>
+                        <div class="special-item-desciption">350 &#8377;</div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="special-item-container mx-auto position-relative my-3">
+                        <div class="special-item-circle position-absolute"></div>
+                            <img class="special-item-img" src="images/HomePage/special item/special-wine.png" alt="wine image">
+                        <h1 class="special-item-title">Red Wine</h1>
+                        <div class="special-item-desciption">1750 &#8377;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="d-block text-center text-uppercase my-3" id="menu-heading">menus</h1>
+        <div class="row" id="menu-img">
+            <div class="col-md-4 col-sm-12 my-3">
+                <div class="menu-pics text-center mx-auto">
                     <a href="MenuCategoryMain.html">
-                    <img src="images/HomePage/menu/menu_Menu.jpg" alt="" class="img-fluid rounded">
+                    <img src="images/HomePage/menu/menu_Menu.jpg" alt="Menu image" class="img-fluid">
                     </a>
                     <span class="title">Menu</span>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-12 rounded mt-3 mb-3">
-                <div class="menu-pics">
+            <div class="col-md-4 col-sm-12 my-3">
+                <div class="menu-pics text-center mx-auto">
                     <a href="#">
-                    <img src="images/HomePage/menu/menu-special.jpg" alt="" class="img-fluid rounded">
+                    <img src="images/HomePage/menu/menu-special.jpg" alt="Special menu image" class="img-fluid">
                     </a>
                     <span class="title">Specail</span>
                 </div>
                 
             </div>
-            <div class="col-md-4 col-sm-12 mt-3 mb-3">
-                <div class="menu-pics">
+            <div class="col-md-4 col-sm-12 my-3">
+                <div class="menu-pics text-center mx-auto">
                     <a href="#">
-                        <img src="images/HomePage/menu/menu-snacks.jpg" alt="" class="img-fluid rounded">
+                        <img src="images/HomePage/menu/menu-snacks.jpg" alt="Snacks image" class="img-fluid">
                     </a>
                     <span class="title">Snacks</span>
                 </div>  
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6 mt-3 mb-3 menu-pics" id="map">
+            <div class="col-xl-6 my-3 menu-pics text-center mx-auto p-0" id="map">
                 <a href="https://goo.gl/maps/CKHYgCixSRHHt9EN7">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241550.01593242184!2d72.72785244572565!3d18.921698199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1c06fffffff%3A0xc0290485a4d73f57!2sThe%20Taj%20Mahal%20Palace%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1650345150899!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </a>
@@ -122,7 +165,7 @@
     <footer class="panel-footer">
         <div class="container-fluid">
             <div class="row">
-                <section class="col-md-3 footer">
+                <section class="col-md-3 footer text-center text-md-start">
                     <span>Navigation Links</span><br>
                     <ul class="nav-link footer-ul">
                         <li class="nav text-center"><a href="index.html" class="nav-link "><i class="fa-solid fa-house"></i> Home</a></li>
@@ -131,21 +174,21 @@
                     </ul>
                     <hr>
                 </section>
-                <section class="col-md-3 footer">
-                    <span>Our Hours</span><br>
+                <section class="col-md-3 footer text-center text-md-start">
+                    <span>Active Hours</span><br>
                     SUN - THURS: 3pm - 9pm<br>
                     FRI & SAT: 3pm - 10pm<br>
                     <hr>
                 </section>
-                <section class="col-md-3 footer">
+                <section class="col-md-3 footer text-center text-md-start">
                     <span>Location</span><br>
                     40220l Alibag vidhyanagar<br>
                     Raigarh Maharashtra<br>
                     <p id="delivery">Delivery area Within 3-4 miles, with mainimum order of 200&#8377; + 50&#8377; charge for all deliveries.</p>
                     <hr>
                 </section>
-                <section class="col-md-3 footer">
-                    <span>Social Links</span><br>
+                <section class="col-md-3 footer text-center text-md-start">
+                    <span>Contact</span><br>
                     <ul class="nav-link footer-ul">
                         <li class="nav text-center"><a href="https://www.instagram.com/mr.purao.12/" class="nav-link "><i class="fa-brands fa-instagram"></i> Instagram</a></li>
                         <li class="nav text-center"><a href="#"  class="nav-link "><i class="fa-brands fa-facebook"></i> Facebook</a></li>
@@ -154,7 +197,7 @@
                     <hr>
                 </section>
                 <div class="phone-num mb-3"><a href="https://api.whatsapp.com/send/?phone=%2B919518556937&text&app_absent=0" class="nav-link d-block text-center mx-auto"><i class="fa-brands fa-whatsapp"></i> Chat With Us </a></div> 
-                <div id="copyright">&copy; are reserved by uncle sammy's kichten</div> 
+                <div id="copyright" class="text-center">&copy; are reserved by uncle sammy's kichten</div> 
             </div>
         </div>
     </footer>
