@@ -37,13 +37,13 @@
                 <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                     <ul class="navbar-nav" id="nav-ul">
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link text-center"><i class="fa-solid fa-house"> </i> Home</a>
+                            <a href="index.html" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-house"> </i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="MenuCategoryMain.html" class="nav-link text-center"><i class="fa-solid fa-utensils "> </i> Menu</a>
+                            <a href="MenuCategoryMain.html" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-utensils"> </i> Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link text-center"><i class="fa-solid fa-circle-info"> </i> About Us</a>
+                            <a href="#" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-circle-info"> </i> About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -51,7 +51,7 @@
         </nav>
     </header>
     <div class="container-fluid pt-2 my-md-4" id="menu-items-content">
-        <h1 class="menu-title-main  text-center"><span class="text-animation">Dinner Combo in 500&#8377;</span></h1>
+        <h1 class="menu-title-main  text-center mx-auto"><span class="text-animation">Dinner Combo in 500&#8377;</span></h1>
         <p id="item-title-sub" class="text-center"> <span> Served with </span>
             <br>
             1) rice(choice of Vegetable Fried Rice, Steamed Rice, Or Brown Rice)
@@ -145,15 +145,15 @@
             </div>
         </section>
     </div>
-    <footer class="panel-footer">
+    <footer class="panel-footer mt-4 ps-2">
         <div class="container-fluid">
             <div class="row">
                 <section class="col-md-3 footer text-center text-md-start">
                     <span>Navigation Links</span><br>
-                    <ul class="nav-link footer-ul">
-                        <li class="nav text-center"><a href="index.html" class="nav-link "><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li class="nav text-center"><a href="MenuCategoryMain.html"  class="nav-link "><i class="fa-solid fa-utensils"></i> Menu</a></li>
-                        <li class="nav text-center"><a href="#"  class="nav-link "><i class="fa-solid fa-circle-info"></i> About Us</i></a></li>
+                    <ul class="nav-link align-items-sm-center align-items-md-start" id="footer-nav-ul">
+                        <li class="nav footer-nav-li"><a href="index.html" class="nav-link "><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav footer-nav-li"><a href="MenuCategoryMain.html"  class="nav-link "><i class="fa-solid fa-utensils"></i> Menu</a></li>
+                        <li class="nav footer-nav-li"><a href="#"  class="nav-link "><i class="fa-solid fa-circle-info"></i> About Us</i></a></li>
                     </ul>
                     <hr>
                 </section>
@@ -171,15 +171,16 @@
                     <hr>
                 </section>
                 <section class="col-md-3 footer text-center text-md-start">
-                    <span>Social Links</span><br>
-                    <ul class="nav-link footer-ul">
-                        <li class="nav text-center"><a href="https://www.instagram.com/mr.purao.12/" class="nav-link "><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                        <li class="nav text-center"><a href="#"  class="nav-link "><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                        <li class="nav text-center"><a href="#"  class="nav-link "><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                    <span>Contact</span><br>
+                    <div id="phone-num" class="mt-2"><a class="m-0" href="tel:+91 999 8888 777"><i class="fa-solid fa-phone"></i> 999 8888 777</a></div>
+                    <ul class="nav-link mt-2 justify-content-sm-center justify-content-md-start" id="footer-social-ul">
+                        <li class="nav text-center"><a href="https://www.instagram.com/mr.purao.12/" class="nav-link "><i class="fa-brands fa-instagram"><span class="visually-hidden">Instagram</span></i></a></li>
+                        <li class="nav text-center"><a href="#"  class="nav-link "><i class="fa-brands fa-facebook"><span class="visually-hidden">Facebook</span></i></a></li>
+                        <li class="nav text-center"><a href="#"  class="nav-link "><i class="fa-brands fa-youtube"><span class="visually-hidden">YouTube</span></i></a></li>
                     </ul>
                     <hr>
                 </section>
-                <div class="phone-num mb-3"><a href="https://api.whatsapp.com/send/?phone=%2B919518556937&text&app_absent=0" class="nav-link d-block text-center mx-auto"><i class="fa-brands fa-whatsapp"></i> Chat With Us </a></div> 
+                <div id="wa-num" class="mb-3"><a href="https://api.whatsapp.com/send/?phone=%2B919518556937&text&app_absent=0" class="nav-link d-block text-center mx-auto"><i class="fa-brands fa-whatsapp"></i> Chat With Us </a></div> 
                 <div id="copyright" class="text-center">&copy; are reserved by uncle sammy's kichten</div> 
             </div>
         </div>
