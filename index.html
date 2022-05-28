@@ -24,26 +24,32 @@
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container-fluid">
             <a href="index.html" id="logo-img">
-                <img src="images/Common/res-logo.jpg" alt="logo img" style="cursor:pointer;" height="60" width="60">
+                <img src="images/Common/res-logo.jpg" alt="logo img" height="60" width="60">
             </a>
             <a href="index.html" class="navbar-brand">
                 <span>Uncle Sammy's Kichten</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars"></i>
+                <span class="visually-hidden">Toggler icon</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                <ul class="navbar-nav" id="nav-ul">
-                    <li class="nav-item">
-                        <a href="index.html" class="navbar-navigation nav-link active text-center"><i class="fa-solid fa-house"> </i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="MenuCategoryMain.html" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-utensils"> </i> Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-circle-info"> </i> About Us</a>
-                    </li>
-                </ul>
+            <div class="offcanvas offcanvas-end d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header position-relative">
+                    <button type="button" id="off-can-close" class="btn-close position-absolute" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" id="offcanvas-body">
+                    <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
+                        <li id="nav-list-1"> 
+                            <a id="nav-anchor-1" class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li id="nav-list-2"> 
+                            <a id="nav-anchor-2" class="nav-link" aria-current="page" href="MenuCategoryMain.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+                        </li>
+                        <li id="nav-list-3"> 
+                            <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-circle-info"></i> About</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -57,21 +63,21 @@
         <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
                 <img src="images/HomePage/carousel/slide-pasta.jpg" class="d-block w-100" alt="Zuppa De Pesce - Clams, Mussels, Shrimp, & Scallops, in a Red or White Sauce">
-                <div class="carousel-caption d-none d-md-block" style="text-transform: capitalize;">
+                <div class="carousel-caption d-none d-md-block text-capitalize">
                     <h3>Rich In Taste As It Is In&nbsp;Tradition</h3>
                     <p>CLASSIC NEIGHBORHOOD ITALIAN</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
                 <img src="images/HomePage/carousel/slide-chicken.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block" style="text-transform: capitalize;">
+                <div class="carousel-caption d-none d-md-block text-capitalize">
                     <h3>Traditional Flavor in the Heart of South&nbsp;Scottsdale</h3>
                     <p>Family Owned and Operated for Over 45 Years</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="images/HomePage/carousel/slide-mutton.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block" style="text-transform: capitalize;">
+                <div class="carousel-caption d-none d-md-block text-capitalize">
                     <h3>Established In 1974</h3>
                     <p>10,000 + reviews on google</p>
                 </div>
@@ -101,28 +107,28 @@
         <div class="container-fluid">
             <div class="speciality-header text-capitalize text-center my-4">also famous for</div>
             <div class="row my-4">
-                <div class="col-md-4 col-sm-12">
-                    <div class="special-item-container mx-auto position-relative my-3">
+                <div class="col-md-4 col-sm-12 pt-2">
+                    <div id="sp-container-m1" class="special-item-container mx-auto position-relative my-3">
                         <div class="special-item-circle position-absolute"></div>
-                        <img class="special-item-img" src="images/HomePage/special item/special-pizza.png" alt="Pizza image">
-                        <h1 class="special-item-title">Pepperoni Pizza</h1>
-                        <div class="special-item-desciption">350 &#8377;</div>
+                        <img id="specical-img-m1" class="special-item-img" src="images/HomePage/special item/special-pizza.png" alt="Pizza image">
+                        <h1 id="specical-title-m1" class="special-item-title">Pepperoni Pizza</h1>
+                        <div class="special-item-price"><span id="sp-price-sheky-m1" class="d-block text-center">350 &#8377;</span></div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="special-item-container mx-auto position-relative my-3">
+                <div class="col-md-4 col-sm-12 pt-2">
+                    <div id="sp-container-m2" class="special-item-container mx-auto position-relative my-3">
                         <div class="special-item-circle position-absolute"></div>
-                        <img class="special-item-img" src="images/HomePage/special item/special-burger.png" alt="burger image">
-                        <h1 class="special-item-title">Burger Bologona</h1>
-                        <div class="special-item-desciption">500 &#8377;</div>
+                        <img id="specical-img-m2" class="special-item-img" src="images/HomePage/special item/special-burger.png" alt="burger image">
+                        <h1 id="specical-title-m2" class="special-item-title">Burger Bologona</h1>
+                        <div class="special-item-price"><span id="sp-price-sheky-m2" class="d-block text-center">500 &#8377;</span></div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="special-item-container mx-auto position-relative my-3">
+                <div class="col-md-4 col-sm-12 pt-2">
+                    <div id="sp-container-m3" class="special-item-container mx-auto position-relative my-3">
                         <div class="special-item-circle position-absolute"></div>
-                            <img class="special-item-img" src="images/HomePage/special item/special-wine.png" alt="wine image">
-                        <h1 class="special-item-title">Red Wine</h1>
-                        <div class="special-item-desciption">1750 &#8377;</div>
+                        <img id="specical-img-m3" class="special-item-img" src="images/HomePage/special item/special-wine.png" alt="wine image">
+                        <h1 id="specical-title-m3" class="special-item-title">Red Wine</h1>
+                        <div class="special-item-price"><span id="sp-price-sheky-m3" class="d-block text-center">1750 &#8377;</span></div>
                     </div>
                 </div>
             </div>
@@ -181,7 +187,7 @@
                     <hr>
                 </section>
                 <section class="col-md-3 footer text-center text-md-start">
-                    <span>Contact</span><br>
+                    <span>Connect</span><br>
                     <div id="phone-num" class="mt-2"><a class="m-0" href="tel:+91 999 8888 777"><i class="fa-solid fa-phone"></i> 999 8888 777</a></div>
                     <ul class="nav-link mt-2 justify-content-sm-center justify-content-md-start" id="footer-social-ul">
                         <li class="nav text-center"><a href="https://www.instagram.com/mr.purao.12/" class="nav-link "><i class="fa-brands fa-instagram"><span class="visually-hidden">Instagram</span></i></a></li>

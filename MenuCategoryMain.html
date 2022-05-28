@@ -41,21 +41,27 @@
                 <a href="index.html" class="navbar-brand">
                     <span>Uncle Sammy's Kichten</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fa-solid fa-bars"></i>
+                    <span class="visually-hidden">Toggler icon</span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-                    <ul class="navbar-nav" id="nav-ul">
-                        <li class="nav-item">
-                            <a href="index.html" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-house"> </i> Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="MenuCategoryMain.html" class="navbar-navigation nav-link active text-center"><i class="fa-solid fa-utensils"> </i> Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="navbar-navigation nav-link text-center"><i class="fa-solid fa-circle-info"> </i> About Us</a>
-                        </li>
-                    </ul>
+                <div class="offcanvas offcanvas-end d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header position-relative">
+                        <button type="button" id="off-can-close" class="btn-close position-absolute" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body" id="offcanvas-body">
+                        <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
+                            <li id="nav-list-1"> 
+                                <a id="nav-anchor-1" class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                            </li>
+                            <li id="nav-list-2"> 
+                                <a id="nav-anchor-2" class="nav-link active" aria-current="page" href="MenuCategoryMain.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+                            </li>
+                            <li id="nav-list-3"> 
+                                <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-circle-info"></i> About</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -153,7 +159,7 @@
                     <hr>
                 </section>
                 <section class="col-md-3 footer text-center text-md-start">
-                    <span>Contact</span><br>
+                    <span>Connect</span><br>
                     <div id="phone-num" class="mt-2"><a class="m-0" href="tel:+91 999 8888 777"><i class="fa-solid fa-phone"></i> 999 8888 777</a></div>
                     <ul class="nav-link mt-2 justify-content-sm-center justify-content-md-start" id="footer-social-ul">
                         <li class="nav text-center"><a href="https://www.instagram.com/mr.purao.12/" class="nav-link "><i class="fa-brands fa-instagram"><span class="visually-hidden">Instagram</span></i></a></li>
