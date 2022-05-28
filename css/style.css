@@ -24,10 +24,6 @@
     --BR-20 : 20px ;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Poppins','Roboto',sans-serif;
     background-color: #ffffff;
@@ -113,13 +109,14 @@ a {
     border: none;
 }
 
-.offcanvas-header {
-    height: 60px;
+.offcanvas-title {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #ffffff;
 }
 
-#off-can-close {
-    right: 30px;
-    top: 30px;
+#offcanvas-title , #offcanvas-body {
+    animation: none;
 }
 
 #nav-anchor-1,
@@ -368,7 +365,7 @@ background-image: var(--gradient-menu-title-main);
 .menu-item-display .menu-item-sr {
     position: absolute;
     color: #ffffff;
-    width:fit-content;
+    width: 50px;
     border-radius: var(--BR-20);
     padding: 2px 10px;
     font-size: 0.8rem;
@@ -543,17 +540,22 @@ div.row section.footer span {
     }
 
     /* FOR NAVIGATION BAR */
-    
+
+    /* toggle menu background change */
+    #offcanvas-title , #offcanvas-body {
+        -webkit-animation:color-change-2x 2s linear infinite alternate both;animation:color-change-2x 2s linear infinite alternate both;
+    }
+    @-webkit-keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}@keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}
+
     #nav-ul > li > a {
-        color: var(--primary-dark);
+        color: #ffffff;
         padding: 0.2rem 0.5rem;
         border-radius: var(--BR-20);
         border: 1px solid transparent;
         font-weight: 500;
     }
 
-    #nav-ul > li > a.active {
-        color: #ffffff !important;
+    #nav-ul > li > a.active , #nav-ul > li > a:hover {
         background-color: rgba(0, 0, 0, 0.5);
         border: 2px solid var(--gold-)!important;
     }
@@ -572,9 +574,11 @@ div.row section.footer span {
         position: absolute;
         align-items: center;
         row-gap: 15px;
-        left: 40%;
-        top: 22%;
+        left: 36%;
+        top: 20%;
     }
+
+    /* for menu thumbnail image */
 
     .menu-thumbnail {
         height: 220px;
