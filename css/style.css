@@ -18,6 +18,7 @@
     --primary-dark : #343a40;
     --primary-light:  #e7e2df;
     --gold-: #ffd700;
+    --pure-white : #ffffff;
     --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
     --gradient-menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     --menu-sr: linear-gradient(to right, #434343, #000000);
@@ -26,7 +27,7 @@
 
 body {
     font-family: 'Poppins','Roboto',sans-serif;
-    background-color: #ffffff;
+    background-color: var(--pure-white);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-y: scroll;
@@ -112,7 +113,7 @@ a {
 .offcanvas-title {
     font-weight: 600;
     font-size: 1.2rem;
-    color: #ffffff;
+    color:var(--pure-white);
 }
 
 .offcanvas-subtitle {
@@ -297,6 +298,7 @@ background-image: var(--gradient-menu-title-main);
 #sp-container-m1:hover #sp-price-sheky-m1, #sp-container-m2:hover #sp-price-sheky-m2,#sp-container-m3:hover #sp-price-sheky-m3 {
     -webkit-animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) infinite both;animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) infinite both;
 }
+
 /* menu card items */
 
 .menu-pics-card {
@@ -305,7 +307,7 @@ background-image: var(--gradient-menu-title-main);
     width: 380px;
     height: 250px;
     overflow: hidden;
-    color: #ffffff;
+    color: var(--pure-white);
     border-radius: 2.5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -374,7 +376,7 @@ background-image: var(--gradient-menu-title-main);
 
 .menu-item-display .menu-item-sr {
     position: absolute;
-    color: #ffffff;
+    color: var(--pure-white);
     width: 48px;
     text-align: center;
     border-radius: var(--BR-20);
@@ -468,8 +470,8 @@ div.row section.footer span {
 #copyright {
     padding: 5px 0;
     background-color: var(--primary-dark);
-    color: #ffffff;
-    border-top: 1px solid #ffffff;
+    color: var(--pure-white);
+    border-top: 1px solid var(--pure-white);
 }
 
 #footer-nav-ul li a , #footer-social-ul li a {
@@ -493,7 +495,7 @@ div.row section.footer span {
 }
 
 .footer a:hover , #phone-num:hover , #wa-num a:hover {
-    color: #ffffff !important;
+    color:var(--pure-white) !important;
 }
 
 /* MEDIA QUERIES*/
@@ -561,23 +563,34 @@ div.row section.footer span {
 
     /* FOR NAVIGATION BAR */
 
-    /* toggle menu background change */
-    #offcanvas-title , #offcanvas-body {
-        -webkit-animation:color-change-2x 2s linear infinite alternate both;animation:color-change-2x 2s linear infinite alternate both;
+    .offcanvas {
+        width: 80% !important;
     }
-    @-webkit-keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}@keyframes color-change-2x{0%{background:#19dcea}100%{background:#b22cff}}
+
+    #offcanvas-title {
+        border-bottom: 1px solid var(--pure-white);
+    }
+
+    #offcanvas-close-btn {
+        border: none;
+        font-size: 1.3rem;
+        color: var(--pure-white);
+        font-weight: 300;
+        width: 23px;
+        text-align: start;
+    }
 
     #nav-ul > li > a {
-        color: #ffffff;
+        color: var(--pure-white);
         padding: 0.2rem 0.5rem;
         border-radius: var(--BR-20);
-        border: 1px solid transparent;
+        border: 2px solid transparent;
         font-weight: 500;
     }
     
     #nav-ul > li > a.active {
         background-color: rgba(0, 0, 0, 0.5);
-        border: 2px solid var(--gold-)!important;
+        border: 2px solid var(--gold-);
     }
 
     #nav-anchor-1::after,
@@ -593,7 +606,7 @@ div.row section.footer span {
     .navbar-navigation {
         position: absolute;
         align-items: center;
-        row-gap: 15px;
+        row-gap: 20px;
         left: 36%;
         top: 20%;
     }
@@ -673,7 +686,7 @@ div.row section.footer span {
     .row section hr{
         display: block;
         height: 2px;
-        background-color: #ffffff;
+        background-color: var(--pure-white);
     }
     .phone-num a {
         font-size: 1.1rem;
@@ -696,6 +709,11 @@ div.row section.footer span {
     }
 
     /* FOR NAVIGATION BAR */
+
+    #offcanvasNavbar {
+        width: 100vw;
+    }
+
     .navbar-brand {
         font-size: 0.85rem;
     }
