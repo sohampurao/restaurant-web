@@ -111,8 +111,8 @@ a {
 }
 
 .offcanvas-title {
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1rem;
     color:var(--pure-white);
 }
 
@@ -565,6 +565,7 @@ div.row section.footer span {
 
     .offcanvas {
         width: 80% !important;
+        border-left: 1px solid var(--pure-white) !important;
     }
 
     #offcanvas-title {
@@ -645,6 +646,8 @@ div.row section.footer span {
         font-size: 0.9rem;
         padding: 0.3rem;
     }
+
+
 /* MENU CATEGORGY MAIN */
 
     #menu-category-content  {
@@ -786,6 +789,10 @@ div.row section.footer span {
 
     #footer-social-ul {
         justify-content: center;
+    }
+
+    #wa-num a {
+        font-size: 1.1rem;
     }
 }
 
