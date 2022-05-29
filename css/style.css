@@ -607,8 +607,8 @@ div.row section.footer span {
         position: absolute;
         align-items: center;
         row-gap: 20px;
-        left: 36%;
-        top: 20%;
+        left: 35%;
+        top: 24.5%;
     }
 
     #nav-ul > li > a:hover {
@@ -716,6 +716,14 @@ div.row section.footer span {
 
     .navbar-brand {
         font-size: 0.85rem;
+    }
+
+    #offcanvas-title {
+        font-size: 0.7rem;
+    }
+
+    #offcanvas-close-btn {
+        width: initial;
     }
 
     /* for Menu Thumbnail img */
