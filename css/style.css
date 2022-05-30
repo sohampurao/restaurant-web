@@ -25,6 +25,10 @@
     --BR-20 : 20px ;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins','Roboto',sans-serif;
     background-color: var(--pure-white);
@@ -34,6 +38,7 @@ body {
     overflow-x: hidden;
     height: 100vh;
     background: transparent;
+    transition: 0.4s;
 }
 
 img {
@@ -119,10 +124,6 @@ a {
 .offcanvas-subtitle {
     font-weight: 400;
     font-size: 0.8rem;
-}
-
-#offcanvas-title , #offcanvas-body {
-    animation: none;
 }
 
 #nav-anchor-1,
@@ -500,36 +501,35 @@ div.row section.footer span {
 
 /* MEDIA QUERIES*/
 
-/* FOR XL LAPTOP */
-
-@media (max-width: 1400px){
-
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
     .menu-pics-card {
         width: 360px;
         height: 250px;
     }
-
+    
+    .menu-pics-card a img {
+        height: 220px;
+    }
 }
 
-/* FOR L LAPTOP */
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
 
-@media screen and (max-width: 1200px) { 
     .menu-pics-card {
         width: 300px;
         height: 190px;
     }
 
     .menu-pics-card a img {
-        height: 160px;
+        height: 180px;
     }
 }
 
-/* FOR SM LAPTOP */
-
-@media screen and (max-width: 1000px) {
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
 
     /* FOR HOME PAGE */
-
     .special-item-container {
         width: 240px;
     }
@@ -550,12 +550,10 @@ div.row section.footer span {
     }
 }
 
-/* FOR TABLET DEVICES */
-
-@media screen and (max-width: 767px) {
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
 
     /*FOR GENERAL STYLES */
-
     .menu-title-main {
         width: 45vw;
         font-size: 2.9vw;
@@ -565,11 +563,13 @@ div.row section.footer span {
 
     .offcanvas {
         width: 80% !important;
-        border-left: 1px solid var(--pure-white) !important;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
     }
 
     #offcanvas-title {
         border-bottom: 1px solid var(--pure-white);
+        border-top-left-radius: inherit;
     }
 
     #offcanvas-close-btn {
@@ -602,6 +602,7 @@ div.row section.footer span {
 
     .offcanvas-body {
         position: relative;
+        border-bottom-left-radius: inherit;
     }
 
     .navbar-navigation {
@@ -642,7 +643,7 @@ div.row section.footer span {
     }
 
 /* MENU IMAGE CARDS */
-.menu-pics-card .title {
+    .menu-pics-card .title {
         font-size: 0.9rem;
         padding: 0.3rem;
     }
@@ -702,16 +703,15 @@ div.row section.footer span {
     }
 }
 
-/* For MD & LG mobile phones */
-
-@media screen and (max-width:576px){
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
     /*FOR GENERAL STYLES */
     .menu-title-main {
         width: 60vw;
         font-size: 3.9vw;
     }
 
-    /* FOR NAVIGATION BAR */
+   /* FOR NAVIGATION BAR */
 
     #offcanvasNavbar {
         width: 100vw;
@@ -771,7 +771,7 @@ div.row section.footer span {
         padding: 0.2rem 0rem;
     }
 
-/* MENU CATEGORGY MAIN */
+    /* MENU CATEGORGY MAIN */
 
     #menu-items-content  {
         width: 100%;
@@ -794,12 +794,14 @@ div.row section.footer span {
     #wa-num a {
         font-size: 1.1rem;
     }
+
+    #copyright {
+        font-size: .9rem;
+    }
 }
 
-/* For SM mobile phones */
-
-@media screen and (max-width:333px) {
-    /*FOR GENERAL STYLES */
+/* `xs` applies to extra-small devices (portrait phones, less than 333px) */
+@media (max-width: 333.98px) {
     .menu-title-main {
         width: 55vw;
         font-size: 3.7vw;
@@ -808,6 +810,10 @@ div.row section.footer span {
     /* FOR NAVIGATION BAR */
     .navbar-brand{
         display: none;
+    }
+
+    .offcanvas-title {
+        font-size: 0.8rem;
     }
 
     /* for Menu Thumbnail img */
