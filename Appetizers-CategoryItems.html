@@ -23,10 +23,10 @@
         <script src="https://kit.fontawesome.com/ad9b6196e1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
             <div class="container-fluid">
-                <a href="index.html" id="logo-img">
-                    <img src="images/Common/res-logo.jpg" alt="logo img" height="60" width="60">
+                <a href="index.html" >
+                    <img id="logo-img" src="images/Common/res-logo.jpg" alt="logo img">
                 </a>
                 <a href="index.html" class="navbar-brand">
                     <span>Uncle Sammy's Kichten</span>
@@ -42,13 +42,13 @@
                     </div>
                     <div class="offcanvas-body bg-dark" id="offcanvas-body">
                         <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
-                            <li id="nav-list-1"> 
-                                <a id="nav-anchor-1" class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                            <li title="Home" id="nav-list-1"> 
+                                <a  id="nav-anchor-1" class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
                             </li>
-                            <li id="nav-list-2"> 
-                                <a id="nav-anchor-2" class="nav-link" aria-current="page" href="MenuCategoryMain.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+                            <li title="Menu" id="nav-list-2"> 
+                                <a id="nav-anchor-2" class="nav-link " aria-current="page" href="MenuCategoryMain.html"><i class="fa-solid fa-utensils"></i> Menu</a>
                             </li>
-                            <li id="nav-list-3"> 
+                            <li title="About" id="nav-list-3"> 
                                 <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-circle-info"></i> About</a>
                             </li>
                         </ul>
@@ -68,40 +68,40 @@
         <section class="row">
             <div id="menu-items-right" class="col-md-6 col-sm-12">
                 <div class="row">
-                        <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12">
-                            <div class="menu-item-sr bg-dark">M-1</div>
-                            <img class="menu-item-img" src="images/CategoryItems/Appetizers/m1.jpg" alt="menu item image" height="150px" width="250px">
+                        <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12 mb-3">
+                            <div class="menu-item-sr text-center bg-dark">M-1</div>
+                            <img class="menu-item-img img-fluid mx-auto shadow-drop-lr" src="images/CategoryItems/Appetizers/m1.jpg" alt="menu item image" height="150px" width="250px">
                         </div>
-                        <div class="menu-item-text col-lg-7 col-md-12 col-sm-12">
-                            <div class="menu-items-discription text-center text-lg-start">
-                                <h3 class="menu-items-discription-title">Chicken Marsala</h3>
-                                <p>
+                        <div class="menu-item-text col-lg-7 col-md-12 col-sm-12 my-sm-2">
+                            <div class="menu-items-discription text-center text-lg-start mt-lg-2">
+                                <h3 class="menu-items-dis-title">Chicken Marsala</h3>
+                                <p class="menu-item-dis-sub">
                                     Chicken Marsala is a flavorful Italian entree with sauteed mushrooms and lean white meat simmered in a creamy wine sauce
                                 </p>
                             </div>
                         </div>
                         <hr class="menu-item-sm-hr">
-                        <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12">
-                            <div class="menu-item-sr bg-dark">M-2</div>
-                            <img class="menu-item-img" src="images/CategoryItems/Appetizers/m2.jpg" alt="menu item image" height="150px" width="250px">
+                        <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12 mb-3">
+                            <div class="menu-item-sr text-center bg-dark">M-2</div>
+                            <img class="menu-item-img img-fluid mx-auto shadow-drop-lr" src="images/CategoryItems/Appetizers/m2.jpg" alt="menu item image" height="150px" width="250px">
                         </div>
-                        <div class="menu-item-text col-lg-7 col-md-12 col-sm-12">
-                            <div class="menu-items-discription text-center text-lg-start">
-                                <h3 class="menu-items-discription-title">Spring Roll</h3>
-                                <p>
+                        <div class="menu-item-text col-lg-7 col-md-12 col-sm-12 my-sm-2">
+                            <div class="menu-items-discription text-center text-lg-start mt-lg-2">
+                                <h3 class="menu-items-dis-title">Spring Roll</h3>
+                                <p class="menu-item-dis-sub">
                                     thin wraps with white meat and cabbage
                                 </p>
                             </div>
                         </div>
                         <hr class="menu-item-sm-hr">
-                        <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12">
-                            <div class="menu-item-sr bg-dark">M-3</div>
-                            <img class="menu-item-img" src="images/CategoryItems/Appetizers/m3.jpg" alt="menu item image" height="150px" width="250px">
+                        <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12 mb-3">
+                            <div class="menu-item-sr text-center bg-dark">M-3</div>
+                            <img class="menu-item-img img-fluid mx-auto shadow-drop-lr" src="images/CategoryItems/Appetizers/m3.jpg" alt="menu item image" height="150px" width="250px">
                         </div>
-                        <div class="menu-item-text col-lg-7 col-md-12 col-sm-12">
-                            <div class="menu-items-discription text-center text-lg-start">
-                                <h3 class="menu-items-discription-title">Fried Chicken Wing</h3>
-                                <p>
+                        <div class="menu-item-text col-lg-7 col-md-12 col-sm-12 my-sm-2">
+                            <div class="menu-items-discription text-center text-lg-start mt-lg-2">
+                                <h3 class="menu-items-dis-title">Fried Chicken Wing</h3>
+                                <p class="menu-item-dis-sub">
                                     These ultra-crisp fried chicken wings have a thin crust that crackles and crunches with 6 pieces of curry-flavored chicken wings
                                 </p>
                             </div>
@@ -110,40 +110,41 @@
             </div>
             <div id="menu-items-left" class="col-md-6 col-sm-12">
                 <div class="row">
-                    <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12">
-                        <div class="menu-item-sr bg-dark">M-4</div>
-                        <img class="menu-item-img" src="images/CategoryItems/Appetizers/m4.jpg" alt="menu item image" height="150px" width="250px">
+                    <hr class="menu-item-sm-hr">
+                    <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12 mb-3">
+                        <div class="menu-item-sr text-center bg-dark">M-4</div>
+                        <img class="menu-item-img img-fluid mx-auto shadow-drop-lr" src="images/CategoryItems/Appetizers/m4.jpg" alt="menu item image" height="150px" width="250px">
                     </div>
-                    <div class="menu-item-text col-lg-7 col-md-12 col-sm-12">
-                        <div class="menu-items-discription text-center text-lg-start">
-                            <h3 class="menu-items-discription-title">Chicken Toast</h3>
-                            <p>
+                    <div class="menu-item-text col-lg-7 col-md-12 col-sm-12 my-sm-2">
+                        <div class="menu-items-discription text-center text-lg-start mt-lg-2">
+                            <h3 class="menu-items-dis-title">Chicken Toast</h3>
+                            <p class="menu-item-dis-sub">
                                 ground chicken meat on bread, deep-fried, comes with 4 pieces
                             </p>
                         </div>
                     </div>
                     <hr class="menu-item-sm-hr">
-                    <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12">
-                        <div class="menu-item-sr bg-dark">M-5</div>
-                        <img class="menu-item-img" src="images/CategoryItems/Appetizers/m5.jpg" alt="menu item image" height="150px" width="250px">
+                    <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12 mb-3">
+                        <div class="menu-item-sr text-center bg-dark">M-5</div>
+                        <img class="menu-item-img img-fluid mx-auto shadow-drop-lr" src="images/CategoryItems/Appetizers/m5.jpg" alt="menu item image" height="150px" width="250px">
                     </div>
-                    <div class="menu-item-text col-lg-7 col-md-12 col-sm-12">
-                        <div class="menu-items-discription text-center text-lg-start">
-                            <h3 class="menu-items-discription-title">Scallion Pancake</h3>
-                            <p>
+                    <div class="menu-item-text col-lg-7 col-md-12 col-sm-12 my-sm-2">
+                        <div class="menu-items-discription text-center text-lg-start mt-lg-2">
+                            <h3 class="menu-items-dis-title">Scallion Pancake</h3>
+                            <p class="menu-item-dis-sub">
                                 Crisp at the edges, soft at the center and filled with scallions and other vegetables.
                             </p>
                         </div>
                     </div>
                     <hr class="menu-item-sm-hr">
-                    <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12">
-                        <div class="menu-item-sr bg-dark">M-6</div>
-                        <img class="menu-item-img" src="images/CategoryItems/Appetizers/m6.jpg" alt="menu item image" height="150px" width="250px">
+                    <div class="menu-item-display col-lg-5 col-md-8 mx-auto col-sm-12 mb-3">
+                        <div class="menu-item-sr text-center bg-dark">M-6</div>
+                        <img class="menu-item-img img-fluid mx-auto shadow-drop-lr" src="images/CategoryItems/Appetizers/m6.jpg" alt="menu item image" height="150px" width="250px">
                     </div>
-                    <div class="menu-item-text col-lg-7 col-md-12 col-sm-12">
-                        <div class="menu-items-discription text-center text-lg-start">
-                            <h3 class="menu-items-discription-title">Steamed (or Pan Fried) Chicken Dumplings</h3>
-                            <p>
+                    <div class="menu-item-text col-lg-7 col-md-12 col-sm-12 my-sm-2">
+                        <div class="menu-items-discription text-center text-lg-start mt-lg-2">
+                            <h3 class="menu-items-dis-title">Steamed Chicken Dumplings</h3>
+                            <p class="menu-item-dis-sub">
                                 house-made dough dumpling with chicken.
                             </p>
                         </div>
@@ -152,43 +153,43 @@
             </div>
         </section>
     </div>
-    <footer class="panel-footer mt-md-4 ps-2">
+    <footer class="panel-footer mt-lg-4">
         <div class="container-fluid">
             <div class="row">
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <span>Active Hours</span><br>
+                    <span class="footer-title">Active Hours</span><br>
                     SUN - THURS: 3pm - 9pm<br>
                     FRI & SAT: 3pm - 10pm<br>
                     <hr>
                 </section>
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <span>Location</span><br>
+                    <span class="footer-title">Location</span><br>
                     40220l Alibag vidhyanagar<br>
                     Raigarh Maharashtra<br>
                     <p id="delivery">Delivery area Within 3-4 miles, with mainimum <br> order of 200&#8377; + 50&#8377; charge for all deliveries.</p>
                     <hr>
                 </section>
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <span>We accept all credit cards</span><br>
+                    <span class="footer-title">We accept all credit cards</span><br>
                     <ul class="nav-link align-items-sm-center align-items-md-start" id="footer-cards-ul">
-                        <li class="nav footer-cards-li"><img src="images/Footer/card1.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
-                        <li class="nav footer-cards-li"><img src="images/Footer/card2.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
-                        <li class="nav footer-cards-li"><img src="images/Footer/card3.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
-                        <li class="nav footer-cards-li"><img src="images/Footer/card4.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
+                        <li title="Visa Credit Card" class="nav footer-cards-li"><img src="images/Footer/card1.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
+                        <li title="Master Credit Card" class="nav footer-cards-li"><img src="images/Footer/card2.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
+                        <li title="Paypal Credit Card" class="nav footer-cards-li"><img src="images/Footer/card3.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
+                        <li title="Discover Credit Card" class="nav footer-cards-li"><img src="images/Footer/card4.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
                     </ul>
                     <hr>
                 </section>
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <span>Contact Us</span><br>
-                    <div id="phone-num" class="mt-2"><a class="m-0" href="tel:+91 999 8888 777">+999 8888 777</a></div>
-                    <ul class="nav-link justify-content-sm-center justify-content-md-start" id="footer-social-ul">
-                        <li class="nav text-center footer-social-li"><a href="https://www.instagram.com/mr.purao.12/" class="nav-link "><i class="fa-brands fa-instagram"><span class="visually-hidden">Instagram</span></i></a></li>
-                        <li class="nav text-center footer-social-li"><a href="#"  class="nav-link "><i class="fa-brands fa-facebook"><span class="visually-hidden">Facebook</span></i></a></li>
-                        <li class="nav text-center footer-social-li"><a href="#"  class="nav-link "><i class="fa-brands fa-youtube"><span class="visually-hidden">YouTube</span></i></a></li>
+                    <span class="footer-title">Get In Touch</span><br>
+                    <div title="Contact Number" id="phone-num" class="mt-2"><a class="m-0" href="tel:+91 999 8888 777">+999 8888 777</a></div>
+                    <ul id="footer-social-ul" class="my-2">
+                        <li title="Instagram" class="footer-social-li"><a href="https://www.instagram.com/mr.purao.12/"><i class="fa-brands fa-instagram"><span class="visually-hidden">Instagram</span></i></a></li>
+                        <li title="Facebook" class="footer-social-li"><a href="#"><i class="fa-brands fa-facebook"><span class="visually-hidden">Facebook</span></i></a></li>
+                        <li title="YouTube" class="footer-social-li"><a href="#"><i class="fa-brands fa-youtube"><span class="visually-hidden">YouTube</span></i></a></li>
                     </ul>
                     <hr>
                 </section>
-                <div id="wa-num" class="mb-3"><a href="https://api.whatsapp.com/send/?phone=%2B919518556937&text&app_absent=0" class="nav-link d-block text-center mx-auto"><i class="fa-brands fa-whatsapp"></i> Chat With Us </a></div> 
+                <div title="Whatsapp Link" id="wa-num" class="mb-3"><a href="https://api.whatsapp.com/send/?phone=%2B919518556937&text&app_absent=0" class="nav-link d-block text-center mx-auto"><i class="fa-brands fa-whatsapp"></i> Chat With Us </a></div> 
                 <div id="copyright" class="text-center">&copy; uncle sammy's kichten. All rigths reserved</div> 
             </div>
         </div>

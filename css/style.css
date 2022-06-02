@@ -1,4 +1,4 @@
-/* Font families */
+/* ============= FONT FAMILIES ============= */
 
 /* Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
@@ -6,7 +6,8 @@
 /* Carter */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
-/* GENERAL STYLES */
+/* ============= BASE ============= */
+
 *{
     margin: 0%;
     padding: 0%;
@@ -15,13 +16,20 @@
 }
 
 :root {
-    --primary-dark : #343a40;
+    /* ============= COLORS ============= */
+    --bs-body-bg : #C0C0C0; /* Silver White */
+    --primary-dark :  rgb(33,37,41); 
     --primary-light:  #e7e2df;
-    --gold-: #ffd700;
+    --gold: #ffd700;
     --pure-white : #ffffff;
+
+    /* ============= LINEAR GRADIENTS ============= */
     --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
     --gradient-menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    --scrollbar-anchor-hover: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
     --menu-sr: linear-gradient(to right, #434343, #000000);
+
+    /* ============= BORDER RADIUS ============= */
     --BR-20 : 20px ;
 }
 
@@ -31,7 +39,7 @@ html {
 
 body {
     font-family: 'Poppins','Roboto',sans-serif;
-    background-color: var(--pure-white);
+    background-color: var(--bs-body-bg);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-y: scroll;
@@ -50,6 +58,12 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
 /* FOR SCROLLBAR */
 ::-webkit-scrollbar {
     width: 10px;
@@ -61,11 +75,20 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+    background-image: var(--scrollbar-anchor-hover);
     border-radius: 20px;
 }
 
-/* TEXT ANIMATI0N  */
+/* ============= TEXT ANIMATION ============= */
+
+.text-animation {
+    background-size: 400%;
+    -webkit-animation: bg-animation 5s infinite alternate;
+    animation: bg-animation 10s infinite linear;
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
 /* background color changeing */
 @keyframes bg-animation {
@@ -77,38 +100,39 @@ a {
     }
 }
 
-.text-animation {
-    background-size: 400%;
-    -webkit-animation: bg-animation 5s infinite alternate;
-    animation: bg-animation 10s infinite linear;
-	-webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
 /* tracking in expand forward */
 
 .tracking-in-expand-fwd{-webkit-animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both;animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both}
 @-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
-/* NAVIGATION BAR */
+/* for shaky text */
+@-webkit-keyframes shake-bottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}@keyframes shake-bottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}
 
-#logo-img img {
+.special-item-img {
+    justify-self: center;
+    vertical-align: center;
+    transition: all 0.5s;
+    
+}
+
+/* ============= NAVIGAITON BAR ============= */
+
+#navbar {
+    background-color: var(--primary-dark);
+}
+
+#logo-img {
     display: block;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 3px solid #d1d1d1;
+    border: 3px solid var(--primary-light);
     padding: 2px;
 }
 
 .navbar-brand{
-    margin-inline-start: 10px;
-}
-
-#nav-ul {
-    margin-left: auto;
-    column-gap: 10px;
+    margin-inline-start: 0.625rem;
+    color: var(--pure-white);
 }
 
 .navbar-toggler {
@@ -121,16 +145,16 @@ a {
     color:var(--pure-white);
 }
 
-.offcanvas-subtitle {
-    font-weight: 400;
-    font-size: 0.8rem;
+#nav-ul {
+    margin-left: auto;
+    column-gap: 0.625rem;
 }
 
 #nav-anchor-1,
 #nav-anchor-2,
 #nav-anchor-3 {
     position: relative;
-    column-gap: 3px;
+    column-gap: 0.188rem;
 }
 
 #nav-anchor-1::after,
@@ -144,7 +168,7 @@ a {
     width: 0%;
     left: 9px;
     border-radius: 5px;
-    background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+    background: var(--scrollbar-anchor-hover);
     transition: width 0.55s ease-in-out;
 }
 
@@ -157,7 +181,7 @@ a {
 /* For Menu Title main */
 
 .menu-title-main {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     width: 340px;
     font-size: 1.5rem;
     font-weight: 500;
@@ -185,9 +209,8 @@ background-image: var(--gradient-menu-title-main);
 
 .menu-thumbnail  div {
     position: absolute;
-    top: 50%;
-    width: 100%;    
-    color: white;
+    top: 50%;    
+    color: var(--pure-white);
     font-size: 3rem;
     font-family: 'Carter One', cursive;
     font-weight: 300;
@@ -196,7 +219,7 @@ background-image: var(--gradient-menu-title-main);
     text-shadow: 2px 2px 3px black;
 }
 
-/* HOME PAGE */
+/* ============= HOME PAGE ============= */
 
 /* CAROUSEL */
 
@@ -210,6 +233,7 @@ background-image: var(--gradient-menu-title-main);
 }
 
 /* hero text */
+
 .hero-text {
     max-width: calc(100% - 100px);
 }
@@ -217,7 +241,7 @@ background-image: var(--gradient-menu-title-main);
 .hero-title{
     font-size: 1.5rem;
     font-weight: 500;
-    word-spacing: 2px;
+    word-spacing: 0.125rem;
     line-height: 2.5rem;
     color: #7F0909;
 }
@@ -226,12 +250,15 @@ background-image: var(--gradient-menu-title-main);
     font-size: 1rem;
     line-height: 3rem;
 }
-#menu-heading , .speciality-header {
+
+.menu-heading {
     font-size: 1.5rem;
-    color: var(--gold-);
+    color: var(--gold);
     font-weight: 600;
     text-shadow: 1px 1px 2px hsla(0, 0%, 13%, 0.795);
 }
+
+/* special items menu */
 
 .special-item-container {
     width: 300px;
@@ -249,7 +276,7 @@ background-image: var(--gradient-menu-title-main);
 
 .special-item-title {
     position: relative;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-weight: 600;
     font-size: 1.1rem;
     padding: 0.3rem 0.3rem;
@@ -264,9 +291,9 @@ background-image: var(--gradient-menu-title-main);
     height: 0.2rem;
     bottom: 0%;
     left: 0%;
-    background-color: var(--gold-);
+    background-color: var(--gold);
     width: 0%;
-    transition: width 0.55s ease-in-out;
+    transition: width 700ms ease-in-out;
 }
 
 .special-item-price {
@@ -276,15 +303,6 @@ background-image: var(--gradient-menu-title-main);
 
 .special-item-price span {
     width: 50px;
-}
-/* for shaky text */
-@-webkit-keyframes shake-bottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}@keyframes shake-bottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg);-webkit-transform-origin:50% 100%;transform-origin:50% 100%}10%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}20%,40%,60%{-webkit-transform:rotate(-4deg);transform:rotate(-4deg)}30%,50%,70%{-webkit-transform:rotate(4deg);transform:rotate(4deg)}80%{-webkit-transform:rotate(-2deg);transform:rotate(-2deg)}90%{-webkit-transform:rotate(2deg);transform:rotate(2deg)}}
-
-.special-item-img {
-    justify-self: center;
-    vertical-align: center;
-    transition: all 0.5s;
-    
 }
 
 #sp-container-m1:hover  #specical-img-m1, #sp-container-m2:hover  #specical-img-m2, #sp-container-m3:hover  #specical-img-m3 {
@@ -297,10 +315,11 @@ background-image: var(--gradient-menu-title-main);
 }
 
 #sp-container-m1:hover #sp-price-sheky-m1, #sp-container-m2:hover #sp-price-sheky-m2,#sp-container-m3:hover #sp-price-sheky-m3 {
+    /* for shaky text */
     -webkit-animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) infinite both;animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) infinite both;
 }
 
-/* menu card items */
+/* ============= MENU ITEM CARDS ============= */
 
 .menu-pics-card {
     position: relative;
@@ -333,7 +352,7 @@ background-image: var(--gradient-menu-title-main);
 }
 
 .menu-pics-card:hover {
-    color: var(--gold-);
+    color: var(--gold);
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     transform: scale(1.05);
 }
@@ -342,7 +361,7 @@ background-image: var(--gradient-menu-title-main);
     background: #000000;
 }
 
-/* MENU CATEGORGY MAIN */
+/* ============= MENU CATEGORY MAIN PAGE ============= */
 
 /* menu image card fade in forward animation */
 .fade-in-top{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
@@ -352,10 +371,10 @@ background-image: var(--gradient-menu-title-main);
     background-color : inherit;
 }
 
-/* MENU CATEGORY PAGE ITEMS */
+/* ============= MENU ITEMS PAGE ============= */
 
 #menu-items-content {
-    background-color: var(--primary-light);
+    background-color: inherit;
     width: calc(100% - 100px);
 }
 
@@ -373,30 +392,30 @@ background-image: var(--gradient-menu-title-main);
 .menu-item-display {
     position: relative;
     margin-bottom: 20px;
+    max-width: 250px;
 }
 
 .menu-item-display .menu-item-sr {
     position: absolute;
     color: var(--pure-white);
     width: 48px;
-    text-align: center;
     border-radius: var(--BR-20);
-    padding: 2px 10px;
+    padding: 0.125rem 0.625rem;
     font-size: 0.7rem;
-    border: 2px solid #ff3232;
+    border: 0.125rem solid #ff3232;
     right: -10px;
     top: -10px;
 }
 
+
+.shadow-drop-lr{-webkit-animation:shadow-drop-lr .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-lr .4s cubic-bezier(.25,.46,.45,.94) both}
+@-webkit-keyframes shadow-drop-lr{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}@keyframes shadow-drop-lr{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}
+
 .menu-item-img {
     display: block;
     border-radius: 2.5px;
-    width: 100%;
-    height:auto;
-}
-
-.menu-item-text {
-    margin-bottom: 20px;
+    max-width: 250px;
+    box-shadow: 0px 1px 3px #000000;
 }
 
 .menu-item-sm-hr {
@@ -405,34 +424,33 @@ background-image: var(--gradient-menu-title-main);
 
 .menu-items-discription {
     font-size: 1rem;
-    padding: 5px;
+    padding: 0.313rem;
     margin-left: 5px;
 }
 
-.menu-items-discription-title {
+.menu-items-dis-title {
     font-size: 1.3rem;
     font-weight: 500;
-    text-decoration: underline;
 }
 
-.menu-items-discription-title p {
+.menu-item-dis-sub {
     font-size: 0.9rem;
 }
 
-/* FOOTER */
+/* ============= FOOTER ============= */
 
 .panel-footer {
     background-color:var(--primary-dark)!important;
-    color: var(--gold-);
-    padding-top: 35px;
-    word-spacing: 2px;
+    color: var(--gold);
+    padding-top: 2.188rem;
+    word-spacing: 0.125rem;
 }
 
 .footer {
     line-height: 1.5rem;
 }
 
-div.row section.footer span {
+.footer-title {
     color: #d1d1d1;
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -453,11 +471,12 @@ div.row section.footer span {
     justify-items: center;
     flex-direction: row;
     column-gap: 5px;
-    margin-top: 1.5rem
+    margin-top: 1.5rem;
 }
 
 .footer-cards-img {
     width: 40px;
+    align-self:center;
 }
 
 #phone-num a {
@@ -470,19 +489,19 @@ div.row section.footer span {
 }
 
 #footer-social-ul {
+    display: inline-flex;
     font-size: 1.3rem;
-    display: flex;
+    column-gap: 30px;
     align-items: center;
-    column-gap: 3px;
+    justify-items: center;
 }
 
 .footer-social-li {
     transition: all .3s;
-    margin-left: -12px;
 }
 
 #footer-social-ul li a {
-    color: var(--gold-);
+    color: var(--gold);
 }
 
 #footer-social-ul li:hover {
@@ -494,16 +513,17 @@ div.row section.footer span {
 }
 
 #copyright {
-    padding: 5px 0;
+    padding: 0.313rem 0;
     background-color: var(--primary-dark);
     color: var(--pure-white);
     border-top: 1px solid var(--pure-white);
 }
 
-/* MEDIA QUERIES*/
+/* ============= MEDIA QUERIES ============= */
 
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
+    /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
         width: 360px;
         height: 250px;
@@ -516,7 +536,7 @@ div.row section.footer span {
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
-
+    /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
         width: 300px;
         height: 190px;
@@ -530,7 +550,7 @@ div.row section.footer span {
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
 
-    /* FOR HOME PAGE */
+    /* ============= HOME PAGE ============= */
     .special-item-container {
         width: 240px;
     }
@@ -541,6 +561,7 @@ div.row section.footer span {
         left: -.2rem;
     }
 
+    /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
         width: 350px;
         height: 230px;
@@ -554,18 +575,19 @@ div.row section.footer span {
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
 
-    /*FOR GENERAL STYLES */
+    /* ============= TEXT ANIMATION ============= */
     .menu-title-main {
         width: 45vw;
         font-size: 2.9vw;
     }
 
-    /* FOR NAVIGATION BAR */
+    /* ============= NAVIGATION BAR ============= */
 
     .offcanvas {
         width: 80% !important;
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
+        border-color: var(--primary-dark) !important;
     }
 
     #offcanvas-title {
@@ -592,7 +614,7 @@ div.row section.footer span {
     
     #nav-ul > li > a.active {
         background-color: rgba(0, 0, 0, 0.5);
-        border: 2px solid var(--gold-);
+        border: 2px solid var(--gold);
     }
 
     #nav-anchor-1::after,
@@ -609,7 +631,7 @@ div.row section.footer span {
     .navbar-navigation {
         position: absolute;
         align-items: center;
-        row-gap: 20px;
+        row-gap: 25px;
         left: 35%;
         top: 24.5%;
     }
@@ -629,7 +651,7 @@ div.row section.footer span {
         font-size: 2.5rem;
     }
 
-    /* FOR HOME PAGE */
+    /* ============= HOME PAGE ============= */
 
     .hero-text {
         max-width: calc(100% - 50px)
@@ -643,15 +665,14 @@ div.row section.footer span {
         font-size: .9rem;
     }
 
-/* MENU IMAGE CARDS */
+    /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card .title {
         font-size: 0.9rem;
         padding: 0.3rem;
     }
 
 
-/* MENU CATEGORGY MAIN */
-
+    /* ============= MENU CATEGORY MAIN ============= */
     #menu-category-content  {
         max-width: calc(100% - 50px);
     }
@@ -664,7 +685,6 @@ div.row section.footer span {
 
     .menu-item-display {
         width: 70%;
-        height: auto;
         margin: 0px auto;
     }
     .menu-item-text {
@@ -677,17 +697,12 @@ div.row section.footer span {
     .menu-item-sm-hr {
         display: block;
         width: 70%;
-        height: 5px;
-        color: rgb(0, 0, 0);
-        margin: 10px auto 20px;
+        max-height: 0.5rem;
+        background-color: #000000;
+        margin: 0.625rem auto 1.25rem;
     }
 
-    /* FOR FOOTER*/
-
-    .footer a {
-        margin-left: 0px;
-    }
-
+    /* ============= FOOTER ============= */
     .row section hr{
         display: block;
         height: 2px;
@@ -699,25 +714,19 @@ div.row section.footer span {
 
     .footer-social-li a {
         font-size: 1.1rem;
-        margin-left: 0px !important;
-        column-gap: 4px;
     }
 }
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
-    /*FOR GENERAL STYLES */
+    /* ============= BASE ============= */
     .menu-title-main {
         width: 60vw;
         font-size: 3.9vw;
     }
 
-   /* FOR NAVIGATION BAR */
-
-    #offcanvasNavbar {
-        width: 100vw;
-    }
-
+    /* ============= NAVIGATION BAR ============= */
+    
     .navbar-brand {
         font-size: 0.85rem;
     }
@@ -738,7 +747,7 @@ div.row section.footer span {
         height: 200px;
     }
 
-    /* FOR HOME PAGE */
+    /* ============= HOME PAGE ============= */
 
     #carousel-nav {
         display: none;
@@ -756,8 +765,7 @@ div.row section.footer span {
         font-size: .8rem;
     }
     
-    /* FOR MENU PICS CARDS */
-
+    /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
         width: 280px;
         height: 190px;
@@ -772,8 +780,7 @@ div.row section.footer span {
         padding: 0.2rem 0rem;
     }
 
-    /* MENU CATEGORGY MAIN */
-
+    /* ============= MENU CATEGORY MAIN ============= */
     #menu-items-content  {
         width: 100%;
     }
@@ -782,7 +789,7 @@ div.row section.footer span {
         max-width: 100%;
     }
 
-    /* FOR FOOTER  */
+    /* ============= FOOTER ============= */
 
     #footer-social-ul {
         justify-content: center;
@@ -804,7 +811,7 @@ div.row section.footer span {
         font-size: 3.7vw;
     }
 
-    /* FOR NAVIGATION BAR */
+    /* ============= NAVIGATION BAR ============= */
     .navbar-brand{
         display: none;
     }
@@ -814,7 +821,6 @@ div.row section.footer span {
     }
 
     /* for Menu Thumbnail img */
-
     .menu-thumbnail {
         height: 180px;
     }
@@ -823,8 +829,7 @@ div.row section.footer span {
         font-size: 1.2rem;
     }
 
-    /* FOR HOME PAGE */
-
+    /* ============= HOME PAGE ============= */
     #carousel-nav {
         display: none;
     }
@@ -844,7 +849,7 @@ div.row section.footer span {
         padding-bottom: 0.5rem;
     }
 
-    /* FOR MENU CATEGORY PAGE*/
+    /* ============= MENU CATEGORY PAGE ============= */
 
     #menu-items-content  {
         width: 100%;
