@@ -17,7 +17,7 @@
 
 :root {
     /* ============= COLORS ============= */
-    --bs-body-bg : #C0C0C0; /* Silver White */
+    --bs-body-bg : 	#F5FFFA; /* Snow White */
     --primary-dark :  rgb(33,37,41); 
     --primary-light:  #e7e2df;
     --gold: #ffd700;
@@ -31,6 +31,10 @@
 
     /* ============= BORDER RADIUS ============= */
     --BR-20 : 20px ;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
 }
 
 html {
@@ -45,7 +49,6 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100vh;
-    background: transparent;
     transition: 0.4s;
 }
 
@@ -64,6 +67,11 @@ ul {
     padding: 0%;
 }
 
+.main-content {
+    background-color : inherit;
+    max-width: calc(100% - 80px);
+}
+
 /* FOR SCROLLBAR */
 ::-webkit-scrollbar {
     width: 10px;
@@ -76,7 +84,7 @@ ul {
 
 ::-webkit-scrollbar-thumb {
     background-image: var(--scrollbar-anchor-hover);
-    border-radius: 20px;
+    border-radius: var(--BR-20);
 }
 
 /* ============= TEXT ANIMATION ============= */
@@ -112,7 +120,6 @@ ul {
     justify-self: center;
     vertical-align: center;
     transition: all 0.5s;
-    
 }
 
 /* ============= NAVIGAITON BAR ============= */
@@ -140,7 +147,7 @@ ul {
 }
 
 .offcanvas-title {
-    font-weight: 500;
+    font-weight: var(--font-medium);
     font-size: 1rem;
     color:var(--pure-white);
 }
@@ -184,9 +191,9 @@ ul {
     margin-top: 0.625rem;
     width: 340px;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: var(--font-medium);
     background-color:var(--primary-dark);
-    padding: 7px 0px;
+    padding: 0.438rem 0%;
     border-radius: var(--BR-20);
     text-transform: capitalize;
 }
@@ -207,7 +214,7 @@ background-image: var(--gradient-menu-title-main);
     background-size: cover;
 }
 
-.menu-thumbnail  div {
+.menu-thumbnail-txt {
     position: absolute;
     top: 50%;    
     color: var(--pure-white);
@@ -228,19 +235,11 @@ background-image: var(--gradient-menu-title-main);
     width: 40px;
 }
 
-#main-content {
-    background-color: inherit;
-}
-
 /* hero text */
-
-.hero-text {
-    max-width: calc(100% - 100px);
-}
 
 .hero-title{
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: var(--font-medium);
     word-spacing: 0.125rem;
     line-height: 2.5rem;
     color: #7F0909;
@@ -254,7 +253,7 @@ background-image: var(--gradient-menu-title-main);
 .menu-heading {
     font-size: 1.5rem;
     color: var(--gold);
-    font-weight: 600;
+    font-weight: var(--font-semi-bold);
     text-shadow: 1px 1px 2px hsla(0, 0%, 13%, 0.795);
 }
 
@@ -277,8 +276,8 @@ background-image: var(--gradient-menu-title-main);
 .special-item-title {
     position: relative;
     margin-top: 0.625rem;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: var(--font-semi-bold);
+    font-size: 1rem;
     padding: 0.3rem 0.3rem;
     background-color: hsla(51, 100%, 50%, 0.18);
     border-radius: 2.5px;
@@ -298,7 +297,7 @@ background-image: var(--gradient-menu-title-main);
 
 .special-item-price {
     padding-left: 0.3rem;
-    font-weight: 500;
+    font-weight: var(--font-medium);
 }
 
 .special-item-price span {
@@ -367,21 +366,12 @@ background-image: var(--gradient-menu-title-main);
 .fade-in-top{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
 @-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 
-#menu-category-content {
-    background-color : inherit;
-}
-
 /* ============= MENU ITEMS PAGE ============= */
-
-#menu-items-content {
-    background-color: inherit;
-    width: calc(100% - 100px);
-}
 
 #item-title-sub {
     font-size: 0.8rem;
     margin: 10px 0px 50px;
-    font-weight: 500;
+    font-weight: var(--font-medium);
 }
 
 #item-title-sub span {
@@ -430,7 +420,8 @@ background-image: var(--gradient-menu-title-main);
 
 .menu-items-dis-title {
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: var(--font-medium);
+    text-decoration: underline;
 }
 
 .menu-item-dis-sub {
@@ -525,12 +516,12 @@ background-image: var(--gradient-menu-title-main);
 @media (max-width: 1399.98px) {
     /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
-        width: 360px;
-        height: 250px;
+        width: 320px;
+        height: 210px;
     }
     
     .menu-pics-card a img {
-        height: 220px;
+        height: 180px;
     }
 }
 
@@ -538,17 +529,21 @@ background-image: var(--gradient-menu-title-main);
 @media (max-width: 1199.98px) {
     /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
-        width: 300px;
-        height: 190px;
+        width: 320px;
+        height: 200px;
     }
 
     .menu-pics-card a img {
-        height: 180px;
+        height: 170px;
     }
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+    /* ============= BASE ============= */
+    .main-content {
+        max-width: calc(100% - 40px);
+    }
 
     /* ============= HOME PAGE ============= */
     .special-item-container {
@@ -561,20 +556,10 @@ background-image: var(--gradient-menu-title-main);
         left: -.2rem;
     }
 
-    /* ============= MENU ITEM CARDS ============= */
-    .menu-pics-card {
-        width: 350px;
-        height: 230px;
-    }
-
-    .menu-pics-card a img {
-        height: 200px;
-    }
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-
     /* ============= TEXT ANIMATION ============= */
     .menu-title-main {
         width: 45vw;
@@ -609,7 +594,7 @@ background-image: var(--gradient-menu-title-main);
         padding: 0.2rem 0.5rem;
         border-radius: var(--BR-20);
         border: 2px solid transparent;
-        font-weight: 500;
+        font-weight: var(--font-medium);
     }
     
     #nav-ul > li > a.active {
@@ -652,11 +637,6 @@ background-image: var(--gradient-menu-title-main);
     }
 
     /* ============= HOME PAGE ============= */
-
-    .hero-text {
-        max-width: calc(100% - 50px)
-    }
-    
     .hero-title{
         font-size: 1.2rem;
     }
@@ -671,17 +651,7 @@ background-image: var(--gradient-menu-title-main);
         padding: 0.3rem;
     }
 
-
-    /* ============= MENU CATEGORY MAIN ============= */
-    #menu-category-content  {
-        max-width: calc(100% - 50px);
-    }
-
     /* FOR MENU ITEMS PAGE */
-
-    #menu-items-content  {
-        width: calc(100% - 50px);
-    }
 
     .menu-item-display {
         width: 70%;
@@ -720,11 +690,14 @@ background-image: var(--gradient-menu-title-main);
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
     /* ============= BASE ============= */
+    .main-content  {
+        max-width: 100%;
+    }
+
     .menu-title-main {
         width: 60vw;
         font-size: 3.9vw;
     }
-
     /* ============= NAVIGATION BAR ============= */
     
     .navbar-brand {
@@ -753,10 +726,6 @@ background-image: var(--gradient-menu-title-main);
         display: none;
     }
 
-    .hero-text {
-        max-width: calc(100% - 6px);
-    }
-
     .hero-title{
         font-size: 1rem;
     }
@@ -780,15 +749,6 @@ background-image: var(--gradient-menu-title-main);
         padding: 0.2rem 0rem;
     }
 
-    /* ============= MENU CATEGORY MAIN ============= */
-    #menu-items-content  {
-        width: 100%;
-    }
-
-    #menu-category-content  {
-        max-width: 100%;
-    }
-
     /* ============= FOOTER ============= */
 
     #footer-social-ul {
@@ -806,6 +766,7 @@ background-image: var(--gradient-menu-title-main);
 
 /* `xs` applies to extra-small devices (portrait phones, less than 333px) */
 @media (max-width: 333.98px) {
+    /* ============= BASE ============= */
     .menu-title-main {
         width: 55vw;
         font-size: 3.7vw;
@@ -847,11 +808,5 @@ background-image: var(--gradient-menu-title-main);
         font-size: 0.8rem;
         height: 25px;
         padding-bottom: 0.5rem;
-    }
-
-    /* ============= MENU CATEGORY PAGE ============= */
-
-    #menu-items-content  {
-        width: 100%;
     }
 }
