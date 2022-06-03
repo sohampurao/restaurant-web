@@ -351,9 +351,9 @@ background-image: var(--gradient-menu-title-main);
 }
 
 #catering-thumbnail {
-    background: var(--bg-img-darken),url("http://down.699pic.com/photo/50127/2825.jpg?_upt=d186806f1654236374&_upd=Lovepik_com-501272825-buffet.jpg");
+    background:url("/images/HomePage/thumbnail/catering-thumbnail.jpg");
     background-repeat: var(--bg-no-repeat);
-    background-position: center 63%;
+    background-position: center 78%;
     background-size: var(--bg-size-cover);
     letter-spacing: 0.2rem;
     word-spacing: 0.313rem;
@@ -375,18 +375,17 @@ background-image: var(--gradient-menu-title-main);
 }
 
 .view-more-btn {
-    padding: 0.4rem 1.6rem;
-    border: 2px solid var(--gold);
+    padding: 0.3rem 1.3rem;
+    border: 3px solid var(--gold);
     position: relative;
     overflow: hidden;
-    background-color: transparent;
+    background-color: #000000a8;
     text-align: center;
     text-transform: uppercase;
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     transition: all 0.3s;
     z-index: 1;
-    font-family: inherit;
-    color: var(--primary-light);
+    color: var(--pure-white);
     font-weight: var(--font-medium);
 }
 
