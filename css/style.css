@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
 
 /* Raleway */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
 
 /* Carter */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
@@ -378,10 +378,10 @@ background-image: var(--gradient-menu-title-main);
 
 .view-more-btn {
     padding: 0.3rem 1.3rem;
-    border: 3px solid var(--gold);
+    border: 2px solid var(--gold);
     position: relative;
     overflow: hidden;
-    background-color: #000000a8;
+    background-color: transparent;
     text-align: center;
     text-transform: uppercase;
     font-size: var(--small-font-size);
@@ -399,7 +399,7 @@ background-image: var(--gradient-menu-title-main);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #000000;
+    background: #000000cf;
     transition: .5s ease;
     display: block;
     z-index: -1;
@@ -408,6 +408,10 @@ background-image: var(--gradient-menu-title-main);
 .view-more-btn:hover::before {
     width: 200%;
 }
+
+/* .view-more-btn:hover {
+    color: #1c1c1c;
+} */
 
 /* ============= MENU ITEM CARDS ============= */
 
@@ -833,8 +837,11 @@ section span.footer-sub {
     
     .thumbnail-inner-glass .thumbnail-txt {
         top: 30%;
-        padding: 0 3px;
-        font-size: 0.688rem;
+        padding-left: 3px;
+        padding-right: 3px;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.2rem;
     }
 
     .view-more-btn {
