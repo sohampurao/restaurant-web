@@ -55,6 +55,7 @@
     --smaller-font-size: .75rem;
 }
 
+/* Responsive topology */
 @media (max-width: 575.98px) { 
 :root {
     /*========== FONT SIZE ==========*/
@@ -67,7 +68,6 @@
     --smaller-font-size: .75rem;
 }
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -120,7 +120,6 @@ ul {
 }
 
 /* ============= TEXT ANIMATION ============= */
-
 .text-animation {
     background-size: 400%;
     -webkit-animation: bg-animation 5s infinite alternate;
@@ -146,7 +145,6 @@ ul {
 @-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
 /* ============= NAVIGAITON BAR ============= */
-
 #navbar {
     background-color: var(--primary-dark);
 }
@@ -209,7 +207,6 @@ ul {
 }
 
 /* For Menu Title main */
-
 .menu-title-main {
     margin-top: 0.625rem;
     width: 220px;
@@ -225,8 +222,7 @@ ul {
 background-image: var(--gradient-menu-title-main);
 }
 
-/* for Thumbnail img */
-
+/* Thumbnail img */
 .thumbnail {
     position: relative;
     overflow: hidden;
@@ -245,20 +241,18 @@ background-image: var(--gradient-menu-title-main);
     height: calc(100% - 30px);
     vertical-align: center;
     border: 2px solid var(--gold);
-    backdrop-filter: blur(1px);
     border-radius: inherit;
 }
+
 /* ============= HOME PAGE ============= */
 
 /* CAROUSEL */
-
 .carousel-control-prev-icon ,.carousel-control-next-icon {
     height: 40px;
     width: 40px;
 }
 
 /* hero text */
-
 .hero-title{
     font-size: var(--h1-font-size);
     font-weight: var(--font-medium);
@@ -270,6 +264,7 @@ background-image: var(--gradient-menu-title-main);
 .hero-description {
     font-size: var(--normal-font-size);
     line-height: 3rem;
+    text-align: justify;
 }
 
 .menu-heading {
@@ -282,7 +277,6 @@ background-image: var(--gradient-menu-title-main);
 }
 
 /* special items menu */
-
 .special-item-container {
     width: 300px;
 }
@@ -384,7 +378,7 @@ background-image: var(--gradient-menu-title-main);
     background-color: transparent;
     text-align: center;
     text-transform: uppercase;
-    font-size: var(--small-font-size);
+    font-size: 1rem;
     transition: all 0.3s;
     z-index: 1;
     color: var(--pure-white);
@@ -394,7 +388,7 @@ background-image: var(--gradient-menu-title-main);
 .view-more-btn::before {
     content: '';
     width: 0;
-    height: 350%;
+    height: 400%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -410,7 +404,6 @@ background-image: var(--gradient-menu-title-main);
 }
 
 /* ============= MENU ITEM CARDS ============= */
-
 .menu-pics-card {
     position: relative;
     display: block;
@@ -452,7 +445,6 @@ background-image: var(--gradient-menu-title-main);
 }
 
 /* ============= MENU CATEGORY MAIN PAGE ============= */
-
 #menu-thumbnail {
     background: var(--bg-img-darken),url("/images/MenuCategoryMain/menu_thumbnail.jpg");
     background-repeat: var(--bg-no-repeat);
@@ -466,12 +458,11 @@ background-image: var(--gradient-menu-title-main);
     letter-spacing: 0.05em;
 }
 
-/* menu image card fade in forward animation */
+/* menu image card fade in top animation */
 .fade-in-top{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
 @-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 
 /* ============= MENU ITEMS PAGE ============= */
-
 #item-title-sub {
     font-size: var(--small-font-size);
     margin: 10px 0px 50px;
@@ -532,7 +523,6 @@ background-image: var(--gradient-menu-title-main);
 }
 
 /* ============= FOOTER ============= */
-
 .panel-footer {
     background-color:var(--primary-dark)!important;
     color: var(--gold);
@@ -737,9 +727,9 @@ section span.footer-sub {
     }
 
     /* ============= HOME PAGE ============= */
-
     .view-more-btn {
         padding: 0.2rem 1.3rem;
+        font-size: 0.813rem;
     }
     
     .thumbnail-inner-glass .thumbnail-txt {
@@ -748,7 +738,6 @@ section span.footer-sub {
     }
 
     /* for menu thumbnail image */
-
     .thumbnail {
         height: 220px;
     }
@@ -763,14 +752,15 @@ section span.footer-sub {
     }
 
     /* FOR MENU ITEMS PAGE */
-
     .menu-item-display {
         width: 70%;
         margin: 0px auto;
     }
+
     .menu-item-text {
         margin-top: 10px;
     }
+
     .menu-items-discription-title {
         margin-top: 15px;
     }
@@ -801,8 +791,8 @@ section span.footer-sub {
     .menu-title-main {
         width: 180px
     }
+
     /* ============= NAVIGATION BAR ============= */
-    
     .navbar-brand {
         font-size: 0.85rem;
     }
@@ -824,6 +814,15 @@ section span.footer-sub {
         display: none;
     }
 
+    .hero-title{
+        word-spacing: 0.1rem;
+        line-height: 1.5rem;
+    }
+
+    .hero-description {
+        line-height: 2.5rem;
+    }
+
     .thumbnail-inner-glass {
         width: 100%;
         height: 100%;
@@ -841,10 +840,12 @@ section span.footer-sub {
     }
 
     .view-more-btn {
-        padding: 0.15rem 1.1rem;
+        padding: .15rem .9rem;
         border: 1px solid var(--gold);
         font-weight: normal;
+        font-size: 0.75rem;
     }
+
     /* ============= MENU ITEM CARDS ============= */
     .menu-pics-card {
         width: 280px;
@@ -860,7 +861,6 @@ section span.footer-sub {
     }
     
     /* ============= FOOTER ============= */
-
     #footer-social-ul {
         justify-content: center;
     }
