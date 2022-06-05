@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --primary-dark :  rgb(33,37,41);
+    --profile-img-bg :  rgb(33,37,41);
+    --card-txt-bg: #e3e2df;
 }
 
 
@@ -14,7 +15,7 @@
     display: none;
     font-size: var(--normal-font-size);
     column-gap: 0.4rem;
-    color: var(--primary-dark);
+    color: var(--profile-img-bg);
 }
 
 @media (max-width: 575.98px) {
@@ -35,7 +36,7 @@
 }
 .card{
     border-radius: 25px;
-    background-color: #def2f1;
+    background-color: var(--card-txt-bg);
     cursor: default;
 }
 .image-content,
@@ -56,7 +57,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--primary-dark);
+    background-color: var(--profile-img-bg);
     border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
@@ -71,12 +72,12 @@
     width: 40px;
     right: 0;
     bottom: -40px;
-    background-color: var(--primary-dark);
+    background-color: var(--profile-img-bg);
 }
 
 .overlay::after{
     border-radius: 0 25px 0 0;
-    background-color: #def2f1;
+    background-color: var(--card-txt-bg);
     height: 42px;
     width: 42px;
     z-index: 2;
@@ -96,7 +97,7 @@
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid var(--primary-dark);
+    border: 4px solid var(--profile-img-bg);
 }
 .name{
     font-size: 18px;
@@ -110,11 +111,11 @@
 }
 
 .swiper-navBtn{
-    color: rgb(184, 184, 184);
+    color: #b8b8b8;
     transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
-    color: var(--primary-dark);
+    color: var(--profile-img-bg);
 }
 .swiper-navBtn::before,
 .swiper-navBtn::after{
@@ -127,11 +128,11 @@
     left: 0;
 }
 .swiper-pagination-bullet{
-    background-color: rgb(184, 184, 184);
+    background-color: #b8b8b8;
     opacity: 1;
 }
 .swiper-pagination-bullet-active{
-    background-color: var(--primary-dark);
+    background-color: var(--profile-img-bg);
 }
 
 @media screen and (max-width: 768px) {
