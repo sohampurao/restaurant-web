@@ -23,6 +23,7 @@
 .card{
     border-radius: 25px;
     background-color: #FFF;
+    cursor: default;
 }
 .image-content,
 .card-content{
@@ -96,7 +97,7 @@
 }
 
 .swiper-navBtn{
-    color: #6E93f7;
+    color: rgb(184, 184, 184);
     transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{

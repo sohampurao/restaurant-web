@@ -522,6 +522,14 @@ background-image: var(--gradient-menu-title-main);
     font-size: var(--normal-font-size);
 }
 
+/* Review swiper */
+#swipe-indicator {
+    display: none;
+    font-size: var(--normal-font-size);
+    column-gap: 0.4rem;
+    color: var(--primary-dark);
+}
+
 /* ============= FOOTER ============= */
 .panel-footer {
     background-color:var(--primary-dark)!important;
@@ -860,6 +868,11 @@ section span.footer-sub {
         padding: 0.2rem 0rem;
     }
     
+    /* Review swiper */
+    #swipe-indicator {
+        display: flex;
+    }
+
     /* ============= FOOTER ============= */
     #footer-social-ul {
         justify-content: center;
