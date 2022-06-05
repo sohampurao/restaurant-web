@@ -213,7 +213,7 @@ ul {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     background-color:var(--primary-dark);
-    padding: 0.438rem 0%;
+    padding: 3px 0px;
     border-radius: var(--br-20);
     text-transform: capitalize;
 }
@@ -480,18 +480,6 @@ background-image: var(--gradient-menu-title-main);
     max-width: 250px;
 }
 
-.menu-item-display .menu-item-sr {
-    position: absolute;
-    color: var(--pure-white);
-    width: 48px;
-    border-radius: var(--br-20);
-    padding: 0.125rem 0.625rem;
-    font-size: 0.7rem;
-    border: 0.125rem solid #ff3232;
-    right: -10px;
-    top: -10px;
-}
-
 .shadow-drop-lr{-webkit-animation:shadow-drop-lr .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-lr .4s cubic-bezier(.25,.46,.45,.94) both}
 @-webkit-keyframes shadow-drop-lr{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}@keyframes shadow-drop-lr{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}
 
@@ -520,14 +508,6 @@ background-image: var(--gradient-menu-title-main);
 
 .menu-item-dis-sub {
     font-size: var(--normal-font-size);
-}
-
-/* Review swiper */
-#swipe-indicator {
-    display: none;
-    font-size: var(--normal-font-size);
-    column-gap: 0.4rem;
-    color: var(--primary-dark);
 }
 
 /* ============= FOOTER ============= */
@@ -797,7 +777,7 @@ section span.footer-sub {
     }
 
     .menu-title-main {
-        width: 180px
+        width: 165px
     }
 
     /* ============= NAVIGATION BAR ============= */
@@ -868,11 +848,6 @@ section span.footer-sub {
         padding: 0.2rem 0rem;
     }
     
-    /* Review swiper */
-    #swipe-indicator {
-        display: flex;
-    }
-
     /* ============= FOOTER ============= */
     #footer-social-ul {
         justify-content: center;
@@ -883,7 +858,7 @@ section span.footer-sub {
 @media (max-width: 333.98px) {
     /* ============= BASE ============= */
     .menu-title-main {
-        width: 55vw;
+        width: 160px;
         font-size: 3.7vw;
     }
 

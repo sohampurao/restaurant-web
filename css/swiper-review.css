@@ -2,13 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --bs-body-bg : 	#F5FFFA; /* Snow White */
-    --primary-dark :  rgb(33,37,41); 
-    --primary-light:  #e7e2df;
-    --gold: #ffd700;
-    --pure-white : #ffffff;
+    --primary-dark :  rgb(33,37,41);
 }
 
+
+#swiper-container {
+    /* background-color: #def2f1; */
+}
+
+#swipe-indicator {
+    display: none;
+    font-size: var(--normal-font-size);
+    column-gap: 0.4rem;
+    color: var(--primary-dark);
+}
+
+@media (max-width: 575.98px) {
+    #swipe-indicator {
+        display: flex;
+    }
+}
 .slide-container{
     margin-top: -40px;
     max-width: 1120px;
@@ -22,7 +35,7 @@
 }
 .card{
     border-radius: 25px;
-    background-color: #FFF;
+    background-color: #def2f1;
     cursor: default;
 }
 .image-content,
@@ -63,7 +76,7 @@
 
 .overlay::after{
     border-radius: 0 25px 0 0;
-    background-color: #ffffff;
+    background-color: #def2f1;
     height: 42px;
     width: 42px;
     z-index: 2;
