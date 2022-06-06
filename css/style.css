@@ -252,6 +252,10 @@ background-image: var(--gradient-menu-title-main);
     width: 40px;
 }
 
+.dark-filter {
+    background-color: #00000073;
+}
+
 /* hero text */
 .hero-title{
     font-size: var(--h1-font-size);
