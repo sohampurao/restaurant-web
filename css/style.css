@@ -407,6 +407,10 @@ background-image: var(--gradient-menu-title-main);
     width: 200%;
 }
 
+#reviews-heading {
+    color: #ffffff;
+    text-shadow: none;
+}
 /* ============= MENU ITEM CARDS ============= */
 .menu-pics-card {
     position: relative;
@@ -805,7 +809,10 @@ section span.footer-sub {
     #carousel-nav {
         display: none;
     }
-
+    
+    .dark-filter {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
     .hero-title{
         word-spacing: 0.1rem;
         line-height: 1.5rem;

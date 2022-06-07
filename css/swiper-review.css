@@ -3,12 +3,24 @@
 
 :root {
     --profile-img-bg :  rgb(33,37,41);
-    --card-txt-bg: #e3e2df;
+    --card-txt-bg: #ffff ; /* alt #e3e2df */
+    --wave-bg-clr : #a6e3e0;
 }
 
 
 #swiper-container {
-    /* background-color: #def2f1; */
+    background: var(--wave-bg-clr);
+}
+
+.shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 92px;
+}
+
+.shape-divider .shape-fill {
+    fill: var(--wave-bg-clr)
 }
 
 #swipe-indicator {
@@ -111,7 +123,7 @@
 }
 
 .swiper-navBtn{
-    color: #b8b8b8;
+    color:  #878787;
     transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
@@ -128,7 +140,7 @@
     left: 0;
 }
 .swiper-pagination-bullet{
-    background-color: #b8b8b8;
+    background-color: #878787;
     opacity: 1;
 }
 .swiper-pagination-bullet-active{
