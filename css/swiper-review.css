@@ -4,7 +4,7 @@
 :root {
     --profile-img-bg :  rgb(33,37,41);
     --card-txt-bg: #ffff ; /* alt #e3e2df */
-    --wave-bg-clr : #a6e3e0;
+    --wave-bg-clr : linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 
 
@@ -21,6 +21,16 @@
 
 .shape-divider .shape-fill {
     fill: var(--wave-bg-clr)
+}
+
+#lgrad-start {
+    stop-color:rgb(250,112,154);
+    stop-opacity:1.00
+}
+
+#lgrad-end {
+    stop-color:rgb(254,225,64);
+    stop-opacity:1.00
 }
 
 #swipe-indicator {
@@ -65,10 +75,11 @@
 }
 .overlay{
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -1px;
+    top: -1px;
+    right: -1px;
     height: 100%;
-    width: 100%;
+    width: calc(100% + 2px);
     background-color: var(--profile-img-bg);
     border-radius: 25px 25px 0 25px;
 }
@@ -101,7 +112,7 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background: #FFF;
+    background: linear-gradient(90deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%);
     padding: 3px;
 }
 .card-image .card-img{
@@ -123,7 +134,7 @@
 }
 
 .swiper-navBtn{
-    color:  #878787;
+    color:  #ffff;
     transition: color 0.3s ease;
 }
 .swiper-navBtn:hover{
@@ -140,7 +151,7 @@
     left: 0;
 }
 .swiper-pagination-bullet{
-    background-color: #878787;
+    background-color: #bcbcbc;
     opacity: 1;
 }
 .swiper-pagination-bullet-active{
