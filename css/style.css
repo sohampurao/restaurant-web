@@ -26,6 +26,11 @@
     --gold: #ffd700;
     --pure-white : #ffffff;
 
+    /* text colors */
+    --title-text-clr: #303030;
+    --normal-text-clr: #505050;
+    --light-text-clr : #707070;
+    
     /* ============= LINEAR GRADIENTS ============= */
     --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
     --gradient-menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
@@ -82,6 +87,7 @@ body {
     overflow-x: hidden;
     height: 100vh;
     transition: 0.4s;
+    color: var(--primary-font-clr);
 }
 
 img {
@@ -267,6 +273,7 @@ background-image: var(--gradient-menu-title-main);
 
 .hero-description {
     font-size: var(--normal-font-size);
+    color: var(--normal-text-clr);
     line-height: 3rem;
     text-align: justify;
 }
@@ -305,6 +312,7 @@ background-image: var(--gradient-menu-title-main);
 
 .special-item-title {
     position: relative;
+    color: var(--title-text-clr);
     margin-top: 0.625rem;
     font-weight: var(--font-semi-bold);
     font-size: var(--normal-font-size);
@@ -328,6 +336,7 @@ background-image: var(--gradient-menu-title-main);
 .special-item-price {
     padding-left: 0.3rem;
     font-weight: var(--font-medium);
+    color: var(--normal-text-clr);
 }
 
 .special-item-price span {
@@ -472,12 +481,13 @@ background-image: var(--gradient-menu-title-main);
 
 /* ============= MENU ITEMS PAGE ============= */
 #item-title-sub {
+    color: var(--title-text-clr);
     font-size: var(--small-font-size);
-    margin: 10px 0px 50px;
     font-weight: var(--font-medium);
 }
 
 #item-title-sub span {
+    color: var(--normal-text-clr);
     font-size: var(--normal-font-size);
     font-weight: 600;
 }
@@ -509,6 +519,7 @@ background-image: var(--gradient-menu-title-main);
 }
 
 .menu-items-dis-title {
+    color: var(--title-text-clr);
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     text-decoration: underline;
@@ -516,6 +527,7 @@ background-image: var(--gradient-menu-title-main);
 
 .menu-item-dis-sub {
     font-size: var(--normal-font-size);
+    color: var(--normal-text-clr);
 }
 
 /* ============= FOOTER ============= */

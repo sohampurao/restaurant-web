@@ -17,10 +17,11 @@
     display: block;
     width: calc(100% + 1.3px);
     height: 92px;
+    margin-bottom: -1px;
 }
 
 .shape-divider .shape-fill {
-    fill: var(--wave-bg-clr)
+    fill: url(#lgrad);
 }
 
 #lgrad-start {
