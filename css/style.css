@@ -90,6 +90,24 @@ body {
     color: var(--primary-font-clr);
 }
 
+/* Preloader */
+#preloader {
+    width: 100%;
+    height: 100vh;
+    background: #ffffff;
+    position: fixed;
+    z-index: 1000;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    place-items: center;
+}
+
+#preloader > img {
+    max-width: 450px;
+    vertical-align: center;
+}
+
 img {
     width: 100%;
     height: auto;
