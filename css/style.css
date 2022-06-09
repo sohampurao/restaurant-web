@@ -101,6 +101,7 @@ body {
     left: 0%;
     display: grid;
     place-items: center;
+    transition: all 0.3s;
 }
 
 #preloader > img {
