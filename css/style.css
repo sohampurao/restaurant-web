@@ -94,7 +94,6 @@ body {
 #preloader {
     width: 100%;
     height: 100vh;
-    background: #fffafc;
     position: fixed;
     z-index: 1000;
     top: 0%;
@@ -102,6 +101,14 @@ body {
     display: grid;
     place-items: center;
     transition: all 0.3s;
+}
+
+.preloader {
+    background: #fffafc;
+}
+
+.preloader {
+    background: #ffffff;
 }
 
 #preloader > img {
