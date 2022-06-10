@@ -23,7 +23,9 @@
         <script src="https://kit.fontawesome.com/ad9b6196e1.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="preloader" class="menu-preloader"><img src="images/common/preloader/menu-preloader.gif" alt="Menu Preloader image"></div>
+        <div id="preloader" class="menu-preloader">
+            <img src="images/common/preloader/menu-preloader.gif" alt="Menu Preloader image">
+        </div>
         <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
             <div class="container-fluid">
                 <a href="index.html" >
@@ -39,7 +41,9 @@
                 <div class="offcanvas offcanvas-end d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header bg-dark" id="offcanvas-title">
                         <h5 class="offcanvas-title" >Uncle Sammy's Kichten</h5>
-                        <button type="button" id="offcanvas-close-btn" class="bg-dark" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                        <button type="button" id="offcanvas-close-btn" class="bg-dark" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
                     <div class="offcanvas-body bg-dark" id="offcanvas-body">
                         <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
@@ -47,7 +51,7 @@
                                 <a  id="nav-anchor-1" class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
                             </li>
                             <li title="Menu" id="nav-list-2"> 
-                                <a id="nav-anchor-2" class="nav-link " aria-current="page" href="MenuCategoryMain.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+                                <a id="nav-anchor-2" class="nav-link " aria-current="page" href="menu-category-main.html"><i class="fa-solid fa-utensils"></i> Menu</a>
                             </li>
                             <li title="About" id="nav-list-3"> 
                                 <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-circle-info"></i> About</a>
@@ -59,6 +63,15 @@
         </nav>
     </header>
     <div class="container-fluid pt-2 my-md-4 main-content">
+        <div class="page-inner-nav w-100 mb-2">
+            <div>
+                <a href="menu-category-main.html" class="nav-link">Menu</a>
+            </div>
+            <span> | </span>
+            <div>
+                <a href="appetizers-category-items.html" class="nav-link inner-nav-active">Appetizer</a>
+            </div>
+        </div>
         <h1 class="menu-title-main text-center mx-auto"><span class="text-animation">Dinner Combo in 500&#8377;</span></h1>
         <p id="item-title-sub" class="text-center mt-3 mb-4 mx-2"> 
             <span>Served with</span><br>
