@@ -7,7 +7,6 @@
     --wave-bg-clr : linear-gradient(to right, #97D9E1 0%, #D9AFD9 100%);
 }
 
-
 #swiper-container {
     background: var(--wave-bg-clr);
 }
@@ -113,8 +112,7 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #FFF886 0%,#F072B6 100%);
+    background: #ffff;
     padding: 3px;
 }
 .card-image .card-img{
