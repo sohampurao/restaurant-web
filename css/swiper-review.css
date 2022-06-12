@@ -4,7 +4,7 @@
 :root {
     --profile-img-bg :  rgb(33,37,41);
     --card-txt-bg: #ffff ; /* alt #e3e2df */
-    --wave-bg-clr : linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    --wave-bg-clr : linear-gradient(to right, #97D9E1 0%, #D9AFD9 100%);
 }
 
 
@@ -25,12 +25,12 @@
 }
 
 #lgrad-start {
-    stop-color:rgb(250,112,154);
+    stop-color:#97D9E1;
     stop-opacity:1.00
 }
 
 #lgrad-end {
-    stop-color:rgb(254,225,64);
+    stop-color:#D9AFD9 ;
     stop-opacity:1.00
 }
 
@@ -113,7 +113,8 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    background: linear-gradient(90deg, rgba(238, 130, 238, 1) 0%, rgba(0, 209, 255, 1) 100%);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #FFF886 0%,#F072B6 100%);
     padding: 3px;
 }
 .card-image .card-img{

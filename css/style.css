@@ -474,13 +474,13 @@ background-image: var(--gradient-menu-title-main);
     padding: 0.2rem;
     background: var(--menu-sr);
     font-weight: 700;
-    font-size: var(--normal-font-size);
+    font-size: var(--normal-font-size)
 }
 
 .menu-pics-card:hover {
     color: var(--gold);
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
 .menu-pics-card:hover .title {
