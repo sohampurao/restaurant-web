@@ -33,7 +33,6 @@
     
     /* ============= LINEAR GRADIENTS ============= */
     --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
-    --gradient-menu-title-main: -webkit-linear-gradient(92deg, #f35626, #feab3a);
     --scrollbar-anchor-hover: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
     --menu-sr: linear-gradient(to right, #434343, #000000);
 
@@ -239,22 +238,6 @@ ul {
 #nav-list-3:hover #nav-anchor-3::after,
 #nav-list-4:hover #nav-anchor-4::after {
     width: 81%;
-}
-
-/* For Menu Title main */
-.menu-title-main {
-    margin-top: 0.625rem;
-    width: 220px;
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-medium);
-    background-color:var(--primary-dark);
-    padding: 3px 0px;
-    border-radius: var(--br-20);
-    text-transform: capitalize;
-}
-
-.menu-title-main span {
-background-image: var(--gradient-menu-title-main);
 }
 
 /* Thumbnail img */
@@ -539,55 +522,77 @@ background-image: var(--gradient-menu-title-main);
     font-weight: 600;
 }
 
-.menu-item-display {
-    position: relative;
-    margin-bottom: 20px;
-    max-width: 250px;
+.menu-item-container {
+    width: calc(100% - 20px);
+    background: white;
+    border-radius: var(--br-20);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
-.shadow-drop-lr{-webkit-animation:shadow-drop-lr .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-lr .4s cubic-bezier(.25,.46,.45,.94) both}
-@-webkit-keyframes shadow-drop-lr{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}@keyframes shadow-drop-lr{0%{-webkit-box-shadow:0 0 0 0 transparent,0 0 0 0 transparent;box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}100%{-webkit-box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35);box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}}
+.menu-item-display {
+    overflow: hidden;
+    padding-left: 0%;
+    padding-right: 0%;
+}
 
 .menu-item-img {
-    display: block;
-    border-top-left-radius: var(--br-2-5);
-    border-top-right-radius: var(--br-2-5);
-    max-width: 250px;
-    box-shadow: 0px 1px 3px #000000;
+    border-radius: var(--br-20);
+    max-width: 150px;
+}
+
+.menu-item-title {
+    color: #f76e6e;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 0px;
 }
 
 .menu-item-price {
-    background-color: #def2f1;
-    border-bottom-left-radius: var(--br-2-5);
-    border-bottom-right-radius: var(--br-2-5);
-    height: 25px;
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+    font-size: var(--h3-font-size);
     color: var(--title-text-clr);
+    font-weight: var(--font-medium)
 }
 
-.menu-item-sm-hr {
-    display: none;
-}
-
-.menu-items-discription {
-    font-size: var(--normal-font-size);
-    padding: 0.313rem;
-    margin-left: 5px;
-}
-
-.menu-items-dis-title {
-    color: var(--title-text-clr);
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-medium);
-    text-decoration: underline;
-}
-
-.menu-item-dis-sub {
-    font-size: var(--normal-font-size);
+.menu-item-sub {
+    font-size: var(--small-font-size);
     color: var(--normal-text-clr);
 }
 
+/* Order Btn */
+.menu-order-btn {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Raleway",sans-serif;
+    font-size: var(--normal-font-size);
+    font-weight: 800;
+    min-height: 35px;
+    outline: 0;
+    padding: 2px 9px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    transition: all .3s;
+}
+
+.menu-order-btn:hover,
+.menu-order-btn:active {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.menu-order-btn:active {
+    opacity: .5;
+}
 /* ============= CONTACT PAGE ============= */
 #contact-map > iframe{
     width: 100%;
@@ -602,16 +607,17 @@ background-image: var(--gradient-menu-title-main);
     color: #ffffff;
 }
 
-#contact-details a {
-    color: #ffffff;
-}
-
 .location-title {
     font-size: var(--big-font-size);
     font-weight: var(--font-medium);
     font-family: 'Raleway', sans-serif;
     letter-spacing: 3px;
     border-bottom: 2px solid var(--gold);
+}
+
+.location-description, .location-description a  {
+    color: #ffffff;
+    font-size: var(--h3-font-size);
 }
 
 #note span {
@@ -852,28 +858,6 @@ section span.footer-sub {
         padding: 0.3rem;
     }
 
-    /* ============= MENU ITEMS PAGE ============= */
-    .menu-item-display {
-        width: 70%;
-        margin: 0px auto;
-    }
-
-    .menu-item-text {
-        margin-top: 10px;
-    }
-
-    .menu-items-discription-title {
-        margin-top: 15px;
-    }
-
-    .menu-item-sm-hr {
-        display: block;
-        width: 70%;
-        max-height: 0.5rem;
-        background-color: #000000;
-        margin: 0.625rem auto 1.25rem;
-    }
-
      /* ============= CONTACT ============= */
     #contact-map  {
         height: 500px;
@@ -892,10 +876,6 @@ section span.footer-sub {
     /* ============= BASE ============= */
     .main-content  {
         max-width: 100%;
-    }
-
-    .menu-title-main {
-        width: 165px
     }
 
     /* ============= NAVIGATION BAR ============= */
@@ -971,8 +951,8 @@ section span.footer-sub {
     }
 
     /* ============= MENU ITEMS PAGE ============= */
-    .menu-item-price {
-        height: 25px;
+    .menu-item-container {
+        flex-direction: column;
     }
 
     /* ============= FOOTER ============= */
@@ -983,12 +963,6 @@ section span.footer-sub {
 
 /* `xs` applies to extra-small devices (portrait phones, less than 333px) */
 @media (max-width: 333.98px) {
-    /* ============= BASE ============= */
-    .menu-title-main {
-        width: 160px;
-        font-size: 3.7vw;
-    }
-
     /* ============= NAVIGATION BAR ============= */
     .navbar-brand{
         display: none;
