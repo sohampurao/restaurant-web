@@ -43,7 +43,7 @@
     /*========== Font weight ==========*/
     --font-medium: 500;
     --font-semi-bold: 600;
-
+    
     /*========== BACKGROUND POSITIONING ==========*/
     --bg-no-repeat : no-repeat;
     --bg-center-xy : center center;
@@ -245,6 +245,14 @@ ul {
     position: relative;
     overflow: hidden;
     height: 270px;
+}
+
+.menu-thumbnail {
+    color: var(--pure-white);
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    font-family: 'Raleway';
+    font-style: italic;
 }
 
 .thumbnail-txt {
@@ -479,12 +487,9 @@ ul {
     background-repeat: var(--bg-no-repeat);
     background-position: var(--bg-center-xy);
     background-size: var(--bg-size-cover);
-    color: var(--pure-white);
-    text-shadow: 2px 2px 3px black;
     font-weight: 300;
-    font-size: 3rem;
+    text-shadow: 2px 2px 3px black;
     font-family: 'Carter One', cursive;
-    letter-spacing: 0.05em;
 }
 
 /* menu image card fade in top animation */
@@ -492,6 +497,13 @@ ul {
 @-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 
 /* ============= MENU ITEMS PAGE ============= */
+#menu-appetizer {
+    background: var(--bg-img-darken), url(/images/menu-category-main/menu-category-appetizers.jpg);
+    background-repeat: var(--bg-no-repeat);
+    background-position: var(--bg-center-xy);
+    background-size: var(--bg-size-cover);
+}
+
 .page-inner-nav {
     display: inline-flex;
     justify-content: center;
@@ -508,18 +520,6 @@ ul {
 
 .page-inner-nav div > a.nav-link:hover {
     color:  rgb(117, 117, 117)
-}
-
-#item-title-sub {
-    color: var(--title-text-clr);
-    font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
-}
-
-#item-title-sub span {
-    color: var(--normal-text-clr);
-    font-size: var(--normal-font-size);
-    font-weight: 600;
 }
 
 .menu-item-container {
@@ -849,7 +849,7 @@ section span.footer-sub {
         height: 220px;
     }
 
-    #menu-thumbnail {
+    .menu-thumbnail {
         font-size: 2.5rem;
     }
 
@@ -888,7 +888,7 @@ section span.footer-sub {
     }
 
     /* for Menu Thumbnail img */
-    #menu-thumbnail {
+    .menu-thumbnail {
         font-size: 1.8rem;
     }
     .thumbnail {
