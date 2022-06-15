@@ -40,6 +40,8 @@
 </head>
 <body>
     <div id="preloader" class="preloader"><img src="images/common/preloader/preloader.gif" alt="Preloader image"></div>
+    
+    <!-- ============= NAVBAR START =============  -->
     <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
         <div class="container-fluid">
             <a href="index.html" >
@@ -63,7 +65,7 @@
                             <a  id="nav-anchor-1" class="nav-link active" href="index.html"> Home </a>
                         </li>
                         <li id="nav-list-2"> 
-                            <a id="nav-anchor-2" class="nav-link " aria-current="page" href="menu-category-main.html"> Menu </a>
+                            <a id="nav-anchor-2" class="nav-link " aria-current="page" href="menu.html"> Menu </a>
                         </li>
                         <li id="nav-list-3"> 
                             <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"> About </a>
@@ -76,9 +78,9 @@
             </div>
         </div>
     </nav>
+    <!-- ============= NAVBAR END =============  -->
 
-
-    <!-- ============= CAROUSEL ============= -->
+    <!-- ============= CAROUSEL  START ============= -->
     <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
         <div id="carousel-nav" class="carousel-indicators d-none d-sm-flex">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -120,10 +122,12 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <!-- ============= CAROUSEL  END ============= -->
 
-
-    <!-- ============= HERO TEXT =============  -->
     <div class="container-fluid pt-2 mt-md-4 main-content">
+
+        <!-- ============= HERO TEXT START =============  -->
+
         <div class="hero-text mx-auto my-3 main-content">
             <div class="hero-title text-center">When you sit down at Uncle Sammy's Restaurent, you're dining with the Molinari family and over 45 years of restaurant experience.</div>
             <div class="hero-description">
@@ -134,50 +138,57 @@
                 Whether you're from down the street or out of town, you'll find the faces friendly, the conversation lively, and the food and flavors unforgettable
             </div>
         </div>
+        <!-- ============= HERO TEXT END =============  -->
 
-
-        <!-- ============= SPECIAL MENU =============  -->
+        <!-- ============= SPECIAL MENU START =============  -->
         <h1 class="d-block menu-heading text-uppercase text-center mb-4 mt-5">also famous for</h1>
+
         <div class="row">
 
             <div class="col-md-4 col-sm-12 pt-2">
-                <div id="sp-container-m1" class="special-item-container mx-auto position-relative my-3">
-                    <div class="special-item-circle position-absolute"></div>
-                    <img id="specical-img-m1" class="special-item-img position-relative" src="images/home-page/special-item/special-burger.png" alt="Pizza image">
-                    <h1 id="specical-title-m1" class="special-item-title">Pepperoni Pizza</h1>
-                    <div class="special-item-price"><span id="sp-price-sheky-m1" class="d-block text-center">350 &#8377;</span></div>
-                </div>
+                <a href="#">
+                    <div id="sp-container-m1" class="special-item-container mx-auto position-relative my-3">
+                        <div class="special-item-circle position-absolute"></div>
+                        <img id="specical-img-m1" class="special-item-img position-relative" src="images/home-page/special-item/special-burger.png" alt="Burger img">
+                        <h1 id="specical-title-m1" class="special-item-title">Burger Bologona</h1>
+                        <div class="special-item-price"><span id="sp-price-sheky-m1" class="d-block text-center">500 &#8377;</span></div>
+                    </div>
+                </a>
             </div>
 
             <div class="col-md-4 col-sm-12 pt-2">
-                <div id="sp-container-m2" class="special-item-container mx-auto position-relative my-3">
-                    <div class="special-item-circle position-absolute"></div>
-                    <img id="specical-img-m2" class="special-item-img position-relative" src="images/home-page/special-item/special-pizza.png" alt="burger image">
-                    <h1 id="specical-title-m2" class="special-item-title">Burger Bologona</h1>
-                    <div class="special-item-price"><span id="sp-price-sheky-m2" class="d-block text-center">500 &#8377;</span></div>
-                </div>
+                <a href="pizza-menu.html">
+                    <div id="sp-container-m2" class="special-item-container mx-auto position-relative my-3">
+                        <div class="special-item-circle position-absolute"></div>
+                        <img id="specical-img-m2" class="special-item-img position-relative" src="images/home-page/special-item/special-pizza.png" alt="Pizza image">
+                        <h1 id="specical-title-m2" class="special-item-title">Pepperoni Pizza</h1>
+                        <div class="special-item-price"><span id="sp-price-sheky-m2" class="d-block text-center">350 &#8377;</span></div>
+                    </div>
+                </a>
             </div>
 
             <div class="col-md-4 col-sm-12 pt-2">
-                <div id="sp-container-m3" class="special-item-container mx-auto position-relative my-3">
-                    <div class="special-item-circle position-absolute"></div>
-                    <img id="specical-img-m3" class="special-item-img position-relative" src="images/home-page/special-item/special-wine.png" alt="wine image">
-                    <h1 id="specical-title-m3" class="special-item-title">Red Wine</h1>
-                    <div class="special-item-price"><span id="sp-price-sheky-m3" class="d-block text-center">1750 &#8377;</span></div>
-                </div>
+                <a href="#">
+                    <div id="sp-container-m3" class="special-item-container mx-auto position-relative my-3">
+                        <div class="special-item-circle position-absolute"></div>
+                        <img id="specical-img-m3" class="special-item-img position-relative" src="images/home-page/special-item/special-wine.png" alt="wine image">
+                        <h1 id="specical-title-m3" class="special-item-title">Red Wine</h1>
+                        <div class="special-item-price"><span id="sp-price-sheky-m3" class="d-block text-center">1750 &#8377;</span></div>
+                    </div>
+                </a>
             </div>
 
         </div>
+        <!-- ============= SPECIAL MENU END =============  -->
 
-
-        <!-- ============= MENU CARDS =============  -->
+        <!-- ============= MENU CARDS START =============  -->
         <h1 class="d-block menu-heading text-uppercase text-center mb-4 mt-5">menus</h1>
         
         <div class="row" id="menu-img">
 
             <div class="col-xxl-4 col-md-6 col-sm-12 my-3">
                 <div id="home-menu-1" class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                    <a href="menu-category-main.html">
+                    <a href="menu.html">
                     <img src="images/home-page/menu/menu_menu.jpg" alt="Menu image" class="img-fluid">
                     </a>
                     <div class="menu-card-title position-absolute w-100">Menu</div>
@@ -203,23 +214,23 @@
             </div>
 
         </div>
+        <!-- ============= MENU CARDS END =============  -->
 
-
-        <!-- ============= CATERING SECTION =============  -->
+        <!-- ============= CATERING SECTION START =============  -->
         <h1 class="d-block menu-heading text-uppercase text-center mb-4 mt-5">catering</h1>
 
         <div class="w-100 thumbnail  my-4" id="catering-thumbnail">
             <div class="thumbnail-inner-glass">
-            <div class="w-100 thumbnail-txt text-center d-flex flex-column justify-content-center align-items-center text-uppercase">
-                <div>Bringing Classic Flavours To Any Function</div>
+                <div class="w-100 thumbnail-txt text-center d-flex flex-column justify-content-center align-items-center text-uppercase">
+                    <div>Bringing Classic Flavours To Any Function</div>
                     <button class="view-more-btn mt-4 mt-sm-4 mt-md-5"> view more </button>
-            </div>
+                </div>
             </div>
         </div>
-
+        <!-- ============= CATERING SECTION END =============  -->
     </div>
 
-    <!-- ============= COSTUMERS REVIEW'S =============  -->
+    <!-- ============= COSTUMERS REVIEW'S START =============  -->
     <div class="shape-divider mt-5">
 
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -232,151 +243,152 @@
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
         </svg>
 
-    <div class="container-fluid pb-4" id="swiper-container">
-    <h1 class="d-block menu-heading text-uppercase text-center mb-3" id="reviews-heading">happy costumer's</h1>
+        <div class="container-fluid pb-4" id="swiper-container">
+            <h1 class="d-block menu-heading text-uppercase text-center mb-3" id="reviews-heading">happy costumer's</h1>
 
-    <h4 class="my-3 align-items-center justify-content-center" id="swipe-indicator"><i class="fa-solid fa-right-left"></i></h4>
+            <h4 class="my-3 align-items-center justify-content-center" id="swipe-indicator"><i class="fa-solid fa-right-left"></i></h4>
 
-    <div class="slide-container swiper">
-        <div class="slide-content">
-            <div class="card-wrapper swiper-wrapper">
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
 
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile1.jpg" alt="Costumer profile image" class="card-img">
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile1.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">David Dell</h2>
+                                <p class="description">Great food, big servings. Good wine pour, attentive servers. this place is a little gem. The Chicken Marsala appetizer is awesome!!</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile2.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Amenda Lee</h2>
+                                <p class="description">The prices are as good as the menu! Each time I spend money, than anywhere else and get a fresh, tasty, homemade dinner!</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile3.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Elon Musk</h2>
+                                <p class="description">I have never had a bad meal at Uncle Sammy's Restaurant. This is the type of Italian place that has you unbuttoning your pants at the end of your meal AND taking left overs home! Great wine.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile4.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Kevin Haley</h2>
+                                <p class="description">Easily one the BEST Italian restaurants in Arizona… I use to live in central Scottsdale and would eat there 3 to 4 times a month… My current residence is 40 minutes NNE; and we drive by 100’s of restaurants to eat at Uncle Sammy's Restaurant.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile5.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Rose Hopkins</h2>
+                                <p class="description">I have never had a bad meal at Uncle Sammy's Restaurant. This is the type of Italian place that has you unbuttoning your pants at the end of your meal AND taking left overs home! Great wine.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile6.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Dabboo ratnani</h2>
+                                <p class="description">Easily one the BEST Italian restaurants in Arizona… I use to live in central Scottsdale and would eat there 3 to 4 times a month… My current residence is 40 minutes NNE; and we drive by 100’s of restaurants to eat at Uncle Sammy's Restaurant.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile7.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Jeff Bezos</h2>
+                                <p class="description">The prices are as good as the menu! Each time I spend money, than anywhere else and get a fresh, tasty, homemade dinner!.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile8.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Kylie Jenner</h2>
+                                <p class="description">The prices are as good as the menu! Each time I spend money, than anywhere else and get a fresh, tasty, homemade dinner!.</p>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/home-page/swiper-review/profile9.jpg" alt="Costumer profile image" class="card-img">
+                                </div>
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Nick Jonhas</h2>
+                                <p class="description">I have never had a bad meal at Uncle Sammy's Restaurant. This is the type of Italian place that has you unbuttoning your pants at the end of your meal AND taking left overs home! Great wine.</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="card-content">
-                        <h2 class="name">David Dell</h2>
-                        <p class="description">Great food, big servings. Good wine pour, attentive servers. this place is a little gem. The Chicken Marsala appetizer is awesome!!</p>
-                    </div>
                 </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
 
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile2.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Amenda Lee</h2>
-                        <p class="description">The prices are as good as the menu! Each time I spend money, than anywhere else and get a fresh, tasty, homemade dinner!</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile3.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Elon Musk</h2>
-                        <p class="description">I have never had a bad meal at Uncle Sammy's Restaurant. This is the type of Italian place that has you unbuttoning your pants at the end of your meal AND taking left overs home! Great wine.</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile4.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Kevin Haley</h2>
-                        <p class="description">Easily one the BEST Italian restaurants in Arizona… I use to live in central Scottsdale and would eat there 3 to 4 times a month… My current residence is 40 minutes NNE; and we drive by 100’s of restaurants to eat at Uncle Sammy's Restaurant.</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile5.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Rose Hopkins</h2>
-                        <p class="description">I have never had a bad meal at Uncle Sammy's Restaurant. This is the type of Italian place that has you unbuttoning your pants at the end of your meal AND taking left overs home! Great wine.</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile6.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Dabboo ratnani</h2>
-                        <p class="description">Easily one the BEST Italian restaurants in Arizona… I use to live in central Scottsdale and would eat there 3 to 4 times a month… My current residence is 40 minutes NNE; and we drive by 100’s of restaurants to eat at Uncle Sammy's Restaurant.</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile7.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Jeff Bezos</h2>
-                        <p class="description">The prices are as good as the menu! Each time I spend money, than anywhere else and get a fresh, tasty, homemade dinner!.</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile8.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Kylie Jenner</h2>
-                        <p class="description">The prices are as good as the menu! Each time I spend money, than anywhere else and get a fresh, tasty, homemade dinner!.</p>
-                    </div>
-                </div>
-                <div class="card swiper-slide">
-                    <div class="image-content">
-                        <span class="overlay"></span>
-
-                        <div class="card-image">
-                            <img src="images/home-page/swiper-review/profile9.jpg" alt="Costumer profile image" class="card-img">
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-                        <h2 class="name">Nick Jonhas</h2>
-                        <p class="description">I have never had a bad meal at Uncle Sammy's Restaurant. This is the type of Italian place that has you unbuttoning your pants at the end of your meal AND taking left overs home! Great wine.</p>
-                    </div>
-                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
+    </div>
+    <!-- ============= COSTUMERS REVIEW'S END =============  -->
 
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-    </div>
-    </div>
-
-    <!-- ============= FOOTER  =============  -->
+    <!-- ============= FOOTER START =============  -->
     <footer class="panel-footer">
 
         <div class="container-fluid">
@@ -384,7 +396,7 @@
             <div class="row">
 
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <div class="footer-title">Active Hours</div>
+                    <div class="footer-title mb-1">Active Hours</div>
                     <span class="footer-sub">
                         SUN - THURS: 3pm - 9pm<br>
                         FRI & SAT: 3pm - 10pm<br>
@@ -393,7 +405,7 @@
                 </section>
 
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <div class="footer-title">Location</div>
+                    <div class="footer-title mb-1">Location</div>
                     <span class="footer-sub">40220l Alibag vidhyanagar<br>
                     Raigarh Maharashtra<br>
                     </span>
@@ -402,7 +414,7 @@
                 </section>
 
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <div class="footer-title">We accept all credit cards</div>
+                    <div class="footer-title mb-1">We accept all credit cards</div>
                     <ul class="nav-link d-inline-flex align-items-centee justify-content-center" id="footer-cards-ul">
                         <li title="Visa Credit Card" class="nav footer-cards-li"><img src="images/footer/card1.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
                         <li title="Master Credit Card" class="nav footer-cards-li"><img src="images/footer/card2.png" alt="credit card image" class="footer-cards-img img-fluid"></li>
@@ -413,8 +425,8 @@
                 </section>
 
                 <section class="col-md-3 footer text-center text-md-start ps-3">
-                    <div class="footer-title">Get In Touch</div>
-                    <div title="Contact Number" id="phone-num"><a class="m-0" href="tel:+91 999 8888 777">+999 8888 777</a></div>
+                    <div class="footer-title mb-1">Get In Touch</div>
+                    <div title="Contact Number" id="phone-num"><a class="m-0" href="tel:+91 999 8888 777">999 8888 777</a></div>
                     <ul id="footer-social-ul" class="my-2 d-inline-flex justify-content-center align-items-center">
                         <li title="Instagram" class="footer-social-li"><a href="https://www.instagram.com/mr.purao.12/"><i class="fa-brands fa-instagram"><span class="visually-hidden">Instagram</span></i></a></li>
                         <li title="Facebook" class="footer-social-li"><a href="#"><i class="fa-brands fa-facebook"><span class="visually-hidden">Facebook</span></i></a></li>
@@ -430,6 +442,7 @@
             </div>
         </div>
     </footer>
+    <!-- ============= FOOTER END =============  -->
 
 <!-- javaScript swiper CDN -->
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

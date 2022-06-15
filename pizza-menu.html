@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Uncle Sammy's Kichten</title>
-        
+
         <!-- Bootstrap CSS only (CDN) -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-        <!-- Custom Css (User agent) -->
+        <!-- Custom CSS (User agent) -->
         <link rel="stylesheet" href="css/style.css">
 
         <!-- Favicon links -->
@@ -23,13 +23,12 @@
         <!-- Font Awesome icons link -->
         <script src="https://kit.fontawesome.com/ad9b6196e1.js" crossorigin="anonymous"></script>
 
-        <!-- for Github background-image problem -->
         <style>
-            #menu-thumbnail {
-            background: var(--bg-img-darken), url(images/menu-category-main/menu_thumbnail.jpg);
+            #menu-pizza {
+            background-image: var(--bg-img-darken), url(images/menu/menu-pizza.jpg);
             background-repeat: var(--bg-no-repeat);
             background-position: var(--bg-center-xy);
-            background-size: var(--bg-size-cover)
+            background-size: var(--bg-size-cover);
         }
         </style>
     </head>
@@ -37,6 +36,8 @@
         <div id="preloader" class="menu-preloader">
             <img src="images/common/preloader/menu-preloader.gif" alt="">
         </div>
+
+        <!-- ============= NAVBAR START =============  -->
         <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
             <div class="container-fluid">
                 <a href="index.html" >
@@ -52,7 +53,9 @@
                 <div class="offcanvas offcanvas-end d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header bg-dark" id="offcanvas-title">
                         <h5 class="offcanvas-title" >Uncle Sammy's Kichten</h5>
-                        <button type="button" id="offcanvas-close-btn" class="bg-dark border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                        <button type="button" id="offcanvas-close-btn" class="bg-dark border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
                     <div class="offcanvas-body bg-dark" id="offcanvas-body">
                         <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
@@ -60,7 +63,7 @@
                                 <a  id="nav-anchor-1" class="nav-link" href="index.html"> Home </a>
                             </li>
                             <li id="nav-list-2"> 
-                                <a id="nav-anchor-2" class="nav-link active" aria-current="page" href="menu-category-main.html"> Menu </a>
+                                <a id="nav-anchor-2" class="nav-link " aria-current="page" href="menu.html"> Menu </a>
                             </li>
                             <li id="nav-list-3"> 
                                 <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"> About </a>
@@ -73,83 +76,131 @@
                 </div>
             </div>
         </nav>
-    </header>
-    <div class="w-100 thumbnail text-center menu-thumbnail" id="menu-thumbnail">
-            <div class="w-100 tracking-in-expand-fwd thumbnail-txt"> Menu </div>
+        <!-- ============= NAVBAR END =============  -->
+</header>
+
+    <!-- ============= THUMBNAIL START =============  -->
+    <div class="w-100 thumbnail menu-thumbnail text-center" id="menu-pizza">
+        <div class="w-100 thumbnail-txt"> Pizza's </div>
     </div>
-    <div class="container-fluid pt-2 my-md-4 main-content">
-        <div id="menu-category-imgs" class="row">
+    <!-- ============= THUMBNAIL END =============  --> 
 
-            <div class="col-xl-4 col-md-6 col-sm-12 my-3">
-                <div class="fade-in-top">
-                    <div class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                        <a href="appetizers-category-items.html">
-                        <img src="images/menu-category-main/menu-category-appetizers.jpg" alt="Appetizers image" class="img-fluid">
-                        </a>
-                        <div class="menu-card-title position-absolute w-100">Appetizers</div>
-                    </div>
-                </div>
-            </div>
+    <div class="container-fluid pt-3">
 
-            <div class="col-xl-4 col-md-6 col-sm-12 my-3">
-                <div class="fade-in-top">
-                    <div class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                        <a href="#">
-                        <img src="images/menu-category-main/menu-category-mainmenu.jpg" alt="Main menu image" class="img-fluid">
-                        </a>
-                        <div class="menu-card-title position-absolute w-100">Main-Menu</div>
-                    </div>
-                </div>
+        <!-- ============= INNER PAGE NAVIGATION START =============  -->
+        <div class="page-inner-nav w-100 mb-4 d-inline-flex justify-content-center align-items-center">
+            <div>
+                <a href="menu.html" class="nav-link">Menu</a>
             </div>
-
-            <div class="col-xl-4 col-md-6 col-sm-12 my-3">
-                <div class="fade-in-top">
-                    <div class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                        <a href="#">
-                        <img src="images/menu-category-main/menu-category-seafood.jpg" alt="Seafood image" class="img-fluid">
-                        </a>
-                        <div class="menu-card-title position-absolute w-100">Seafood</div>
-                    </div>
-                </div>
+            <span> | </span>
+            <div>
+                <a href="pizza-menu.html" class="nav-link inner-nav-active">Pizza's</a>
             </div>
-
-            <div class="col-xl-4 col-md-6 col-sm-12 my-3">
-                <div class="fade-in-top">
-                    <div class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                        <a href="#">
-                        <img src="images/menu-category-main/menu-category-pizza.jpg" alt="pizaa image" class="img-fluid">
-                        </a>
-                        <div class="menu-card-title position-absolute w-100">Pizza</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-md-6 col-sm-12 my-3">
-                <div class="fade-in-top">
-                    <div class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                        <a href="#">
-                        <img src="images/menu-category-main/menu-category-drinks.jpg" alt="drinks image" class="img-fluid">
-                        </a>
-                        <div class="menu-card-title position-absolute w-100">Drinks</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-md-6 col-sm-12 my-3">
-                <div class="fade-in-top">
-                    <div class="menu-pics-card position-relative overflow-hidden text-center mx-auto">
-                        <a href="dessert-menu.html">
-                        <img src="images/menu-category-main/menu-category-dessert.jpg" alt="Dessert image" class="img-fluid">
-                        </a>
-                        <div class="menu-card-title position-absolute w-100">Dessert's</div>
-                    </div>
-                </div>
-            </div>
-            
         </div>
+        <!-- ============= INNER PAGE NAVIGATION END =============  -->
+
+        <div class="row">
+
+            <!-- ============= MENU ITEMS RIGHT START=============  -->
+            <div class="col-lg-6 col-12">
+
+                <div class="row menu-item-container align-items-center mx-auto mb-4 p-3">
+                    <div class="overflow-hidden px-0 mt-1 col-sm-3 col-12">
+                        <img class="menu-item-img mx-auto d-block" src="images/category-items/pizzas/m1.jpg" alt=" pizza menu image">
+                    </div>
+
+                    <div class="text-center text-sm-start mt-2 col-12  col-sm-9 ps-md-4">
+                        <h3 class="menu-item-title mb-0 mt-1 text-capitalize">Cheese pizza 10 | 13 | 15</h3>
+                        <div class="menu-item-price">350 &#8377;</div>
+                        <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
+                            With any one topping 30 &#8377; | 55 &#8377; | 65 &#8377;
+                        </h5>
+                    <button class="menu-order-btn d-inline-block text-center" role="button" type="button" >order now</button>
+                    </div>
+                </div>
+
+                <div class="row menu-item-container align-items-center mx-auto mb-4 p-3">
+                    <div class="overflow-hidden px-0 mt-1 col-sm-3 col-12">
+                        <img class="menu-item-img mx-auto d-block" src="images/category-items/pizzas/m2.jpg" alt=" pizza menu image">
+                    </div>
+                    <div class="menu-item-text text-center text-sm-start mt-2 col-12  col-sm-9 ps-md-4">
+                        <h3 class="menu-item-title mb-0 mt-1 text-capitalize">Special 14 | 18 | 22</h3>
+                        <div class="menu-item-price">250 &#8377;</div>
+                        <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
+                            Sausage, Pepperoni, Onion, Green Pepper, Black Olives and Mushrooms.
+                        </h5>
+                    <button class="menu-order-btn d-inline-block text-center" role="button" type="button" >order now</button>
+                    </div>
+                </div>
+
+                <div class="row menu-item-container align-items-center mx-auto mb-4 p-3">
+                    <div class="overflow-hidden px-0 mt-1 col-sm-3 col-12">
+                        <img class="menu-item-img mx-auto d-block" src="images/category-items/pizzas/m3.jpg" alt=" pizza menu image">
+                    </div>
+                    <div class="menu-item-text text-center text-sm-start mt-2 col-12  col-sm-9 ps-md-4">
+                        <h3 class="menu-item-title mb-0 mt-1 text-capitalize">Pizza Alla Vodka with Shrimp 20 | 22 | 24</h3>
+                        <div class="menu-item-price">280 &#8377;</div>
+                        <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
+                            Creamy Vodka Sauce Topped with Fresh Shrimp.
+                        </h5>
+                    <button class="menu-order-btn d-inline-block text-center" role="button" type="button" >order now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ============= MENU ITEMS RIGHT END =============  -->
+
+            <!-- ============= MENU ITEMS LEFT START =============  -->
+            <div class="col-lg-6 col-12">
+
+                <div class="row menu-item-container align-items-center mx-auto mb-4 p-3">
+                    <div class="overflow-hidden px-0 mt-1 col-sm-3 col-12">
+                        <img class="menu-item-img mx-auto d-block" src="images/category-items/pizzas/m4.jpg" alt=" pizza menu image">
+                    </div>
+                    <div class="menu-item-text text-center text-sm-start mt-2 col-12  col-sm-9 ps-md-4">
+                        <h3 class="menu-item-title mb-0 mt-1 text-capitalize">Bianco 14 | 16 | 18</h3>
+                        <div class="menu-item-price">200 &#8377;</div>
+                        <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
+                            Traditional White Pizza - Brushed Olive Oil, Fresh Ricotta and Mozzarella.
+                        </h5>
+                    <button class="menu-order-btn d-inline-block text-center" role="button" type="button" >order now</button>
+                    </div>
+                </div>
+                
+                <div class="row menu-item-container align-items-center mx-auto mb-4 p-3">
+                    <div class="overflow-hidden px-0 mt-1 col-sm-3 col-12">
+                        <img class="menu-item-img mx-auto d-block" src="images/category-items/pizzas/m6.jpg" alt=" pizza menu image">
+                    </div>
+                    <div class="menu-item-text text-center text-sm-start mt-2 col-12  col-sm-9 ps-md-4">
+                        <h3 class="menu-item-title mb-0 mt-1 text-capitalize">Mediterranean 14 | 16 | 18</h3>
+                        <div class="menu-item-price">150 &#8377;</div>
+                        <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
+                            Spinach, Feta Cheese, Kalamata Olives and Artichokes.
+                        </h5>
+                        <button class="menu-order-btn d-inline-block text-center" role="button" type="button">order now</button>
+                    </div>
+                </div>
+    
+                <div class="row menu-item-container align-items-center mx-auto mb-4 p-3">
+                    <div class="overflow-hidden px-0 mt-1 col-sm-3 col-12">
+                        <img class="menu-item-img mx-auto d-block" src="images/category-items/pizzas/m5.jpg" alt=" pizza menu image">
+                    </div>
+                    <div class="menu-item-text text-center text-sm-start mt-2 col-12  col-sm-9 ps-md-4">
+                        <h3 class="menu-item-title mb-0 mt-1 text-capitalize">Margarita 14 | 16 | 18</h3>
+                        <div class="menu-item-price">195 &#8377;</div>
+                        <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
+                            Fresh Tomato, Basil and Mozzarella. each additional topping $2 | $3 | $4.
+                        </h5>
+                        <button class="menu-order-btn d-inline-block text-center" role="button" type="button">order now</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ============= MENU ITEMS LEFT END =============  -->
+        </div>
+
     </div>
 
-    <!-- ============= FOOTER  =============  -->
+    <!-- ============= FOOTER START =============  -->
     <footer class="panel-footer">
 
         <div class="container-fluid">
@@ -203,6 +254,8 @@
             </div>
         </div>
     </footer>
+    <!-- ============= FOOTER END =============  -->
+
 
 <!-- costum js file -->
 <script src="js/script.js"></script>

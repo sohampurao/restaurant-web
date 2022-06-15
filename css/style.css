@@ -324,14 +324,6 @@ ul {
     -webkit-animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) infinite both;animation:shake-bottom .8s cubic-bezier(.455,.03,.515,.955) infinite both;
 }
 
-#catering-thumbnail {
-    background: var(--bg-img-darken),url(/images/HomePage/thumbnail/catering-thumbnail.jpg);
-    background-repeat: var(--bg-no-repeat);
-    background-position: center 78%;
-    background-size: var(--bg-size-cover);
-    border-radius: var(--br-2-5);
-}
-
 .thumbnail-inner-glass .thumbnail-txt {
     top: 35%;
     color: var(--pure-white);
@@ -373,9 +365,9 @@ ul {
     
 .view-more-btn:hover {color: var(--title-text-clr)}
 
-.view-more-btn:hover::before {width: 200%;}
+.view-more-btn:hover::before {width: 200%}
 
-#reviews-heading {color: #ffffff}
+#reviews-heading {color: #ffffff; text-shadow: none}
 
 /* ============= MENU ITEM CARDS ============= */
 .menu-pics-card {
@@ -412,29 +404,13 @@ ul {
     background: #000000;
 }
 
-/* ============= MENU CATEGORY MAIN PAGE ============= */
-#menu-thumbnail {
-    background: var(--bg-img-darken), url(/images/menu-category-main/menu_thumbnail.jpg);
-    background-repeat: var(--bg-no-repeat);
-    background-position: var(--bg-center-xy);
-    background-size: var(--bg-size-cover);
-    font-weight: 300;
-    text-shadow: 2px 2px 3px black;
-    font-family: 'Carter One', cursive;
-}
+/* ============= MENU PAGE ============= */
 
 /* menu image card fade in top animation */
 .fade-in-top{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
 @-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 
 /* ============= MENU ITEMS PAGE ============= */
-#menu-appetizer {
-    background: var(--bg-img-darken), url(/images/menu-category-main/menu-category-appetizers.jpg);
-    background-repeat: var(--bg-no-repeat);
-    background-position: var(--bg-center-xy);
-    background-size: var(--bg-size-cover);
-}
-
 .page-inner-nav {
     column-gap: 0.5rem;
     color: var(--title-text-clr);
@@ -516,14 +492,6 @@ ul {
     border: none;
     width: 100%;
     height: 100%;
-}
-
-#contact-details {
-    background: var(--bg-img-darken), url(/images/common/contact/contact-restaurent.jpg);
-    background-repeat: var(--bg-no-repeat);
-    background-position: var(--bg-center-xy);
-    background-size: var(--bg-size-cover);
-    color: #ffffff;
 }
 
 .location-title {
