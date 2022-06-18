@@ -106,7 +106,7 @@ body {
 
 img {width: 100%;height: auto;}
 
-a {text-decoration: none;}
+a {text-decoration: none; color: inherit;}
 
 ul {
     list-style: none;
@@ -246,9 +246,9 @@ ul {
     font-size: var(--big-font-size);
     color: var(--gold);
     font-weight: var(--font-semi-bold);
-    text-shadow: 1px 1px 2px hsla(0, 0%, 13%, 0.795);
     letter-spacing: 3px;
     word-spacing: 4px;
+    font-style: italic;
 }
 
 /* special items menu */
@@ -380,9 +380,7 @@ ul {
     background-color: inherit;
 }
 
-.menu-pics-card a img {
-    height: 220px;
-}
+.menu-pics-card a img {height: 220px}
 
 .menu-pics-card .menu-card-title {
     height: 30px;
@@ -395,7 +393,7 @@ ul {
 }
 
 .menu-pics-card:hover {
-    color: var(--gold);
+    color: rgb(244, 80, 80);
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     transform: scale(1.05)
 }
@@ -495,6 +493,7 @@ ul {
 }
 
 .location-title {
+    color: var(--pure-white);
     font-size: var(--big-font-size);
     font-weight: var(--font-medium);
     font-family: 'Raleway', sans-serif;
@@ -512,6 +511,7 @@ ul {
 #note {
     font-size: var(--small-font-size);
     text-align: justify;
+    color: var(--pure-white)
 }
 
 /* ============= FOOTER ============= */
