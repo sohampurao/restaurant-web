@@ -372,48 +372,39 @@ ul {
 
 /* home menu cards */
 .home-card-1 .card-img-hover {
-    background-image: url("images/home-page/menu/menu_menu.jpg");
     background-image: url("/images/home-page/menu/menu_menu.jpg");
 }
 
 .home-card-2 .card-img-hover {
-    background-image: url("images/home-page/menu/menu-special.jpg");
     background-image: url("/images/home-page/menu/menu-special.jpg");
 }
 
 .home-card-3 .card-img-hover {
-    background-image: url("images/home-page/menu/menu-snacks.jpg");
     background-image: url("/images/home-page/menu/menu-snacks.jpg");
 }
 
 /* main menu cards */
 .menu-card-1 .card-img-hover {
-    background-image: url("images/menu/menu-appetizers.jpg");
     background-image: url("/images/menu/menu-appetizers.jpg");
 }
 
 .menu-card-2 .card-img-hover {
-    background-image: url("images/menu/menu-main-menu.jpg");
     background-image: url("/images/menu/menu-main-menu.jpg");
 }
 
 .menu-card-3 .card-img-hover {
-    background-image: url("images/menu/menu-seafood.jpg");
     background-image: url("/images/menu/menu-seafood.jpg");
 }
 
 .menu-card-4 .card-img-hover {
-    background-image: url("images/menu/menu-pizza.jpg");
     background-image: url("/images/menu/menu-pizza.jpg");
 }
 
 .menu-card-5 .card-img-hover {
-    background-image: url("images/menu/menu-drinks.jpg");
     background-image: url("/images/menu/menu-drinks.jpg");
 }
 
 .menu-card-6 .card-img-hover {
-    background-image: url("images/menu/menu-dessert.jpg");
     background-image: url("/images/menu/menu-dessert.jpg");
 }
 
