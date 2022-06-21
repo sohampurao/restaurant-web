@@ -408,7 +408,6 @@ ul {
     background-image: url("/images/menu/menu-dessert.jpg");
 }
 
-
 .place-holder {
     visibility: hidden;
     width: 100%;
@@ -433,7 +432,7 @@ ul {
     position: relative;
     border-radius: var(--br-20);
     overflow: hidden;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .menu-card:hover {
@@ -444,10 +443,10 @@ ul {
 .card-info {
     background: #fffafc;
     padding: 10px 16px 16px 16px;
-    color: var(--title-text-clr);
-}
-
-.card-title {
+    color: var(--normal-text-clr);
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: var(--h2-font-size);
     font-weight: 600;
     font-family: "Roboto", sans-serif;
 }
@@ -460,10 +459,10 @@ ul {
     background: transparent;
     position: relative;
     color: #ffffff;
+    text-shadow: 2px 1px 4px rgb(0, 0, 0);
 }
 
 /* ============= MENU PAGE ============= */
-
 /* menu image card fade in top animation */
 .fade-in-top{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
 @-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
