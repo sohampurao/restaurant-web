@@ -248,7 +248,6 @@ ul {
     font-weight: var(--font-semi-bold);
     letter-spacing: 3px;
     word-spacing: 4px;
-    font-style: italic;
 }
 
 /* special items menu */
@@ -370,36 +369,97 @@ ul {
 #reviews-heading {color: #ffffff; text-shadow: none}
 
 /* ============= MENU ITEM CARDS ============= */
-.menu-pics-card {
-    width: 380px;
-    height: 250px;
-    color: var(--pure-white);
-    border-radius: var(--br-2-5);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    background-color: inherit;
+
+/* home menu cards */
+.home-card-1 .card-img-hover {
+    background-image: url("/images/home-page/menu/menu_menu.jpg");
 }
 
-.menu-pics-card a img {height: 220px}
-
-.menu-pics-card .menu-card-title {
-    height: 30px;
-    bottom: 0px;
-    left: 0px;
-    padding: 0.2rem;
-    background: var(--menu-sr);
-    font-weight: 700;
-    font-size: var(--normal-font-size)
+.home-card-2 .card-img-hover {
+    background-image: url("/images/home-page/menu/menu-special.jpg");
 }
 
-.menu-pics-card:hover {
-    color: rgb(244, 80, 80);
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    transform: scale(1.05)
+.home-card-3 .card-img-hover {
+    background-image: url("/images/home-page/menu/menu-snacks.jpg");
 }
 
-.menu-pics-card:hover .menu-card-title {
-    background: #000000;
+/* main menu cards */
+.menu-card-1 .card-img-hover {
+    background-image: url("/images/menu/menu-appetizers.jpg");
+}
+
+.menu-card-2 .card-img-hover {
+    background-image: url("/images/menu/menu-main-menu.jpg");
+}
+
+.menu-card-3 .card-img-hover {
+    background-image: url("/images/menu/menu-seafood.jpg");
+}
+
+.menu-card-4 .card-img-hover {
+    background-image: url("/images/menu/menu-pizza.jpg");
+}
+
+.menu-card-5 .card-img-hover {
+    background-image: url("/images/menu/menu-drinks.jpg");
+}
+
+.menu-card-6 .card-img-hover {
+    background-image: url("/images/menu/menu-dessert.jpg");
+}
+
+
+.place-holder {
+    visibility: hidden;
+    width: 100%;
+    height: 235px;
+}
+
+.card-img-hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    top: 0%;
+}
+
+.menu-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: #ffff;
+    width: 350px;
+    position: relative;
+    border-radius: var(--br-20);
+    overflow: hidden;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.menu-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: scale(1.1, 1.1);
+}
+
+.card-info {
+    background: #fffafc;
+    padding: 10px 16px 16px 16px;
+    color: var(--title-text-clr);
+}
+
+.card-title {
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+
+.menu-card:hover .card-img-hover {
+    height: 100%;
+}
+
+.menu-card:hover .card-info {
+    background: transparent;
+    position: relative;
+    color: #ffffff;
 }
 
 /* ============= MENU PAGE ============= */
@@ -579,29 +639,8 @@ section span.footer-sub {
 
 /* ============= MEDIA QUERIES ============= */
 
-/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {
-    /* ============= MENU ITEM CARDS ============= */
-    .menu-pics-card {
-        width: 320px;
-        height: 210px;
-    }
-    
-    .menu-pics-card a img {
-        height: 180px;
-    }
-}
-
 /* `xl` applies to large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
-    /* ============= MENU ITEM CARDS ============= */
-    .menu-pics-card {
-        width: 320px;
-        height: 200px;
-    }
-
-    .menu-pics-card a img {height: 170px;}
-
     /* ============= HOME PAGE ============= */
     .thumbnail-inner-glass .thumbnail-txt {
         top: 35%;
@@ -705,9 +744,6 @@ section span.footer-sub {
 
     .menu-thumbnail {font-size: 2.5rem}
 
-    /* ============= MENU ITEM CARDS ============= */
-    .menu-pics-card .menu-card-title {padding: 0.3rem}
-
     /* ============= CONTACT ============= */
     #contact-map  {height: 500px}
 
@@ -767,11 +803,7 @@ section span.footer-sub {
     }
 
     /* ============= MENU ITEM CARDS ============= */
-    .menu-pics-card {width: 280px; height: 190px;}
-
-    .menu-pics-card a img { height: 160px}
-
-    .menu-pics-card .menu-card-title {padding: 0.2rem 0rem}
+    .menu-card {width: 270px}
 }
 
 /* `xs` applies to extra-small devices (portrait phones, less than 333px) */
@@ -781,11 +813,4 @@ section span.footer-sub {
 
     /* for Menu Thumbnail img */
     .thumbnail {height: 180px}
-
-    /* ============= HOME PAGE ============= */
-    .menu-pics-card {width: 250px; height: 160px}
-
-    .menu-pics-card a img {height: 135px}
-
-    .menu-pics-card .menu-card-title {height: 25px; padding-bottom: 0.5rem}
 }
