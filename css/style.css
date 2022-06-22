@@ -32,7 +32,7 @@
     /* ============= LINEAR GRADIENTS ============= */
     --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
     --scrollbar-anchor-hover: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
-    --menu-sr: linear-gradient(to right, #434343, #000000);
+    --menu-sr : linear-gradient(to right, #434343 0%, black 100%);;
 
     /* ============= BORDER RADIUS ============= */
     --br-20 : 20px ;
@@ -427,7 +427,7 @@ ul {
 
 .menu-card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-    background-color: #ffff;
+    background-image: var(--menu-sr);
     width: 350px;
     position: relative;
     border-radius: var(--br-20);
@@ -441,14 +441,15 @@ ul {
 }
 
 .card-info {
-    background: #fffafc;
+    background-image: var(--menu-sr);
     padding: 10px 16px 16px 16px;
-    color: var(--normal-text-clr);
+    color: #fffafc;
     letter-spacing: 2px;
     word-spacing: 3px;
     font-size: var(--h2-font-size);
     font-weight: 600;
     font-family: "Roboto", sans-serif;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0, 1);
 }
 
 .menu-card:hover .card-img-hover {
@@ -458,8 +459,8 @@ ul {
 .menu-card:hover .card-info {
     background: transparent;
     position: relative;
-    color: #ffffff;
     text-shadow: 2px 1px 4px rgb(0, 0, 0);
+    border: none;
 }
 
 /* ============= MENU PAGE ============= */
