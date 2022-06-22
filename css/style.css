@@ -769,6 +769,8 @@ section span.footer-sub {
     .menu-thumbnail {font-size: 1.8rem}
     .thumbnail {height: 180px}
 
+    /* carousel */
+    .carousel-img {height: 50vw;}
     /* ============= HOME PAGE ============= */
     .dark-filter {background-color: #0000004d}
 
