@@ -117,26 +117,45 @@ ul {
 .main-content {background-color : inherit; max-width: calc(100% - 80px);}
 
 /* FOR SCROLLBAR */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background-color: var(--pure-white);
-    border: var(--br-20);
-}
-::-webkit-scrollbar-thumb {
-    background-image: var(--scrollbar-anchor-hover);
-    border-radius: var(--br-20);
-}
+::-webkit-scrollbar {width: 10px}
+::-webkit-scrollbar-track {background-color: var(--pure-white)}
 
+::-webkit-scrollbar-thumb {border-radius: 100vh;background-image: var(--scrollbar-anchor-hover);}
 /* tracking in expand forward (used for main menu page) */
 .tracking-in-expand-fwd{-webkit-animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both;animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both}
 @-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
-/* ============= NAVIGAITON BAR ============= */
-#navbar {
-    background-color: var(--primary-dark);
+/* scroll up element */
+.scroll-up {
+    position: fixed;
+    bottom: -30%;
+    right: 1.3rem;
+    background-image: var(--scrollbar-anchor-hover);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--br-2-5);
+    opacity: 0.8;
+    z-index: 1000;
+    animation: scrollani 700ms infinite alternate ease-in;
+    transition: all 0.4s;
 }
+
+.show-scroll {
+    bottom: 3rem;
+}
+
+.scroll-up i {
+    color: var(--pure-white);
+}
+.scroll-up:hover {
+    opacity: 1;
+}
+
+@keyframes scrollani {
+    0% {transform: translateY(0.75rem);}
+    100% {transform: none}
+}
+/* ============= NAVIGAITON BAR ============= */
+#navbar {background-color: var(--primary-dark)}
 
 #logo-img {
     display: block;
@@ -160,10 +179,7 @@ ul {
     color:var(--pure-white);
 }
 
-#nav-ul {
-    margin-left: auto;
-    column-gap: 0.625rem;
-}
+#nav-ul {margin-left: auto;column-gap: 0.625rem}
 
 #nav-anchor-1, #nav-anchor-2, #nav-anchor-3, #nav-anchor-4 {
     position: relative;
@@ -417,7 +433,7 @@ ul {
 .card-img-hover {
     transition: 0.2s all ease-out;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
     position: absolute;
@@ -462,11 +478,6 @@ ul {
     text-shadow: 2px 1px 4px rgb(0, 0, 0);
     border: none;
 }
-
-/* ============= MENU PAGE ============= */
-/* menu image card fade in top animation */
-.fade-in-top{-webkit-animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both;animation:fade-in-top 1s cubic-bezier(.39,.575,.565,1.000) .5s both}
-@-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
 
 /* ============= MENU ITEMS PAGE ============= */
 .page-inner-nav {

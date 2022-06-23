@@ -13,7 +13,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-    <!-- Custom Css (User agent) -->
+    <!-- Custom Css -->
     <link rel="stylesheet" href="css/swiper-review.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -21,14 +21,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
-    <!-- javaScript swiper CDN -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-
-    <!-- javaScript swiper reveiw Custom file -->
-    <script src="js/swiper-review.js" defer></script>
-
     <!-- Costum js file -->
     <script src="js/script.js" defer></script>
+
+    <!-- scroll reveal js cdn -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <!-- Favicon links -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/common/favicon_io/android-chrome-192x192.png">
@@ -65,6 +62,7 @@
 </head>
 <body>
     <div id="preloader" class="preloader"><img src="images/common/preloader/preloader.gif" alt="Preloader image"></div>
+    <a href="#" class="scroll-up" id="scrollup"><i class="fa-solid fa-arrow-up"><span class="visually-hidden">scroll up element</span></i></a>
     
     <!-- ============= NAVBAR START =============  -->
     <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
@@ -208,7 +206,7 @@
         <!-- ============= MENU CARDS START =============  -->
         <h1 class="d-block menu-heading text-uppercase text-center fst-italic mb-4 mt-5">menus</h1>
         
-        <div class="row" id="menu-img">
+        <div class="row">
 
             <div class="col-xxl-4 col-md-6 col-sm-12 mt-lg-3">
                 <article class="menu-card home-card-1 mx-auto">
@@ -476,5 +474,9 @@
         </div>
     </footer>
     <!-- ============= FOOTER END =============  -->
+    <!-- javaScript swiper CDN -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- javaScript swiper reveiw Custom file -->
+    <script src="js/swiper-review.js" defer></script>
 </body>
 </html>
