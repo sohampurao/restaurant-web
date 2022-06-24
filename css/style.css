@@ -8,6 +8,9 @@
 /* Carter */
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
+/* Yanone Kaffeesatz */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+
 /* ============= BASE ============= */
 *{
     margin: 0%;
@@ -75,12 +78,12 @@ html {scroll-behavior: smooth}
 
 body {
     font-family: 'Poppins','Roboto',sans-serif;
-    background-color: var(--bs-body-bg);
+    background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 100vh;
+    height: 100%;
     transition: 0.4s;
     color: var(--primary-font-clr);
 }
@@ -107,6 +110,8 @@ body {
 img {width: 100%;height: auto;}
 
 a {text-decoration: none; color: inherit;}
+
+.overflow-x-hidden {overflow-inline: hidden;}
 
 ul {
     list-style: none;
@@ -139,21 +144,12 @@ ul {
     transition: all 0.4s;
 }
 
-.show-scroll {
-    bottom: 3rem;
-}
+.show-scroll {bottom: 3rem;}
 
-.scroll-up i {
-    color: var(--pure-white);
-}
-.scroll-up:hover {
-    opacity: 1;
-}
+.scroll-up i {color: var(--pure-white);}
+.scroll-up:hover {opacity: 1;}
 
-@keyframes scrollani {
-    0% {transform: translateY(0.75rem);}
-    100% {transform: none}
-}
+@keyframes scrollani {0% {transform: translateY(0.75rem);}100% {transform: none}}
 /* ============= NAVIGAITON BAR ============= */
 #navbar {background-color: var(--primary-dark)}
 
@@ -242,28 +238,42 @@ ul {
 
 .dark-filter {background-color: #00000073}
 
-/* hero text */
-.hero-title{
-    font-size: var(--h1-font-size);
-    font-weight: var(--font-medium);
-    word-spacing: 0.125rem;
-    line-height: 2.5rem;
-    color: #7F0909;
-}
-
-.hero-description {
-    font-size: var(--normal-font-size);
-    color: var(--normal-text-clr);
-    line-height: 3rem;
-    text-align: justify;
-}
-
 .menu-heading {
     font-size: var(--big-font-size);
     color: var(--gold);
     font-weight: var(--font-semi-bold);
     letter-spacing: 3px;
     word-spacing: 4px;
+}
+
+/* about section */
+#pizza-inline { max-height: 40px; max-width: 500px;}
+
+.about-container {background-color: #ffffff;}
+
+.about-title {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 40px;
+    line-height: 2rem;
+    font-weight: 700;
+    color: var(--title-text-clr);
+}
+
+.about-sub-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: var(--font-medium);
+    font-size: 20px;
+    line-height: 4rem;
+    font-weight: 700;
+    color: #dd3744;
+}
+
+.about-discription {
+    line-height: 2rem;
+    text-align: justify;
+    font-size: var(--normal-font-size);
+    color: var(--normal-text-clr);
+    font-weight: var(--font-medium);
 }
 
 /* special items menu */
@@ -785,13 +795,18 @@ section span.footer-sub {
     /* ============= HOME PAGE ============= */
     .dark-filter {background-color: #0000004d}
 
-    .hero-title{
-        word-spacing: 0.1rem;
-        line-height: 1.5rem;
+    /* about section */
+    .about-title {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 35px;
+        line-height: 2.5rem;
+
     }
 
-    .hero-description {line-height: 2.5rem}
-
+    .about-sub-title {
+        font-size: 15px;
+        line-height: 2.2rem;
+    }
     .thumbnail-inner-glass {
         width: 100%;
         height: 100%;

@@ -19,6 +19,16 @@ const sr = ScrollReveal({
     duration: 2500,
     delay: 400,
 })
+
+// for about image
+sr.reveal(`.about-image-container`, {origin: 'left'})
+sr.reveal(`.about-image-container`, {delay: 900})
+sr.reveal(`.about-image-container`, {duration: 3000})
+
+sr.reveal(`.about-text`, {origin: 'right'})
+sr.reveal(`.about-text`, {delay: 900})
+sr.reveal(`.about-text`, {duration: 3000})
+
 // for home page
 sr.reveal(`#sp-container-m1`, {origin: 'left'})
 sr.reveal(`#sp-container-m2`, {origin: 'top'})
