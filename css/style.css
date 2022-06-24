@@ -71,7 +71,7 @@
 }
 }
 
-html {scroll-behavior: smooth;overflow-x: hidden;}
+html {scroll-behavior: smooth}
 
 body {
     font-family: 'Poppins','Roboto',sans-serif;
