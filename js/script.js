@@ -31,7 +31,7 @@ sr.reveal(`#sp-container-m1, #sp-container-m2, #sp-container-m3`, {reset: 'true'
 sr.reveal(`.home-card-1, .home-card-2, .home-card-3`, {reset: 'true'})
 
 sr.reveal(`.menu-item-left .menu-item-container`, {origin: 'left'})
-sr.reveal(`.menu-item-left .menu-item-container`, {reset: 'true'})
+// sr.reveal(`.menu-item-left .menu-item-container`, {reset: 'true'})
 sr.reveal(`.menu-item-right .menu-item-container`, {origin: 'right'})
-sr.reveal(`.menu-item-right .menu-item-container`, {reset: 'true'})
+// sr.reveal(`.menu-item-right .menu-item-container`, {reset: 'true'})
 }
