@@ -182,19 +182,21 @@ ul {
 
 #nav-anchor-1::after, #nav-anchor-2::after, #nav-anchor-3::after, #nav-anchor-4::after {
     content:"";
-    display: block;
     position: absolute;
-    height: 0.2rem;
-    bottom: 0%;
-    width: 0px;
+    height: 2px;
+    bottom: 5%;
+    width: 81%;
     left: 8px;
-    border-radius: 5px;
-    background: var(--scrollbar-anchor-hover);
-    transition: width 0.55s ease-in-out;
+    border-radius: 100vh;
+    background-image: var(--scrollbar-anchor-hover);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
 }
 
 #nav-list-1:hover #nav-anchor-1::after, #nav-list-2:hover #nav-anchor-2::after, #nav-list-3:hover #nav-anchor-3::after, #nav-list-4:hover #nav-anchor-4::after {
-    width: 81%;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Thumbnail img */
