@@ -59,42 +59,39 @@
     <a href="#" class="scroll-up" id="scrollup"><i class="fa-solid fa-arrow-up"><span class="visually-hidden">scroll up element</span></i></a>
     
     <!-- ============= NAVBAR START =============  -->
-    <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
-        <div class="container-fluid">
-            <a href="index.html" >
-                <img id="logo-img" src="images/common/res-logo.jpg" alt="logo img">
-            </a>
-            <a href="index.html" class="navbar-brand">
-                <span>Uncle Sammy's Kichten</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <i class="fa-solid fa-bars"></i>
-                <span class="visually-hidden">Toggler icon</span>
-            </button>
-            <div class="offcanvas offcanvas-end d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header bg-dark" id="offcanvas-title">
-                    <h5 class="offcanvas-title" >Uncle Sammy's Kichten</h5>
-                    <button type="button" id="offcanvas-close-btn" class="bg-dark border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-                <div class="offcanvas-body bg-dark" id="offcanvas-body">
-                    <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
-                        <li id="nav-list-1"> 
-                            <a  id="nav-anchor-1" class="nav-link active" href="index.html"> Home </a>
-                        </li>
-                        <li id="nav-list-2"> 
-                            <a id="nav-anchor-2" class="nav-link " aria-current="page" href="menu.html"> Menu </a>
-                        </li>
-                        <li id="nav-list-3"> 
-                            <a id="nav-anchor-3" class="nav-link" aria-current="page" href="#"> About </a>
-                        </li>
-                        <li id="nav-list-4"> 
-                            <a id="nav-anchor-4" class="nav-link" aria-current="page" href="contact.html"> Contact </a>
-                        </li>
-                    </ul>
+    <header class="container-fluid bg-dark header p-2" id="header">
+        <div class="nav d-flex align-items-center justify-content-between overflow-hidden">
+
+            <div class="nav-logo overflow-hidden">
+                <img src="images/common/res-logo.jpg" alt="brand logo" height="60px" width="60px">
+            </div>
+
+            <div class="brand-name text-white me-md-auto ms-md-2 mx-auto">
+                Uncle Sammy's Kichten
+            </div>
+
+            <div class="cart me-3 text-white">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            
+            <div class="nav-menu bg-dark" id="nav-menu">
+                <ul class="nav-ul text-center d-flex me-3">
+                    <li class="nav-li"><a href="index.html" class="nav-anchor active"> Home </a></li>
+                    <li class="nav-li"><a href="#" class="nav-anchor"> About </a></li>
+                    <li class="nav-li"><a href="menu.html" class="nav-anchor"> Menu </a></li>
+                    <li class="nav-li"><a href="contact.html" class="nav-anchor"> Contact </a></li>
+                </ul>
+
+                <div class="close-offcanvas text-white d-md-none" id="nav-close">
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
+
+            <div class="nav-toggle d-md-none text-white d-inline-flex me-3" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-    </nav>
+    </header>
     <!-- ============= NAVBAR END =============  -->
 
     <!-- ============= CAROUSEL  START ============= -->
@@ -171,33 +168,33 @@
 
             <div class="col-md-4 col-sm-12 pt-2">
                 <a href="#">
-                    <div id="sp-container-m1" class="special-item-container mx-auto position-relative my-3">
+                    <div class="special-item-container mx-auto position-relative my-3">
                         <div class="special-item-circle position-absolute"></div>
-                        <img id="specical-img-m1" class="special-item-img position-relative" src="images/home-page/special-item/special-burger.png" alt="Burger img">
-                        <h1 id="specical-title-m1" class="special-item-title">Burger Bologona</h1>
-                        <div class="special-item-price"><span id="sp-price-sheky-m1" class="d-block text-center">500 &#8377;</span></div>
+                        <img class="special-item-img position-relative" src="images/home-page/special-item/special-burger.png" alt="Burger img">
+                        <h1 class="special-item-title">Burger Bologona</h1>
+                        <div class="special-item-price"><span class="d-block text-center">500 &#8377;</span></div>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-4 col-sm-12 pt-2">
                 <a href="pizza-menu.html">
-                    <div id="sp-container-m2" class="special-item-container mx-auto position-relative my-3">
+                    <div class="special-item-container mx-auto position-relative my-3">
                         <div class="special-item-circle position-absolute"></div>
-                        <img id="specical-img-m2" class="special-item-img position-relative" src="images/home-page/special-item/special-pizza.png" alt="Pizza image">
-                        <h1 id="specical-title-m2" class="special-item-title">Pepperoni Pizza</h1>
-                        <div class="special-item-price"><span id="sp-price-sheky-m2" class="d-block text-center">350 &#8377;</span></div>
+                        <img class="special-item-img position-relative" src="images/home-page/special-item/special-pizza.png" alt="Pizza image">
+                        <h1 class="special-item-title">Pepperoni Pizza</h1>
+                        <div class="special-item-price"><span class="d-block text-center">350 &#8377;</span></div>
                     </div>
                 </a>
             </div>
 
             <div class="col-md-4 col-sm-12 pt-2">
                 <a href="#">
-                    <div id="sp-container-m3" class="special-item-container mx-auto position-relative my-3">
+                    <div class="special-item-container mx-auto position-relative my-3">
                         <div class="special-item-circle position-absolute"></div>
-                        <img id="specical-img-m3" class="special-item-img position-relative" src="images/home-page/special-item/special-wine.png" alt="wine image">
-                        <h1 id="specical-title-m3" class="special-item-title">Red Wine</h1>
-                        <div class="special-item-price"><span id="sp-price-sheky-m3" class="d-block text-center">1750 &#8377;</span></div>
+                        <img class="special-item-img position-relative" src="images/home-page/special-item/special-wine.png" alt="wine image">
+                        <h1 class="special-item-title">Red Wine</h1>
+                        <div class="special-item-price"><span class="d-block text-center">1750 &#8377;</span></div>
                     </div>
                 </a>
             </div>
