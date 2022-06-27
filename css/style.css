@@ -117,6 +117,8 @@ ul {
     padding: 0%;
 }
 
+.overflow-x-hidden {overflow-x: hidden}
+
 .main-content {background-color : inherit; max-width: calc(100% - 80px);}
 
 /* FOR SCROLLBAR */
@@ -129,73 +131,48 @@ ul {
 @-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
 /* ============= NAVBAR NAV ============= */
-.nav-logo {
+.brand-logo {
     width: 60px;
-    align-self: flex-start;
-    border-radius: 50px;
-    border: 2px solid var(--pure-white);
     padding: 2px;
-    object-fit: contain;
+    border: 2px solid var(--pure-white);
 }
-
-.nav-logo img {border-radius: inherit}
 
 .brand-name {
     font-size: var(--h2-font-size);
-    font-weight: var(--font-semi-bold);
+    font-weight: var(--font-medium);
 }
 
-@media (max-width: 767.98px) {
-.nav-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%;
-    height: 100%;
-    z-index: 9999;
-    border-bottom-left-radius: var(--br-20);
-    border-top-left-radius: var(--br-20);
-    border-left: 1px solid white;
-    font-size: 1rem;
-    transform: translateX(100%);
-    outline: none;
+.cart-icon, .nav-close, .nav-toggler {
+    font-size: 1.25rem;
+    cursor: pointer;
 }
 
-.close-offcanvas {
-    position: absolute;
-    display: inline-block;
-    top: 1.5rem;
-    right: 1.5rem;
-}
-
-.nav-ul {
-    top: 30%;
-    left: 37%;
-    row-gap: 2rem;
-    flex-direction: column !important;
-    position: absolute;
-}
-.nav-anchor {color: #ffffff !important;}
-}
-
-.nav-ul {
-    flex-direction: row;
+.nav-list {
+    flex-direction:row;
     column-gap: 1rem;
 }
 
-.active {color: #ffffff !important;}
+.active {color: var(--pure-white) !important;}
 
-.nav-anchor {
-    color:rgba(255, 255, 255, 0.55);
+.nav-link {color: rgba(255, 255, 255, 0.55); position: relative;}
+
+.nav-link:hover {color: rgba(255, 255, 255, 0.75)}
+
+.nav-link::after {
+    content:'';
+    display: block;
+    position: absolute;
+    background-image: var(--scrollbar-anchor-hover);
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
 }
 
-.nav-anchor:hover {color: rgba(255, 255, 255, 0.75);}
-
-/* Show menu */
-.show-menu{
-    transform: none;
-    visibility: visible;
-    transition: transform .3s ease-in-out;
+.nav-item:hover .nav-link::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 /* scroll up element */
 .scroll-up {
@@ -673,7 +650,44 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
      /* ============= NAVIGATION BAR ============= */
-    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 360px;
+        height: 100%;
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: var(--br-20);
+        border-top-left-radius: var(--br-20);
+        border-left: 1px solid var(--pure-white);
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        visibility: hidden;
+    }
+
+    .nav-link::after{display: none;}
+
+    .nav-list {
+        font-size: 1rem;
+        color: var(--pure-white);
+        flex-direction: column;
+        row-gap: 20px;
+        font-weight: var(--font-medium);
+    }
+
+    .nav-close {
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .show-menu {
+        visibility: visible;
+        transform: none;
+        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    }
+
     /* ============= HOME PAGE ============= */
     .view-more-btn {
         padding: 0.2rem 1.3rem;
@@ -705,8 +719,8 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 @media (max-width: 575.98px) { 
     /* ============= BASE ============= */
     .main-content  {max-width: 100%}
-
     /* ============= NAVIGATION BAR ============= */
+    .nav-menu {width: 80%;}
     /* for Menu Thumbnail img */
     .menu-thumbnail {font-size: 1.8rem}
     .thumbnail {height: 180px}

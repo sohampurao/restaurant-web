@@ -21,9 +21,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
-    <!-- Costum js file -->
-    <script src="js/script.js" defer></script>
-
     <!-- scroll reveal js cdn -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
@@ -59,38 +56,38 @@
     <a href="#" class="scroll-up" id="scrollup"><i class="fa-solid fa-arrow-up"><span class="visually-hidden">scroll up element</span></i></a>
     
     <!-- ============= NAVBAR START =============  -->
-    <header class="container-fluid bg-dark header p-2" id="header">
-        <div class="nav d-flex align-items-center justify-content-between overflow-hidden">
+    <header class="header container-fluid bg-dark py-2">
+        <nav class="nav-bar d-flex align-items-center justify-content-between">
 
-            <div class="nav-logo overflow-hidden">
-                <img src="images/common/res-logo.jpg" alt="brand logo" height="60px" width="60px">
+            <div class="brand-logo rounded-circle">
+                <img src="images/common/res-logo.jpg" alt="restaurent logo" class="img-fluid rounded-circle">
             </div>
 
-            <div class="brand-name text-white me-md-auto ms-md-2 mx-auto">
-                Uncle Sammy's Kichten
+            <div class="brand-name text-capitalize me-auto ms-2 text-white">
+                uncle sammy's kicthen
             </div>
 
-            <div class="cart me-3 text-white">
+            <div class="cart-icon">
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
             
-            <div class="nav-menu bg-dark" id="nav-menu">
-                <ul class="nav-ul text-center d-flex me-3">
-                    <li class="nav-li"><a href="index.html" class="nav-anchor active"> Home </a></li>
-                    <li class="nav-li"><a href="#" class="nav-anchor"> About </a></li>
-                    <li class="nav-li"><a href="menu.html" class="nav-anchor"> Menu </a></li>
-                    <li class="nav-li"><a href="contact.html" class="nav-anchor"> Contact </a></li>
+            <div class="nav-menu bg-dark text-center d-flex" id="nav-menu">
+                <ul class="nav-list text-capitalize d-flex me-md-2" id="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">home</a></li>
+                    <li class="nav-item"><a href="menu.html" class="nav-link">menu</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">about</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
                 </ul>
 
-                <div class="close-offcanvas text-white d-md-none" id="nav-close">
+                <div class="nav-close d-inline-flex d-md-none position-absolute text-white" id="nav-close">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
 
-            <div class="nav-toggle d-md-none text-white d-inline-flex me-3" id="nav-toggle">
+            <div class="nav-toggler text-white me-2 d-inline-flex d-md-none" id="nav-toggler">
                 <i class="fa-solid fa-bars"></i>
             </div>
-        </div>
+        </nav>
     </header>
     <!-- ============= NAVBAR END =============  -->
 
@@ -141,7 +138,7 @@
     <div class="container pt-2 mt-lg-3 main-content">
 
         <!-- ============= HERO TEXT START =============  -->
-        <div class="container my-5 about-container">
+        <div class="container my-5 about-container overflow-x-hidden">
             <div class="row">
                 <div class="col-md-4 about-image-container">
                 <img src="images/about-us/about-us.jpg" alt="about image" class="img-fluid">
@@ -164,7 +161,7 @@
         <!-- ============= SPECIAL MENU START =============  -->
         <h1 class="d-block menu-heading text-uppercase text-center fst-italic mb-4 mt-5">also famous for</h1>
 
-        <div class="row">
+        <div class="row overflow-x-hidden">
 
             <div class="col-md-4 col-sm-12 pt-2">
                 <a href="#">
@@ -205,7 +202,7 @@
         <!-- ============= MENU CARDS START =============  -->
         <h1 class="d-block menu-heading text-uppercase text-center fst-italic mb-4 mt-5">menus</h1>
         
-        <div class="row">
+        <div class="row overflow-x-hidden">
 
             <div class="col-xxl-4 col-md-6 col-sm-12 mt-lg-3 my-4">
                 <article class="menu-card home-card-1 mx-auto">
@@ -261,7 +258,7 @@
     </div>
 
     <!-- ============= COSTUMERS REVIEW'S START =============  -->
-    <div class="shape-divider mt-5 overflow-hidden">
+    <div class="shape-divider mt-5 overflow-x-hidden">
 
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <defs>
@@ -473,6 +470,8 @@
         </div>
     </footer>
     <!-- ============= FOOTER END =============  -->
+    <!-- Costum js file -->
+    <script src="js/script.js" defer></script>
     <!-- javaScript swiper CDN -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <!-- javaScript swiper reveiw Custom file -->

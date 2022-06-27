@@ -3,7 +3,7 @@ window.addEventListener('load', () => { return document.getElementById("preloade
 
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
+    navToggle = document.getElementById('nav-toggler'),
     navClose = document.getElementById('nav-close')
 
 /*===== MENU SHOW =====*/
@@ -24,7 +24,7 @@ if(navClose){
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav-anchor')
+const navLink = document.querySelectorAll('.nav-item')
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
