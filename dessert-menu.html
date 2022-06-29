@@ -52,46 +52,40 @@
         <!-- ============= PPRELOADER END =============  -->
 
         <!-- ============= NAVBAR START =============  -->
-        <nav class="navbar navbar-expand-md navbar-dark" id="navbar">
-            <div class="container-fluid">
-                <a href="index.html" >
-                    <img id="logo-img" src="images/common/res-logo.jpg" alt="logo img">
-                </a>
-                <a href="index.html" class="navbar-brand">
-                    <span>Uncle Sammy's Kichten</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <i class="fa-solid fa-bars"></i>
-                    <span class="visually-hidden">Toggler icon</span>
-                </button>
-                <div class="offcanvas offcanvas-end d-flex" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header bg-dark" id="offcanvas-title">
-                        <h5 class="offcanvas-title" >Uncle Sammy's Kichten</h5>
-                        <button type="button" id="offcanvas-close-btn" class="bg-dark border-0" data-bs-dismiss="offcanvas" aria-label="Close">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
-                    </div>
-                    <div class="offcanvas-body bg-dark" id="offcanvas-body">
-                        <ul class="navbar-nav navbar-navigation d-flex pe-3" id="nav-ul">
-                            <li class="nav-list"> 
-                                <a class="nav-link" href="index.html"> Home </a>
-                            </li>
-                            <li class="nav-list"> 
-                                <a class="nav-link " aria-current="page" href="menu.html"> Menu </a>
-                            </li>
-                            <li class="nav-list"> 
-                                <a class="nav-link" aria-current="page" href="#"> About </a>
-                            </li>
-                            <li class="nav-list"> 
-                                <a class="nav-link" aria-current="page" href="contact.html"> Contact </a>
-                            </li>
-                        </ul>
+        <header class="header container-fluid bg-black">
+            <nav class="nav-bar d-flex align-items-center justify-content-between">
+    
+                <div class="brand-logo rounded-circle">
+                    <img src="images/common/res-logo.jpg" alt="restaurent logo" class="img-fluid rounded-circle">
+                </div>
+    
+                <div class="brand-name text-capitalize me-auto ms-2 text-white">
+                    uncle sammy's kicthen
+                </div>
+    
+                <div class="cart-icon text-white me-3">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                
+                <div class="nav-menu bg-black text-center d-flex" id="nav-menu">
+                    <ul class="nav-list text-capitalize d-flex me-md-2" id="nav-list">
+                        <li class="nav-item"><a href="index.html" class="nav-link">home</a></li>
+                        <li class="nav-item"><a href="menu.html" class="nav-link">menu</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">about</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
+                    </ul>
+    
+                    <div class="nav-close d-inline-flex d-md-none position-absolute text-white" id="nav-close">
+                        <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>
-            </div>
-        </nav>
+    
+                <div class="nav-toggler text-white me-2 d-inline-flex d-md-none" id="nav-toggler">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
         <!-- ============= NAVBAR END =============  -->
-    </header>
 
     <!-- ============= THUMNBNAIL START =============  -->
     <div class="w-100 thumbnail menu-thumbnail text-center" id="menu-dessert">
@@ -103,16 +97,16 @@
         <!-- ============= INNER PAGE NAVIGATION START =============  -->
         <div class="page-inner-nav w-100 mb-4 d-inline-flex justify-content-center align-items-center">
             <div>
-                <a href="menu.html" class="nav-link">Menu</a>
+                <a href="menu.html">Menu</a>
             </div>
             <span> | </span>
             <div>
-                <a href="dessert-menu.html" class="nav-link inner-nav-active"> Dessert </a>
+                <a href="dessert-menu.html" class="inner-nav-active"> Dessert </a>
             </div>
         </div>
         <!-- ============= INNER PAGE NAVIGATION END =============  -->
 
-        <div class="row">
+        <div class="row overflow-x-hidden">
             <!-- ============= MENU ITEMS LEFT START =============  -->
             <div class="col-lg-6 col-12 menu-item-left">
 

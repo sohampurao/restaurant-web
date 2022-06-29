@@ -111,11 +111,7 @@ img {width: 100%; height: auto;}
 
 a {text-decoration: none; color: inherit;}
 
-ul {
-    list-style: none;
-    margin: 0%;
-    padding: 0%;
-}
+ul {list-style: none; margin: 0%; padding: 0%;}
 
 .overflow-x-hidden {overflow-x: hidden}
 
@@ -131,6 +127,10 @@ ul {
 @-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
 /* ============= NAVBAR NAV ============= */
+header {height: 4.75rem; border-bottom: 1px solid var(--pure-white);}
+
+.nav-bar {height: inherit;}
+
 .brand-logo {
     width: 60px;
     padding: 2px;
@@ -143,7 +143,7 @@ ul {
 }
 
 .cart-icon, .nav-close, .nav-toggler {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -174,6 +174,7 @@ ul {
     transform: scaleX(1);
     transform-origin: left;
 }
+
 /* scroll up element */
 .scroll-up {
     position: fixed;
@@ -650,10 +651,11 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 /* `md` applies to small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
      /* ============= NAVIGATION BAR ============= */
+    header {height: 3.75rem}
     .nav-menu {
         position: fixed;
         top: 0;
-        right: 0;
+        right: -100%;
         width: 360px;
         height: 100%;
         z-index: 99999;
@@ -662,10 +664,10 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
         border-bottom-left-radius: var(--br-20);
         border-top-left-radius: var(--br-20);
         border-left: 1px solid var(--pure-white);
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in-out;
-        visibility: hidden;
+        transition: right 0.4s ease-out;
     }
+
+    .brand-logo {display: none;}
 
     .nav-link::after{display: none;}
 
@@ -683,8 +685,7 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
     }
 
     .show-menu {
-        visibility: visible;
-        transform: none;
+        right: 0;
         box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4);
     }
 

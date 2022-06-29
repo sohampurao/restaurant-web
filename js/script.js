@@ -60,9 +60,9 @@ sr.reveal('.about-text', {delay: 900})
 sr.reveal('.about-text', {duration: 3000})
 
 // for home page
-sr.reveal('#sp-container-m1', {origin: 'left'})
-sr.reveal('#sp-container-m2', {origin: 'top'})
-sr.reveal('#sp-container-m3', {origin: 'right'})
+sr.reveal('#sp-container-1', {origin: 'left'})
+sr.reveal('#sp-container-2', {origin: 'top'})
+sr.reveal('#sp-container-3', {origin: 'right'})
 
 sr.reveal('.home-card-1, .home-card-2, .home-card-3', {duration: 3000})
 sr.reveal('#sp-container-m1, #sp-container-m2, #sp-container-m3', {duration: 3000})
