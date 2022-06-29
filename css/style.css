@@ -84,7 +84,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100%;
-    transition: 0.4s;
+    transition: 0.4s ease-in;
     color: var(--primary-font-clr);
 }
 
@@ -109,7 +109,7 @@ body {
 
 img {width: 100%; height: auto;}
 
-a {text-decoration: none; color: inherit;}
+a ,a:hover {text-decoration: none; color: inherit;}
 
 ul {list-style: none; margin: 0%; padding: 0%;}
 
@@ -127,7 +127,7 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 @-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
 
 /* ============= NAVBAR NAV ============= */
-header {height: 4.75rem; border-bottom: 1px solid var(--pure-white);}
+header {height: 4.625rem; border-bottom: 1px solid var(--pure-white);}
 
 .nav-bar {height: inherit;}
 
@@ -140,6 +140,7 @@ header {height: 4.75rem; border-bottom: 1px solid var(--pure-white);}
 .brand-name {
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
+    cursor: pointer;
 }
 
 .cart-icon, .nav-close, .nav-toggler {
@@ -467,7 +468,7 @@ header {height: 4.75rem; border-bottom: 1px solid var(--pure-white);}
 
 .inner-nav-active , .inner-nav-active:hover{color: #f76e6e !important}
 
-.page-inner-nav div > a.nav-link:hover {color:  rgb(117, 117, 117)}
+.page-inner-nav > div > a:hover {color:  rgb(117, 117, 117)}
 
 .menu-item-container {
     width: calc(100% - 20px);
@@ -594,6 +595,7 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 #wa-num a {
     width: 200px;
     font-size: var(--h2-font-size);
+    color: var(--gold);
 }
 
 #footer-social-ul {
@@ -724,6 +726,7 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
     .nav-menu {width: 80%;}
     /* for Menu Thumbnail img */
     .menu-thumbnail {font-size: 1.8rem}
+
     .thumbnail {height: 180px}
 
     /* carousel */
@@ -772,7 +775,6 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 /* `xs` applies to extra-small devices (portrait phones, less than 333px) */
 @media (max-width: 333.98px) {
     /* ============= NAVIGATION BAR ============= */
-
     /* for Menu Thumbnail img */
     .thumbnail {height: 180px}
 }

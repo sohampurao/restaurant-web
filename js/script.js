@@ -1,29 +1,16 @@
 // PRELOADER
 window.addEventListener('load', () => { return document.getElementById("preloader").style.display = "none"})
 
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggler'),
-    navClose = document.getElementById('nav-close')
+/*=============== OFFCANVAS START ===============*/
+const navMenu = document.getElementById('nav-menu'), navToggle = document.getElementById('nav-toggler'), navClose = document.getElementById('nav-close')
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+// show menu
+navToggle.addEventListener('click', function(){return navMenu.classList.add('show-menu')});
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
+// hide menu
+navClose.addEventListener('click', function(){return navMenu.classList.remove('show-menu')});
 
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-/*=============== REMOVE MENU MOBILE ===============*/
+// removing "show-menu" class while navigation
 const navLink = document.querySelectorAll('.nav-item')
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
@@ -31,15 +18,17 @@ function linkAction(){
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+/*=============== OFFCANVAS END ===============*/
 
-// scroll Up
+/*=============== SCROLL UP START ===============*/
 function scrollUP() {
     let scrollBtn = document.getElementById("scrollup");
     if (this.scrollY >= 400)scrollBtn.classList.add("show-scroll"); else scrollBtn.classList.remove("show-scroll");
 }
 window.addEventListener('scroll', scrollUP)
+/*=============== SCROLL UP END ===============*/
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/*=============== SCROLL REVEAL ANIMATION  START ===============*/
 window.addEventListener('load', revealOnScroll)
 
 function revealOnScroll() {
@@ -74,3 +63,4 @@ sr.reveal('.menu-item-right .menu-item-container', {origin: 'right'})
 // sr.reveal('.menu-item-left .menu-item-container', {reset: 'true'})
 // sr.reveal('.menu-item-right .menu-item-container.', {reset: 'true'})
 }
+/*=============== SCROLL REVEAL ANIMATION END ===============*/
