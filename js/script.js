@@ -5,10 +5,9 @@ window.addEventListener('load', () => { return document.getElementById("preloade
 const navMenu = document.getElementById('nav-menu'), navToggle = document.getElementById('nav-toggler'), navClose = document.getElementById('nav-close')
 
 // show menu
-navToggle.addEventListener('click', function(){return navMenu.classList.add('show-menu')});
-
+navToggle.addEventListener('click', function(){navMenu.classList.add('show-menu'); return document.body.classList.add('overflow-hidden')});
 // hide menu
-navClose.addEventListener('click', function(){return navMenu.classList.remove('show-menu')});
+navClose.addEventListener('click', function(){navMenu.classList.remove('show-menu'); return document.body.classList.remove('overflow-hidden')});
 
 // removing "show-menu" class while navigation
 const navLink = document.querySelectorAll('.nav-item')
