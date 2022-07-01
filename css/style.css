@@ -177,17 +177,15 @@ ul {list-style: none; margin: 0%; padding: 0%;}
     box-shadow: 0 0px 10px 2px #878787b8;
 }
 
+.cart-offer {top: var(--header-height); left: 0%; width: inherit; font-family: 'Poppins', sans-serif; font-size: var(--small-font-size); text-align: justify; height: 50px; max-height: 50px;}
+
+.cart-item-container {margin-top: 50px;}
+
 .cart-item-row {border-bottom: 1px solid black; }
 
-.cart-item-title {
-    font-size: var(--h2-font-size);
-    font-weight: var(--font-medium);
-}
+.cart-item-title {font-size: var(--h2-font-size); font-weight: var(--font-medium);}
 
-.cart-item-price {
-    font-size: var(--normal-font-size);
-    font-weight: 500;
-}
+.cart-item-price {font-size: var(--normal-font-size);}
 
 .cart-item-quantity {column-gap: 15px;}
 
@@ -199,14 +197,7 @@ ul {list-style: none; margin: 0%; padding: 0%;}
     box-shadow: 0 0px 10px #878787b8;
 }
 
-.shipping-label , .total-label {
-    font-size: 1rem;
-    font-weight: var(--font-semi-bold);
-}
-
-.shipping-price , .total-price {
-    font-weight: var(--font-medium);
-}
+.shipping-label , .total-label {font-size: 1rem; font-weight: var(--font-medium);}
 
 .cart-show {
     left: 0;
@@ -801,9 +792,8 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
     /* ============= BASE ============= */
     .main-content  {max-width: 100%}
     /* ============= NAVIGATION BAR ============= */
-    .cart-body {width: 80%;}
+    .cart-body,  .nav-menu{width: 90%;}
 
-    .nav-menu {width: 80%;}
     /* for Menu Thumbnail img */
     .menu-thumbnail {font-size: 1.8rem}
 
