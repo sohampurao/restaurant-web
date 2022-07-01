@@ -2,12 +2,16 @@
 window.addEventListener('load', () => { return document.getElementById("preloader").style.display = "none"})
 
 /*=============== OFFCANVAS START ===============*/
-const navMenu = document.getElementById('nav-menu'), navToggle = document.getElementById('nav-toggler'), navClose = document.getElementById('nav-close')
+const navMenu = document.getElementById('nav-menu'), navToggle = document.getElementById('nav-toggler'), navClose = document.getElementById('nav-close'), cartBody = document.getElementById("cart-body"), cartToggle = document.getElementById('cart-icon'), cartClose = document.getElementById('cart-close');
 
 // show menu
 navToggle.addEventListener('click', function(){navMenu.classList.add('show-menu'); return document.body.classList.add('overflow-hidden')});
+
+cartToggle.addEventListener('click', function(){cartBody.classList.add('cart-show'); cartBody.classList.add('overflow-scroll');return document.body.classList.add('overflow-hidden')});
 // hide menu
 navClose.addEventListener('click', function(){navMenu.classList.remove('show-menu'); return document.body.classList.remove('overflow-hidden')});
+
+cartClose.addEventListener('click', function(){cartBody.classList.remove('cart-show'); return document.body.classList.remove('overflow-hidden')});
 
 // removing "show-menu" class while navigation
 const navLink = document.querySelectorAll('.nav-item')
