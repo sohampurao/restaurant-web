@@ -170,8 +170,6 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 }
 
 .cart-header-container {
-    top: 0%;
-    left: 0%;
     z-index: 100;
     font-family: 'Raleway', sans-serif;
     background-color: red;
@@ -182,8 +180,8 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 .cart-item-row {border-bottom: 1px solid black; }
 
 .cart-item-title {
-    font-size: var(--h3-font-size);
-    font-weight: var(--font-semi-bold);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
 }
 
 .cart-item-price {
@@ -194,6 +192,21 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 .cart-item-quantity {column-gap: 15px;}
 
 .minus-quantity > i , .plus-quantity > i { width: 20px; height: 20px; cursor: pointer; font-size: var(--small-font-size);}
+
+.cart-total-container {
+    height: 25vh;
+    z-index: 100;
+    box-shadow: 0 0px 10px #878787b8;
+}
+
+.shipping-label , .total-label {
+    font-size: 1rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.shipping-price , .total-price {
+    font-weight: var(--font-medium);
+}
 
 .cart-show {
     left: 0;

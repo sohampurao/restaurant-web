@@ -7,7 +7,7 @@ const navMenu = document.getElementById('nav-menu'), navToggle = document.getEle
 // show menu
 navToggle.addEventListener('click', function(){navMenu.classList.add('show-menu'); return document.body.classList.add('overflow-hidden')});
 
-cartToggle.addEventListener('click', function(){cartBody.classList.add('cart-show'); cartBody.classList.add('overflow-scroll');return document.body.classList.add('overflow-hidden')});
+cartToggle.addEventListener('click', function(){cartBody.classList.add('cart-show'); cartBody.classList.add('overflow-auto');return document.body.classList.add('overflow-hidden')});
 // hide menu
 navClose.addEventListener('click', function(){navMenu.classList.remove('show-menu'); return document.body.classList.remove('overflow-hidden')});
 
