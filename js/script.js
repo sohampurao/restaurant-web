@@ -1,28 +1,6 @@
 // PRELOADER
 window.addEventListener('load', () => { return document.getElementById("preloader").style.display = "none"})
 
-/*=============== OFFCANVAS START ===============*/
-const navMenu = document.getElementById('nav-menu'), navToggle = document.getElementById('nav-toggler'), navClose = document.getElementById('nav-close'), cartBody = document.getElementById("cart-body"), cartToggle = document.getElementById('cart-icon'), cartClose = document.getElementById('cart-close');
-
-// show menu
-navToggle.addEventListener('click', function(){navMenu.classList.add('show-menu'); return document.body.classList.add('overflow-hidden')});
-
-cartToggle.addEventListener('click', function(){cartBody.classList.add('cart-show'); cartBody.classList.add('overflow-auto');return document.body.classList.add('overflow-hidden')});
-// hide menu
-navClose.addEventListener('click', function(){navMenu.classList.remove('show-menu'); return document.body.classList.remove('overflow-hidden')});
-
-cartClose.addEventListener('click', function(){cartBody.classList.remove('cart-show'); return document.body.classList.remove('overflow-hidden')});
-
-// removing "show-menu" class while navigation
-const navLink = document.querySelectorAll('.nav-item')
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-/*=============== OFFCANVAS END ===============*/
-
 /*=============== SCROLL UP START ===============*/
 function scrollUP() {
     let scrollBtn = document.getElementById("scrollup");
@@ -32,9 +10,9 @@ window.addEventListener('scroll', scrollUP)
 /*=============== SCROLL UP END ===============*/
 
 /*=============== SCROLL REVEAL ANIMATION  START ===============*/
-window.addEventListener('load', revealOnScroll)
+window.addEventListener('load', scrollReveal)
 
-function revealOnScroll() {
+function scrollReveal() {
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
@@ -58,12 +36,187 @@ sr.reveal('#sp-container-3', {origin: 'right'})
 
 sr.reveal('.home-card-1, .home-card-2, .home-card-3', {duration: 3000})
 sr.reveal('#sp-container-m1, #sp-container-m2, #sp-container-m3', {duration: 3000})
+
 // sr.reveal('#sp-container-m1, #sp-container-m2, #sp-container-m3', {reset: 'true'})
 // sr.reveal('.home-card-1, .home-card-2, .home-card-3', {reset: 'true'})
 
 sr.reveal('.menu-item-left .menu-item-container', {origin: 'left'})
 sr.reveal('.menu-item-right .menu-item-container', {origin: 'right'})
+
 // sr.reveal('.menu-item-left .menu-item-container', {reset: 'true'})
 // sr.reveal('.menu-item-right .menu-item-container.', {reset: 'true'})
 }
 /*=============== SCROLL REVEAL ANIMATION END ===============*/
+
+/*=============== OFFCANVAS START ===============*/
+const navMenu = document.getElementById('nav-menu'), navToggle = document.getElementById('nav-toggler'), navClose = document.getElementById('nav-close'), cartBody = document.getElementById("cart-body"), cartToggle = document.getElementById('cart-icon'), cartClose = document.getElementById('cart-close');
+
+// show menu
+navToggle.addEventListener('click', function(){navMenu.classList.add('show-menu'); return document.body.classList.add('overflow-hidden')});
+
+cartToggle.addEventListener('click', function(){ cartBody.classList.add('cart-show'); document.body.classList.add('overflow-hidden')});
+// hide menu
+navClose.addEventListener('click', function(){navMenu.classList.remove('show-menu'); return document.body.classList.remove('overflow-hidden')});
+
+cartClose.addEventListener('click', function(){cartBody.classList.remove('cart-show'); return document.body.classList.remove('overflow-hidden')});
+
+// removing "show-menu" class while navigation
+const navLink = document.querySelectorAll('.nav-item')
+function linkAction(){
+    const navMenu = document.getElementById('nav-menu')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+/*=============== OFFCANVAS END ===============*/
+
+/*=============== SHOPPING CART START ===============*/
+
+//executes the function while loading the page and even after the page is loaded
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+}
+else {
+    ready();
+}
+
+function ready() {
+    let addToCartBtns = document.getElementsByClassName('add-to-cart');
+    for(let i = 0; i < addToCartBtns.length; i++) {
+        var button = addToCartBtns[i];
+        button.addEventListener('click', addToCartItemRow)
+    }
+
+    function addToCartItemRow(event) {
+        let button = event.target;
+        let menuItemContainer = button.parentElement.parentElement;
+        let title = menuItemContainer.getElementsByClassName('menu-item-title')[0].innerHTML;
+        let price = menuItemContainer.getElementsByClassName('menu-item-price')[0].innerHTML;
+        let image = menuItemContainer.getElementsByClassName('menu-item-img')[0].src;
+
+        addToTheCart(title, price, image)
+    }
+
+    function addToTheCart(title, price, image) {
+        //checking whether the item is already exist in the shopping cart
+        var CartItemTitle = document.getElementsByClassName('cart-item-title');
+        for(let i =0; i < CartItemTitle.length; i++) {
+            if(CartItemTitle[i].innerHTML == title) {
+                alert('This item is already added to the cart!')
+                return
+            }
+        }
+
+        var cartRow = document.createElement('div');
+        cartRow.classList.add('row')
+        cartRow.classList.add('cart-item-row')
+        cartRow.classList.add('py-3')
+
+        var CartRowContainer = document.getElementsByClassName('cart-item-container')[0];
+        var cartRowContent = `
+        <div class="cart-item-details col-8 pe-0 mt-1">
+            <div class="cart-item-title">${title}</div>
+                <div class="cart-item-price fw-normal">${price}</div>
+                <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
+                <div class="minus-quantity">
+                    <i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i>
+                </div>
+                <input type="number" name="quantity-display" class="quantity-display text-center bg-light" min="1" max="7" size="2" value="1">
+                <div class="plus-quantity">
+                    <i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i>
+                </div>
+                <div class="cart-item-delete">
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+                </div>
+            </div>
+            <div class="cart-item-img col-4 ps-0 my-auto">
+                <img src="${image}" alt="cart item image" class="img-fluid rounded-2">
+            </div>
+        `
+        cartRow.innerHTML = cartRowContent;
+        CartRowContainer.append(cartRow);
+        cartRow.getElementsByClassName('quantity-display')[0].addEventListener('change', quantityInputsChaged);
+        cartRow.getElementsByClassName('plus-quantity')[0].addEventListener('click', increaseCartItemQuantity);
+        cartRow.getElementsByClassName('minus-quantity')[0].addEventListener('click', decreaseCartItemQuantity);
+        cartRow.getElementsByClassName('cart-item-delete')[0].addEventListener('click', removeCartItems);
+        updateCartTotal()
+    }
+
+    // function for removing the menu item row form the cart
+    const cartTrashItemRowBtn = document.getElementsByClassName('cart-item-delete');
+    console.log(cartTrashItemRowBtn);
+    for(var i = 0; i < cartTrashItemRowBtn.length; i++) {
+        var button = cartTrashItemRowBtn[i];
+        button.addEventListener('click', removeCartItems)
+    }
+
+    function removeCartItems(event) {
+        let buttonClicked = event.target;
+            buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
+            updateCartTotal()
+    }
+
+    //function for preventing costumer from ordering unexpected order quantitiy value
+    var quantityInputs = document.getElementsByClassName('quantity-display');
+    for(var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        input.addEventListener('change', quantityInputsChaged)
+    }
+
+    //returns 1 when order quantity is (-, null(0))
+    function quantityInputsChaged(event) {
+        var input = event.target;
+        if(isNaN(input.value) || input.value <= 0 || input.value == "" ) {
+            input.value = 1;
+        }
+        updateCartTotal()
+    }
+
+    // function for decreasing order quantity by 1
+    var decreaseCartItemQuantityBtns = document.getElementsByClassName('minus-quantity');
+    for(var i = 0; i < decreaseCartItemQuantityBtns.length; i++) {
+        var decreaseBtn = decreaseCartItemQuantityBtns[i];
+        decreaseBtn.addEventListener('click', decreaseCartItemQuantity)
+    }
+
+    function decreaseCartItemQuantity(event) {
+        var decreaseBtn = event.target;
+        var input = decreaseBtn.parentElement.parentElement.getElementsByClassName('quantity-display')[0];
+        if (input.value >= 2) {
+            input.value--;
+        }
+        updateCartTotal()
+    }
+
+    // function for incrementing order quantity by 1
+    var increaseCartItemQuantityBtns = document.getElementsByClassName('plus-quantity');
+    for(var i = 0; i < increaseCartItemQuantityBtns.length; i++) {
+        var increaseBtn = increaseCartItemQuantityBtns[i];
+        increaseBtn.addEventListener('click', increaseCartItemQuantity)
+    }
+
+    function increaseCartItemQuantity(event) {
+        var increaseBtn = event.target;
+        var input = increaseBtn.parentElement.parentElement.getElementsByClassName('quantity-display')[0];
+        if (input.value < 7) {
+            input.value++;
+        }
+        updateCartTotal()
+    }
+
+    //function returns total order value
+    function updateCartTotal() {
+        let cartItemContainer = document.getElementById('cart-item-container');
+        let cartItemRows = cartItemContainer.getElementsByClassName('cart-item-row');
+        var total = 0;
+        for(var i = 0; i < cartItemRows.length; i++) {
+            var cartRow = cartItemRows[i];
+            let itemPrice = parseInt(cartRow.getElementsByClassName('cart-item-price')[0].innerHTML.replace('₹', ''))
+            let itemQuantity = cartRow.getElementsByClassName('quantity-display')[0].value;
+            total = total + (itemPrice * itemQuantity)
+            document.getElementById('total-price').innerHTML = total + ' &#8377;';
+    }
+}
+}
+/*=============== SHOPPING CART END ===============*/

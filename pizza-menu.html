@@ -40,45 +40,79 @@
             <img src="images/common/preloader/menu-preloader.gif" alt="">
         </div>
         <a href="#" class="scroll-up" id="scrollup"><i class="fa-solid fa-arrow-up"><span class="visually-hidden">scroll up element</span></i></a>
-        <!-- ============= NAVBAR START =============  -->
-        <header class="header container-fluid bg-black">
-            <nav class="nav-bar d-flex align-items-center justify-content-between">
-    
-                <div class="brand-logo rounded-circle">
-                    <a href="index.html"></a>
-                        <img src="images/common/res-logo.jpg" alt="restaurent logo" class="img-fluid rounded-circle">
-                    </a>
+        
+    <!-- ============= NAVBAR START =============  -->
+    <header class="header container-fluid bg-black">
+        <nav class="nav-bar d-flex align-items-center justify-content-between">
+
+            <div class="brand-logo rounded-circle" title="brand logo">
+                <a href="index.html">
+                    <img src="images/common/res-logo.jpg" alt="restaurent logo" class="img-fluid rounded-circle">
+                </a>
+            </div>
+
+            <div class="brand-name text-capitalize me-auto ms-2 text-white" title="brand name">
+                <a href="index.html">
+                    uncle sammy's kicthen
+                </a>
+            </div>
+
+            <!-- Toggle cart section -->
+            <div class="cart-icon text-white me-3" title="Order Cart" id="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <div class="cart-body bg-light fixed-top h-100 d-flex flex-column overflow-x-hidden" id="cart-body">
+
+                <header class="cart-header-container position-relative d-flex justify-content-between align-items-center px-3">
+                    <div class="cart-header text-white fw-bold">Your Cart</div>
+                    <div class="cart-close text-white" id="cart-close"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="cart-offer position-absolute bg-black text-white px-2 w-100">Get up to <span class="fw-bold">50%</span> off on your first order | <span class="fw-bold">FREE</span>  shipping over order value <span class="fw-bold">3000₹</span>. </div>
+                </header>
+
+                <div class="cart-item-container container-fluid overflow-x-hidden" id="cart-item-container">
+
+                    <!-- cart item rows ends here  -->
                 </div>
-    
-                <div class="brand-name text-capitalize me-auto ms-2 text-white">
-                    <a href="index.html">
-                        uncle sammy's kicthen
-                    </a>
-                </div>
-    
-                <div class="cart-icon text-white me-3">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+
+                <footer class="cart-total-container container-fluid bg-white px-4 py-3 d-flex flex-column mt-auto">
+
+                    <div class="shipping-amount d-flex justify-content-between align-items-center">
+                        <div class="shipping-label">Shipping Price :</div>
+                        <div class="shipping-price fw-normal">50&#8377;</div>                        
+                    </div>
+
+                    <div class="total-amount d-flex justify-content-between align-items-center">
+                        <div class="total-label">Total Amount :</div>
+                        <div class="total-price fw-semibold" id="total-price">0 &#8377;</div>                        
+                    </div>
+
+                <button class="menu-order-btn d-inline-block text-center text-capitalize my-auto" role="button">Cash On Delivery/UPI</button>
+                </footer>
                 
-                <div class="nav-menu bg-black text-center d-flex" id="nav-menu">
-                    <ul class="nav-list text-capitalize d-flex me-md-2" id="nav-list">
-                        <li class="nav-item position-relative"><a href="index.html" class="nav-link">home</a></li>
+            </div>
+
+            <!-- Toggle menu section -->
+            <div class="nav-toggler text-white me-2 d-inline-flex d-md-none" id="nav-toggler" title="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="nav-menu bg-black text-center d-flex" id="nav-menu">
+                <ul class="nav-list text-capitalize d-flex me-md-2" id="nav-list">
+                    <li class="nav-item position-relative"><a href="index.html" class="nav-link">home</a></li>
                     <li class="nav-item position-relative"><a href="menu.html" class="nav-link">menu</a></li>
                     <li class="nav-item position-relative"><a href="#" class="nav-link">about</a></li>
                     <li class="nav-item position-relative"><a href="contact.html" class="nav-link">contact</a></li>
-                    </ul>
-    
-                    <div class="nav-close d-inline-flex d-md-none position-absolute text-white" id="nav-close">
-                        <i class="fa-solid fa-xmark"></i>
-                    </div>
+                </ul>
+
+                <div class="nav-close d-inline-flex d-md-none position-absolute text-white" id="nav-close">
+                    <i class="fa-solid fa-xmark"></i>
                 </div>
-    
-                <div class="nav-toggler text-white me-2 d-inline-flex d-md-none" id="nav-toggler">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </nav>
-        </header>
-        <!-- ============= NAVBAR END =============  -->
+
+            </div>
+        </nav>
+    </header>
+    <!-- ============= NAVBAR END =============  -->
 
     <!-- ============= THUMBNAIL START =============  -->
     <div class="w-100 thumbnail menu-thumbnail text-center" id="menu-pizza">
@@ -116,7 +150,7 @@
                         <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
                             With any one topping 30 &#8377; | 55 &#8377; | 65 &#8377;
                         </h5>
-                    <button class="menu-order-btn d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-cart d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </div>
 
@@ -130,7 +164,7 @@
                         <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
                             Sausage, Pepperoni, Onion, Green Pepper, Black Olives and Mushrooms.
                         </h5>
-                    <button class="menu-order-btn d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-cart d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </div>
 
@@ -144,7 +178,7 @@
                         <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
                             Creamy Vodka Sauce Topped with Fresh Shrimp. each additional topping 30 &#8377; | $45 &#8377; | 65 &#8377;
                         </h5>
-                    <button class="menu-order-btn d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-cart d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </div>
             </div>
@@ -163,7 +197,7 @@
                         <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
                             Traditional White Pizza - Brushed Olive Oil, Fresh Ricotta and Mozzarella.
                         </h5>
-                    <button class="menu-order-btn d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="add-to-cart d-inline-block text-center text-capitalize" role="button">add to cart | <i class="fa-solid fa-cart-plus"></i></button>
                     </div>
                 </div>
                 
@@ -177,7 +211,7 @@
                         <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
                             Spinach, Feta Cheese, Kalamata Olives and Artichokes.
                         </h5>
-                        <button class="menu-order-btn d-inline-block text-center" role="button" type="button">order now</button>
+                        <button class="add-to-cart d-inline-block text-center" role="button" type="button">order now</button>
                     </div>
                 </div>
     
@@ -191,7 +225,7 @@
                         <h5 class="menu-item-sub mt-1 mt-sm-0 w-100">
                             Fresh Tomato, Basil and Mozzarella. each additional topping 30 &#8377; | $45 &#8377; | 65 &#8377;
                         </h5>
-                        <button class="menu-order-btn d-inline-block text-center" role="button" type="button">order now</button>
+                        <button class="add-to-cart d-inline-block text-center" role="button" type="button">order now</button>
                     </div>
                 </div>
 

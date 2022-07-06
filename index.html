@@ -76,130 +76,40 @@
                 <i class="fa-solid fa-cart-shopping"></i>
             </div>
 
-            <div class="cart-body bg-light" id="cart-body">
+            <div class="cart-body bg-light fixed-top h-100 d-flex flex-column overflow-x-hidden" id="cart-body">
 
-                <div class="cart-header-container position-sticky d-flex justify-content-between align-items-center px-3 sticky-top">
+                <header class="cart-header-container position-relative d-flex justify-content-between align-items-center px-3">
                     <div class="cart-header text-white fw-bold">Your Cart</div>
                     <div class="cart-close text-white" id="cart-close"><i class="fa-solid fa-xmark"></i></div>
-                    <div class="cart-offer position-absolute bg-black text-white px-2">Get up to <span class="fw-bold">50%</span> off on your first order | <span class="fw-bold">FREE</span>  shipping over order value <span class="fw-bold">3000₹</span>. </div>
-                </div>
+                    <div class="cart-offer position-absolute bg-black text-white px-2 w-100">Get up to <span class="fw-bold">50%</span> off on your first order | <span class="fw-bold">FREE</span>  shipping over order value <span class="fw-bold">3000₹</span>. </div>
+                </header>
 
-                <div class="cart-item-container container-fluid">
+                <div class="cart-item-container container-fluid overflow-x-hidden" id="cart-item-container">
 
-                    <div class="row cart-item-row py-3">
+                    <!-- <div class="row cart-item-row py-3">
                         <div class="cart-item-details col-8 pe-0 mt-1">
                             <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
                             <div class="cart-item-price fw-normal">350 ₹</div>
                             <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
+                                <div class="minus-quantity">
+                                    <i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i>
+                                </div>
+                                <input type="number" name="quantity-display" class="quantity-display text-center bg-light" min="1" max="7" size="2" value="1">
+                                <div class="plus-quantity">
+                                    <i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i>
+                                </div>
                                 <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
                             </div>
                         </div>
                         <div class="cart-item-img col-4 ps-0 my-auto">
                             <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div>
-
-                    <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div>
-
-                    <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div>
-
-                    <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div>
-
-                    <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div>
-
-                    <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity"><i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i></div>
-                                <div class="quantity-display">1</div>
-                                <div class="plus-quantity"><i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i></div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div>
+                    <!-- cart item rows ends here  -->
                 </div>
 
-                <div class="container-fluid cart-total-container position-sticky sticky-bottom bg-white px-4 py-3 w-100 d-flex flex-column">
+                <footer class="cart-total-container container-fluid bg-white px-4 py-3 d-flex flex-column mt-auto">
 
                     <div class="shipping-amount d-flex justify-content-between align-items-center">
                         <div class="shipping-label">Shipping Price :</div>
@@ -208,11 +118,12 @@
 
                     <div class="total-amount d-flex justify-content-between align-items-center">
                         <div class="total-label">Total Amount :</div>
-                        <div class="total-price fw-semibold">500&#8377;</div>                        
+                        <div class="total-price fw-semibold" id="total-price"></div>                        
                     </div>
 
                 <button class="menu-order-btn d-inline-block text-center text-capitalize my-auto" role="button">Cash On Delivery/UPI</button>
-                </div>
+                </footer>
+                
             </div>
 
             <!-- Toggle menu section -->
@@ -238,14 +149,14 @@
     <!-- ============= NAVBAR END =============  -->
 
     <!-- ============= CAROUSEL  START ============= -->
-    <div id="carouselExampleDark" class="carousel carousel-light slide" data-bs-ride="carousel">
+    <div id="carouselExampleFade" class="carousel carousel-light slide carousel-fade" data-bs-ride="carousel">
         <div id="carousel-nav" class="carousel-indicators d-none d-lg-flex">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner ">
-            <div class="carousel-item active position-relative" data-bs-interval="10000">
+            <div class="carousel-item active position-relative" data-bs-interval="5500">
                 <div class="dark-filter w-100 h-100 position-absolute top-0"></div>
                 <img src="images/home-page/carousel/slide-burger.jpg" class="img-fluid carousel-img" alt="Burger image">
                 <div class="carousel-caption d-none d-md-block text-capitalize">
@@ -253,7 +164,7 @@
                     <p>CLASSIC NEIGHBORHOOD ITALIAN</p>
                 </div>
             </div>
-            <div class="carousel-item position-relative" data-bs-interval="2000">
+            <div class="carousel-item position-relative" data-bs-interval="5500">
                 <div class="dark-filter w-100 h-100 position-absolute top-0"></div>
                 <img src="images/home-page/carousel/slide-pasta.jpg" class="img-fluid carousel-img" alt="Pasta image">
                 <div class="carousel-caption d-none d-md-block text-capitalize">
@@ -261,7 +172,7 @@
                     <p>Family Owned and Operated for Over 45 Years</p>
                 </div>
             </div>
-            <div class="carousel-item position-relative">
+            <div class="carousel-item position-relative" data-bs-interval="5500">
                 <div class="dark-filter w-100 h-100 position-absolute top-0"></div>
                 <img src="images/home-page/carousel/slide-pizza.jpg" class="img-fluid carousel-img" alt="pizza image">
                 <div class="carousel-caption d-none d-md-block text-capitalize">
@@ -270,12 +181,12 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-prev" aria-hidden="true">‹</span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-next" aria-hidden="true">›</span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
@@ -355,6 +266,7 @@
                     <div class="place-holder">Visaully Hidden</div>
                     <a href="menu.html" class="card-link">
                         <div class="card-img-hover"></div>
+                        <span class="visually-hidden">PlaceHolder</span>
                     </a>
                     <div class="card-info text-center">
                         <span class="card-title">Menu</span>
@@ -367,6 +279,7 @@
                     <div class="place-holder">Visaully Hidden</div>
                     <a href="#" class="card-link">
                         <div class="card-img-hover"></div>
+                        <span class="visually-hidden">PlaceHolder</span>
                     </a>
                     <div class="card-info text-center">
                         <span class="card-title">Special</span>
@@ -379,6 +292,7 @@
                     <div class="place-holder">Visaully Hidden</div>
                     <a href="#" class="card-link">
                         <div class="card-img-hover"></div>
+                        <span class="visually-hidden">PlaceHolder</span>
                     </a>
                     <div class="card-info text-center">
                         <span class="card-title">Snacks</span>

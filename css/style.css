@@ -94,6 +94,34 @@ body {
     color: var(--primary-font-clr);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+img {width: 100%; height: auto;}
+
+a ,a:hover {text-decoration: none; color: inherit;}
+
+ul {list-style: none; margin: 0%; padding: 0%;}
+
+.overflow-x-hidden {overflow-x: hidden}
+
+.main-content {background-color : inherit; max-width: calc(100% - 80px);}
+
+/* FOR SCROLLBAR */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background-color: transparent;}
+::-webkit-scrollbar-thumb {border-radius: 100vh;background: var(--scrollbar-anchor-hover);}
+
+/* tracking in expand forward (used for main menu page) */
+.tracking-in-expand-fwd{-webkit-animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both;animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both}
+@-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+
 /* Preloader */
 #preloader {
     width: 100%;
@@ -112,26 +140,6 @@ body {
 .menu-preloader {background: #ffffff}
 
 #preloader > img {max-width: 450px; vertical-align: center;}
-
-img {width: 100%; height: auto;}
-
-a ,a:hover {text-decoration: none; color: inherit;}
-
-ul {list-style: none; margin: 0%; padding: 0%;}
-
-.overflow-x-hidden {overflow-x: hidden}
-
-.main-content {background-color : inherit; max-width: calc(100% - 80px);}
-
-/* FOR SCROLLBAR */
- ::-webkit-scrollbar {width: 0;}
-/*::-webkit-scrollbar-track {background-color: transparent;}
-::-webkit-scrollbar-thumb {border-radius: 100vh;background-image: var(--scrollbar-anchor-hover);} */
-
-/* tracking in expand forward (used for main menu page) */
-.tracking-in-expand-fwd{-webkit-animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both;animation:tracking-in-expand-fwd .8s cubic-bezier(.215,.61,.355,1.000) 0.8s both}
-@-webkit-keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes tracking-in-expand-fwd{0%{letter-spacing:-.5em;-webkit-transform:translateZ(-700px);transform:translateZ(-700px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
-
 /* ============= NAVBAR NAV ============= */
 .header {height: var(--header-height); border-bottom: 1px solid var(--pure-white);}
 
@@ -159,11 +167,8 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 .cart-item-delete:hover {color: rgba(0, 0, 0, 0.75)}
 
 .cart-body {
-    position: fixed;
-    top: 0%;
     left: -100%;
     width: 360px;
-    height: 100%;
     z-index: 99999;
     transition: .6s cubic-bezier(.75,0,.175,1), visibility .6s cubic-bezier(.75,0,.175,1);;
     visibility: hidden;
@@ -173,21 +178,29 @@ ul {list-style: none; margin: 0%; padding: 0%;}
     z-index: 100;
     font-family: 'Raleway', sans-serif;
     background-color: red;
-    height: var(--header-height);
+    height: 50px;
     box-shadow: 0 0px 10px 2px #878787b8;
 }
 
-.cart-offer {top: var(--header-height); left: 0%; width: inherit; font-family: 'Poppins', sans-serif; font-size: var(--small-font-size); text-align: justify; height: 50px; max-height: 50px;}
+.cart-offer {top: 100%; left: 0%; width: inherit; font-family: 'Poppins', sans-serif; font-size: var(--small-font-size); text-align: justify; height: 50px; max-height: 50px; z-index: inherit;}
 
-.cart-item-container {margin-top: 50px;}
+.cart-item-container {margin-top: 50px; overflow-y: scroll;}
 
-.cart-item-row {border-bottom: 1px solid black; }
+.cart-item-container::-webkit-scrollbar { width: 5px;}
+
+.cart-item-container::-webkit-scrollbar-thumb {background: rgba(255, 0, 0, 0.6);border-radius: 0;}
+
+.cart-item-container::-webkit-scrollbar-thumb:hover {background: red}
+
+.cart-item-row {border-bottom: 1px solid black;}
 
 .cart-item-title {font-size: var(--h2-font-size); font-weight: var(--font-medium);}
 
 .cart-item-price {font-size: var(--normal-font-size);}
 
 .cart-item-quantity {column-gap: 15px;}
+
+.quantity-display {width: 20px; border: none; outline-color: #FF4742}
 
 .minus-quantity > i , .plus-quantity > i { width: 20px; height: 20px; cursor: pointer; font-size: var(--small-font-size);}
 
@@ -286,10 +299,7 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 
 /* ============= HOME PAGE ============= */
 /* CAROUSEL */
-.carousel-control-prev-icon ,.carousel-control-next-icon {
-    height: 40px;
-    width: 40px;
-}
+.carousel-control-prev, .carousel-control-next {font-size: 100px; width: 35px;}
 
 .dark-filter {background-color: #00000073}
 
@@ -557,7 +567,7 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 }
 
 /* Order Btn */
-.menu-order-btn {
+.menu-order-btn, .add-to-cart {
     background: #FF4742;
     border: 1px solid #FF4742;
     border-radius: 6px;
@@ -579,13 +589,13 @@ ul {list-style: none; margin: 0%; padding: 0%;}
     transition: all .3s;
 }
 
-.menu-order-btn:hover, .menu-order-btn:active {
+.menu-order-btn:hover, .add-to-cart:hover, .menu-order-btn:active, .add-to-cart:hover {
     background-color: initial;
     background-position: 0 0;
     color: #FF4742;
 }
 
-.menu-order-btn:active {opacity: .5;}
+.menu-order-btn:active, .add-to-cart:active {opacity: .5;}
 
 /* ============= CONTACT PAGE ============= */
 #contact-map > iframe{
@@ -800,6 +810,7 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
     .thumbnail {height: 180px}
 
     /* carousel */
+    .carousel-control-prev, .carousel-control-next {font-size: 80px; font-weight: 300;}
     .carousel-img {height: 50vw;}
     /* ============= HOME PAGE ============= */
     .dark-filter {background-color: #0000004d}
