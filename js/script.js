@@ -115,7 +115,19 @@ function ready() {
         var decreaseBtn = decreaseCartItemQuantityBtns[i];
         decreaseBtn.addEventListener('click', decreaseCartItemQuantity)
     }
+
+    //adding event listener to the purchase button 
+    document.getElementsByClassName('menu-order-btn')[0].addEventListener('click', purchaseClicked)
 }
+    //function returns alert message on purchase and make cart empty
+    function purchaseClicked() {
+        alert('Thank you for your purchase!')
+        var cartItems = document.getElementById('cart-item-container');
+        while (cartItems.hasChildNodes()) {
+            cartItems.removeChild(cartItems.firstChild)
+        }
+        updateCartTotal()
+    }
 
     // function for removing the menu item row form the cart
     function removeCartItems(event) {
