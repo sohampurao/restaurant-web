@@ -119,6 +119,18 @@ function ready() {
     //adding event listener to the purchase button 
     document.getElementsByClassName('menu-order-btn')[0].addEventListener('click', purchaseClicked)
 }
+    //function for getting count of total number of items in the cart
+    function cartItemCount() {
+        var cartRows = document.getElementsByClassName('cart-item-row').length;
+        var cartRowsCount = document.getElementsByClassName('cart-item-count');
+        for (let index = 0; index < cartRowsCount.length; index++) {
+            cartRowsCount[index].innerHTML = cartRows;
+        }
+        console.log(cartRowsCount)
+    };
+
+    cartItemCount();
+
     //function returns alert message on purchase and make cart empty
     function purchaseClicked() {
         alert('Thank you for your purchase!')
@@ -127,6 +139,7 @@ function ready() {
             cartItems.removeChild(cartItems.firstChild)
         }
         updateCartTotal()
+        cartItemCount()
     }
 
     // function for removing the menu item row form the cart
@@ -134,6 +147,7 @@ function ready() {
         let buttonClicked = event.target;
         buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
         updateCartTotal()
+        cartItemCount()
 }
 
     //function prevents costumer from ordering unexpected order quantity value.
@@ -205,6 +219,7 @@ function ready() {
         cartRow.getElementsByClassName('minus-quantity')[0].addEventListener('click', decreaseCartItemQuantity);
         cartRow.getElementsByClassName('cart-item-delete')[0].addEventListener('click', removeCartItems);
         updateCartTotal()
+        cartItemCount()
     }
 
     // function for decreasing order quantity by 1
@@ -231,6 +246,9 @@ function ready() {
     function updateCartTotal() {
         let cartItemContainer = document.getElementById('cart-item-container');
         let cartItemRows = cartItemContainer.getElementsByClassName('cart-item-row');
+        var shippingAmount = document.getElementsByClassName('shipping-price')[0];
+        shippingAmount = parseInt(shippingAmount.innerHTML.replace('₹', ''))
+
         var total = 0;
         for(var i = 0; i < cartItemRows.length; i++) {
             var cartRow = cartItemRows[i];
@@ -238,10 +256,12 @@ function ready() {
             var itemQuantity = cartRow.getElementsByClassName('quantity-display')[0].value;
             total = total + (itemPrice * itemQuantity)
             }
-        if(total > 0 ) {
-        let shippingAmount = document.getElementsByClassName('shipping-price')[0];
-        shippingAmount = parseInt(shippingAmount.innerHTML.replace('₹', ''))
-        total = total + shippingAmount;
+        if(total > 3000) {
+            total;
+            document.getElementsByClassName('shipping-price')[0].style.textDecoration = "line-through";
+        } else if (total > 0) {
+            total = total + shippingAmount;
+            document.getElementsByClassName('shipping-price')[0].style.textDecoration = "none";
         }
         return document.getElementById('total-price').innerHTML = total + ' &#8377;';
 }

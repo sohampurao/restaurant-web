@@ -73,38 +73,21 @@
 
             <!-- Toggle cart section -->
             <div class="cart-icon text-white me-3" title="Order Cart" id="cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping position-relative">
+                    <span class="cart-item-count cart-bubble position-absolute text-center"></span>
+                </i>
             </div>
 
             <div class="cart-body bg-light fixed-top h-100 d-flex flex-column overflow-x-hidden" id="cart-body">
 
                 <header class="cart-header-container position-relative d-flex justify-content-between align-items-center px-3">
-                    <div class="cart-header text-white fw-bold">Your Cart</div>
-                    <div class="cart-close text-white" id="cart-close"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="cart-header text-white fw-bold d-flex align-items-center">Your Cart</div>
+                    <div class="me-auto d-flex align-items-center px-2 text-white"><div class="cart-item-count d-flex align-content-start text-center"></div><div class="d-flex align-items-center">Items</div> </div>
+                    <div class="cart-close text-white justify-content-between" id="cart-close"><i class="fa-solid fa-xmark"></i></div>
                     <div class="cart-offer position-absolute bg-black text-white px-2 w-100">Get up to <span class="fw-bold">50%</span> off on your first order | <span class="fw-bold">FREE</span>  shipping over order value <span class="fw-bold">3000₹</span>. </div>
                 </header>
 
                 <div class="cart-item-container container-fluid overflow-x-hidden" id="cart-item-container">
-
-                    <!-- <div class="row cart-item-row py-3">
-                        <div class="cart-item-details col-8 pe-0 mt-1">
-                            <div class="cart-item-title">Cheese Pizza 10 | 13 | 15</div>
-                            <div class="cart-item-price fw-normal">350 ₹</div>
-                            <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
-                                <div class="minus-quantity">
-                                    <i class="fa-solid fa-minus rounded-circle text-center d-flex justify-content-center align-items-center bg-danger text-white"></i>
-                                </div>
-                                <input type="number" name="quantity-display" class="quantity-display text-center bg-light" min="1" max="7" size="2" value="1">
-                                <div class="plus-quantity">
-                                    <i class="fa-solid fa-plus rounded-circle d-flex justify-content-center align-items-center  bg-danger text-white"></i>
-                                </div>
-                                <div class="cart-item-delete"><i class="fa-solid fa-trash-can"></i></div>
-                            </div>
-                        </div>
-                        <div class="cart-item-img col-4 ps-0 my-auto">
-                            <img src="images/category-items/pizzas/m1.jpg" alt="cart item image" class="img-fluid rounded-2">
-                        </div>
-                    </div> -->
 
                     <!-- cart item rows ends here  -->
                 </div>
@@ -118,7 +101,7 @@
 
                     <div class="total-amount d-flex justify-content-between align-items-center">
                         <div class="total-label">Total Amount :</div>
-                        <div class="total-price fw-semibold" id="total-price"></div>                        
+                        <div class="total-price fw-semibold" id="total-price">0 &#8377;</div>                        
                     </div>
 
                 <button class="menu-order-btn d-inline-block text-center text-capitalize my-auto" role="button">Cash On Delivery/UPI</button>

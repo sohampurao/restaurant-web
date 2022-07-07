@@ -78,7 +78,7 @@
 
         <!-- ============= PPRELOADER END =============  -->
 
-        <!-- ============= NAVBAR START =============  -->
+    <!-- ============= NAVBAR START =============  -->
     <header class="header container-fluid bg-black">
         <nav class="nav-bar d-flex align-items-center justify-content-between">
 
@@ -96,14 +96,17 @@
 
             <!-- Toggle cart section -->
             <div class="cart-icon text-white me-3" title="Order Cart" id="cart-icon">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping position-relative">
+                    <span class="cart-item-count cart-bubble position-absolute text-center"></span>
+                </i>
             </div>
 
             <div class="cart-body bg-light fixed-top h-100 d-flex flex-column overflow-x-hidden" id="cart-body">
 
                 <header class="cart-header-container position-relative d-flex justify-content-between align-items-center px-3">
-                    <div class="cart-header text-white fw-bold">Your Cart</div>
-                    <div class="cart-close text-white" id="cart-close"><i class="fa-solid fa-xmark"></i></div>
+                    <div class="cart-header text-white fw-bold d-flex align-items-center">Your Cart</div>
+                    <div class="me-auto d-flex align-items-center px-2 text-white"><div class="cart-item-count d-flex align-content-start text-center"></div><div class="d-flex align-items-center">Items</div> </div>
+                    <div class="cart-close text-white justify-content-between" id="cart-close"><i class="fa-solid fa-xmark"></i></div>
                     <div class="cart-offer position-absolute bg-black text-white px-2 w-100">Get up to <span class="fw-bold">50%</span> off on your first order | <span class="fw-bold">FREE</span>  shipping over order value <span class="fw-bold">3000₹</span>. </div>
                 </header>
 
@@ -116,7 +119,7 @@
 
                     <div class="shipping-amount d-flex justify-content-between align-items-center">
                         <div class="shipping-label">Shipping Price :</div>
-                        <div class="shipping-price fw-normal" id="shipping-price">50&#8377;</div>                        
+                        <div class="shipping-price fw-normal">50&#8377;</div>                        
                     </div>
 
                     <div class="total-amount d-flex justify-content-between align-items-center">
@@ -137,7 +140,7 @@
             <div class="nav-menu bg-black text-center d-flex" id="nav-menu">
                 <ul class="nav-list text-capitalize d-flex me-md-2" id="nav-list">
                     <li class="nav-item position-relative"><a href="index.html" class="nav-link">home</a></li>
-                    <li class="nav-item position-relative"><a href="menu.html" class="nav-link">menu</a></li>
+                    <li class="nav-item position-relative active"><a href="menu.html" class="nav-link">menu</a></li>
                     <li class="nav-item position-relative"><a href="#" class="nav-link">about</a></li>
                     <li class="nav-item position-relative"><a href="contact.html" class="nav-link">contact</a></li>
                 </ul>
