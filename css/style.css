@@ -96,11 +96,11 @@ body {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 img {width: 100%; height: auto;}
@@ -140,6 +140,7 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 .menu-preloader {background: #ffffff}
 
 #preloader > img {max-width: 450px; vertical-align: center;}
+
 /* ============= NAVBAR NAV ============= */
 .header {height: var(--header-height); border-bottom: 1px solid var(--pure-white);}
 
@@ -205,7 +206,8 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 .minus-quantity > i , .plus-quantity > i { width: 20px; height: 20px; cursor: pointer; font-size: var(--small-font-size);}
 
 .cart-total-container {
-    height: 25vh;
+    min-height: 25vh;
+    max-height: 25vh;
     z-index: 100;
     box-shadow: 0 0px 10px #878787b8;
 }

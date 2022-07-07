@@ -81,19 +81,71 @@ else {
 }
 
 function ready() {
+    // looping to all trash buttons and adding event listener to all of them.
+    const cartTrashItemRowBtn = document.getElementsByClassName('cart-item-delete');
+    for(var i = 0; i < cartTrashItemRowBtn.length; i++) {
+        var button = cartTrashItemRowBtn[i];
+        button.addEventListener('click', removeCartItems)
+    }
+
+    // looping to input fields and adding event listener to all of them.
+    var quantityInputs = document.getElementsByClassName('quantity-display');
+    for(var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i];
+        input.addEventListener('change', quantityInputsChaged)
+    }
+
+    // looping to Add to buttons and adding event listener to all of them.
     let addToCartBtns = document.getElementsByClassName('add-to-cart');
     for(let i = 0; i < addToCartBtns.length; i++) {
         var button = addToCartBtns[i];
         button.addEventListener('click', addToCartItemRow)
     }
 
+    // looping to add quantity buttons and adding event listener to all of them.
+    var increaseCartItemQuantityBtns = document.getElementsByClassName('plus-quantity');
+    for(var i = 0; i < increaseCartItemQuantityBtns.length; i++) {
+        var increaseBtn = increaseCartItemQuantityBtns[i];
+        increaseBtn.addEventListener('click', increaseCartItemQuantity)
+    }
+
+    // looping to sub quantity buttons and adding event listener to all of them.
+    var decreaseCartItemQuantityBtns = document.getElementsByClassName('minus-quantity');
+    for(var i = 0; i < decreaseCartItemQuantityBtns.length; i++) {
+        var decreaseBtn = decreaseCartItemQuantityBtns[i];
+        decreaseBtn.addEventListener('click', decreaseCartItemQuantity)
+    }
+}
+
+    // function for removing the menu item row form the cart
+    function removeCartItems(event) {
+        let buttonClicked = event.target;
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
+        updateCartTotal()
+}
+
+    //function prevents costumer from ordering unexpected order quantity value.
+    function quantityInputsChaged(event) {
+        var input = event.target;
+        // returns 1 when order quantity is set to (-, null(0))
+        if(isNaN(input.value) || input.value <= 0 || input.value == "" ) {
+            input.value = 1;
+        }
+        //returns 7 if quantity value is < 7 and give an alert message 
+        else if (input.value > 7) {
+            input.value = 7;
+            alert('Maximum order quantity of a item is 7.')
+        }
+        updateCartTotal()
+    }
+
+    //function for fetching detials of a specific item when 'Add to cart' btn is clicked.
     function addToCartItemRow(event) {
         let button = event.target;
         let menuItemContainer = button.parentElement.parentElement;
         let title = menuItemContainer.getElementsByClassName('menu-item-title')[0].innerHTML;
         let price = menuItemContainer.getElementsByClassName('menu-item-price')[0].innerHTML;
         let image = menuItemContainer.getElementsByClassName('menu-item-img')[0].src;
-
         addToTheCart(title, price, image)
     }
 
@@ -143,43 +195,7 @@ function ready() {
         updateCartTotal()
     }
 
-    // function for removing the menu item row form the cart
-    const cartTrashItemRowBtn = document.getElementsByClassName('cart-item-delete');
-    console.log(cartTrashItemRowBtn);
-    for(var i = 0; i < cartTrashItemRowBtn.length; i++) {
-        var button = cartTrashItemRowBtn[i];
-        button.addEventListener('click', removeCartItems)
-    }
-
-    function removeCartItems(event) {
-        let buttonClicked = event.target;
-            buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
-            updateCartTotal()
-    }
-
-    //function for preventing costumer from ordering unexpected order quantitiy value
-    var quantityInputs = document.getElementsByClassName('quantity-display');
-    for(var i = 0; i < quantityInputs.length; i++) {
-        var input = quantityInputs[i];
-        input.addEventListener('change', quantityInputsChaged)
-    }
-
-    //returns 1 when order quantity is (-, null(0))
-    function quantityInputsChaged(event) {
-        var input = event.target;
-        if(isNaN(input.value) || input.value <= 0 || input.value == "" ) {
-            input.value = 1;
-        }
-        updateCartTotal()
-    }
-
     // function for decreasing order quantity by 1
-    var decreaseCartItemQuantityBtns = document.getElementsByClassName('minus-quantity');
-    for(var i = 0; i < decreaseCartItemQuantityBtns.length; i++) {
-        var decreaseBtn = decreaseCartItemQuantityBtns[i];
-        decreaseBtn.addEventListener('click', decreaseCartItemQuantity)
-    }
-
     function decreaseCartItemQuantity(event) {
         var decreaseBtn = event.target;
         var input = decreaseBtn.parentElement.parentElement.getElementsByClassName('quantity-display')[0];
@@ -190,12 +206,6 @@ function ready() {
     }
 
     // function for incrementing order quantity by 1
-    var increaseCartItemQuantityBtns = document.getElementsByClassName('plus-quantity');
-    for(var i = 0; i < increaseCartItemQuantityBtns.length; i++) {
-        var increaseBtn = increaseCartItemQuantityBtns[i];
-        increaseBtn.addEventListener('click', increaseCartItemQuantity)
-    }
-
     function increaseCartItemQuantity(event) {
         var increaseBtn = event.target;
         var input = increaseBtn.parentElement.parentElement.getElementsByClassName('quantity-display')[0];
@@ -212,11 +222,15 @@ function ready() {
         var total = 0;
         for(var i = 0; i < cartItemRows.length; i++) {
             var cartRow = cartItemRows[i];
-            let itemPrice = parseInt(cartRow.getElementsByClassName('cart-item-price')[0].innerHTML.replace('₹', ''))
-            let itemQuantity = cartRow.getElementsByClassName('quantity-display')[0].value;
+            var itemPrice = parseInt(cartRow.getElementsByClassName('cart-item-price')[0].innerHTML.replace('₹', ''))
+            var itemQuantity = cartRow.getElementsByClassName('quantity-display')[0].value;
             total = total + (itemPrice * itemQuantity)
-            document.getElementById('total-price').innerHTML = total + ' &#8377;';
-    }
-}
+            }
+        if(total > 0 ) {
+        let shippingAmount = document.getElementsByClassName('shipping-price')[0];
+        shippingAmount = parseInt(shippingAmount.innerHTML.replace('₹', ''))
+        total = total + shippingAmount;
+        }
+        return document.getElementById('total-price').innerHTML = total + ' &#8377;';
 }
 /*=============== SHOPPING CART END ===============*/
