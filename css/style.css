@@ -170,11 +170,10 @@ ul {list-style: none; margin: 0%; padding: 0%;}
     top: -16px;
     right: -8px;
     font-size: 9px;
-    height: 21px;
-    min-width: 21px;
-    line-height: 1;
-    border-radius: 21px;
-    letter-spacing: 0;
+    height: 20px;
+    min-width: 20px;
+    line-height: 1rem;
+    border-radius: 20px;
     background-color: red;
 }
 .cart-item-delete {color: rgba(0, 0, 0, 0.55);}
@@ -196,6 +195,8 @@ ul {list-style: none; margin: 0%; padding: 0%;}
     min-height: 50px;
     box-shadow: 0 0px 10px 2px #878787b8;
 }
+
+.item-count-container {font-family: 'Poppins', sans-serif; column-gap: 1px;}
 
 .cart-offer {top: 100%; left: 0%; width: inherit; font-family: 'Poppins', sans-serif; font-size: var(--small-font-size); text-align: justify; height: 50px; max-height: 50px; z-index: inherit;}
 
@@ -750,7 +751,8 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
         border-bottom-left-radius: var(--br-20);
         border-top-left-radius: var(--br-20);
         border-left: 1px solid var(--pure-white);
-        transition: right 0.4s ease-in-out;
+        transition: .6s cubic-bezier(.75,0,.175,1), visibility .6s cubic-bezier(.75,0,.175,1);;
+        visibility: hidden;
     }
 
     .active::after {
@@ -783,7 +785,8 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 
     .show-menu {
         right: 0;
-        box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.4);
+        visibility: visible;
     }
 
     /* ============= HOME PAGE ============= */
@@ -817,6 +820,7 @@ section span.footer-sub {font-size: var(--small-font-size) !important;}
 @media (max-width: 575.98px) { 
     /* ============= BASE ============= */
     .main-content  {max-width: 100%}
+
     /* ============= NAVIGATION BAR ============= */
     .cart-body,  .nav-menu{width: 90%;}
 

@@ -40,14 +40,12 @@ sr.reveal('#sp-container-3', {origin: 'right'})
 sr.reveal('.home-card-1, .home-card-2, .home-card-3', {duration: 3000})
 sr.reveal('#sp-container-m1, #sp-container-m2, #sp-container-m3', {duration: 3000})
 
-// sr.reveal('#sp-container-m1, #sp-container-m2, #sp-container-m3', {reset: 'true'})
-// sr.reveal('.home-card-1, .home-card-2, .home-card-3', {reset: 'true'})
-
 sr.reveal('.menu-item-left .menu-item-container', {origin: 'left'})
 sr.reveal('.menu-item-right .menu-item-container', {origin: 'right'})
 
-// sr.reveal('.menu-item-left .menu-item-container', {reset: 'true'})
-// sr.reveal('.menu-item-right .menu-item-container.', {reset: 'true'})
+if (window.innerWidth <= 575.98) {
+    sr.reveal('.menu-item-right .menu-item-container', {origin: 'left'})
+}
 }
 /*=============== SCROLL REVEAL ANIMATION END ===============*/
 
@@ -196,7 +194,7 @@ function ready() {
         var CartRowContainer = document.getElementsByClassName('cart-item-container')[0];
         var cartRowContent = `
         <div class="cart-item-details col-8 pe-0 mt-1">
-            <div class="cart-item-title pe-1">${title}</div>
+            <div class="cart-item-title pe-1 text-capitalize">${title}</div>
                 <div class="cart-item-price fw-normal">${price}</div>
                 <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
                 <div class="minus-quantity">
