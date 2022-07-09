@@ -358,7 +358,7 @@ ul {list-style: none; margin: 0%; padding: 0%;}
 }
 
 /* special items menu */
-.special-item-container {width: 300px}
+.special-item-container {width: 300px ; overflow: visible;}
 
 .special-item-circle {
     width: 250px;

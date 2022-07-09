@@ -1,5 +1,7 @@
+"use strict"
 // PRELOADER
-window.addEventListener('load', () => { return document.getElementById("preloader").style.display = "none"})
+window.addEventListener('loadstart', ()=> document.body.classList.add('overflow-hidden')) 
+window.addEventListener('load', () => { return document.getElementById("preloader").style.display = "none", document.body.classList.remove('overflow-hidden')})
 
 /*=============== SCROLL UP START ===============*/
 function scrollUP() {
@@ -18,6 +20,7 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2500,
     delay: 400,
+    // reset : 'true'
 })
 
 // for about image
@@ -64,7 +67,7 @@ cartClose.addEventListener('click', function(){cartBody.classList.remove('cart-s
 const navLink = document.querySelectorAll('.nav-item')
 function linkAction(){
     const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
+    // When we click on each nav-item link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
@@ -122,11 +125,11 @@ function ready() {
     //function for getting count of total number of items in the cart
     function cartItemCount() {
         var cartRows = document.getElementsByClassName('cart-item-row').length;
+        cartRows = parseInt(cartRows);
         var cartRowsCount = document.getElementsByClassName('cart-item-count');
         for (let index = 0; index < cartRowsCount.length; index++) {
             cartRowsCount[index].innerHTML = cartRows;
         }
-        console.log(cartRowsCount)
     };
 
     cartItemCount();
@@ -193,7 +196,7 @@ function ready() {
         var CartRowContainer = document.getElementsByClassName('cart-item-container')[0];
         var cartRowContent = `
         <div class="cart-item-details col-8 pe-0 mt-1">
-            <div class="cart-item-title">${title}</div>
+            <div class="cart-item-title pe-1">${title}</div>
                 <div class="cart-item-price fw-normal">${price}</div>
                 <div class="cart-item-quantity d-flex align-items-center justify-content-start py-2">
                 <div class="minus-quantity">
