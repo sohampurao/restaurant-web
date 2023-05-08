@@ -1,0 +1,67 @@
+.panel-footer {
+    background-color:var(--primary-dark)!important;
+    color: var(--gold);
+    padding-top: 2.188rem;
+    word-spacing: 0.125rem;
+}
+
+.footer {line-height: 1.5rem}
+
+.footer-title {
+    color: #d1d1d1;
+    font-size: var(--h2-font-size);
+}
+
+section span.footer-sub {font-size: var(--small-font-size) !important;}
+
+.row section hr{display: none}
+
+#delivery {
+    font-size: 0.7rem;
+    color: #bababa;
+}
+
+#footer-cards-ul {
+    column-gap: 5px;
+    margin-top: 0.5rem;
+}
+
+.footer-cards-img {width: 40px}
+
+#phone-num a {color: inherit}
+
+#wa-num a {
+    width: 200px;
+    font-size: var(--h2-font-size);
+    color: var(--gold);
+}
+
+#footer-social-ul {
+    font-size: var(--h2-font-size);
+    column-gap: 30px;
+}
+
+.footer-social-li {transition: all .3s;}
+
+#footer-social-ul li a {color: var(--gold)}
+
+#footer-social-ul li:hover {transform: translateY(-0.5rem)}
+
+.footer a:hover , #phone-num:hover , #wa-num a:hover {color:var(--pure-white) !important}
+
+#copyright {
+    padding: 0.313rem 0;
+    background-color: var(--primary-dark);
+    color: var(--pure-white);
+    border-top: 1px solid var(--pure-white);
+    font-size: var(--smaller-font-size);
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .row section hr{
+        display: block;
+        height: 2px;
+        background-color: var(--pure-white);
+    }
+}

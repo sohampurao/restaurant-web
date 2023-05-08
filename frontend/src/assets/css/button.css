@@ -1,0 +1,28 @@
+.add-to-cart {
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: "Raleway",sans-serif;
+    font-size: var(--normal-font-size);
+    font-weight: 800;
+    min-height: 35px;
+    outline: 0;
+    padding: 2px 9px;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    transition: all .3s;
+}
+.add-to-cart:hover, .add-to-cart:hover {
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
+}
+
+.add-to-cart:active {opacity: .5;}

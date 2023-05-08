@@ -1,0 +1,77 @@
+/* home menu cards */
+.home-card-1 .card-img-hover {background-image: url("../images/home/menucards/menu-menu.jpg")}
+
+.home-card-2 .card-img-hover {background-image: url("../images/home/menucards/menu-burger.jpg")}
+
+.home-card-3 .card-img-hover {background-image: url("../images/home/menucards/menu-snacks.jpg")}
+
+/* main menu cards */
+.menu-card-1 .card-img-hover {background-image: url("../images/menu/menu-appetizers.jpg")}
+
+.menu-card-2 .card-img-hover {background-image: url("../images/menu/menu-main-menu.jpg")}
+
+.menu-card-3 .card-img-hover {background-image: url("../images/menu/menu-seafood.jpg")}
+
+.menu-card-4 .card-img-hover {background-image: url("../images/menu/menu-pizza.jpg")}
+
+.menu-card-5 .card-img-hover {background-image: url("../images/menu/menu-cocktail.jpg")}
+
+.menu-card-6 .card-img-hover {background-image: url("../images/menu/menu-dessert.jpg")}
+
+.place-holder {
+    visibility: hidden;
+    width: 100%;
+    height: 235px;
+}
+
+.card-img-hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 235px;
+    top: 0%;
+}
+
+.menu-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-image: var(--menu-sr);
+    width: 350px;
+    position: relative;
+    border-radius: var(--br-20);
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.menu-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transform: scale(1.1, 1.1);
+}
+
+.card-info {
+    background-image: var(--menu-sr);
+    padding: 10px 16px 16px 16px;
+    color: #fffafc;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0, 1);
+}
+
+.menu-card:hover .card-img-hover {height: 100%;}
+
+.menu-card:hover .card-info {
+    background: transparent;
+    position: relative;
+    text-shadow: 2px 1px 4px rgb(0, 0, 0);
+    border: none;
+}
+
+@media (max-width: 575.98px) { 
+    /* menu cards */
+    .menu-card {width: 270px}
+}

@@ -1,0 +1,38 @@
+#contact-details {
+    background: var(--bg-img-darken), url(../images/contact/contact-restaurent.jpg);
+    background-repeat: var(--bg-no-repeat);
+    background-position: var(--bg-center-xy);
+    background-size: cover
+}
+
+#contact-map > iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.location-title {
+    color: var(--pure-white);
+    font-size: var(--big-font-size);
+    font-weight: var(--font-medium);
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+    border-bottom: 2px solid var(--gold);
+}
+
+.location-description, .location-description a  {
+    color: #ffffff;
+    font-size: var(--h3-font-size);
+}
+
+#note span {color: var(--gold);}
+
+#note {
+    font-size: var(--small-font-size);
+    text-align: justify;
+    color: var(--pure-white)
+}
+
+@media (max-width: 767.98px) {
+    #contact-map  {height: 500px}
+}

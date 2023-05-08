@@ -1,0 +1,262 @@
+/* ============= FONT FAMILIES ============= */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap');
+
+/* Carter */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+/* Yanone Kaffeesatz */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+
+/* ============= BASE ============= */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    line-height: 1.5rem;
+}
+
+:root {
+    /* ============= COLORS ============= */
+    --bs-body-bg : 	#F5FFFA; /* Snow White */
+    --primary-dark :  rgb(33,37,41); 
+    --primary-light:  #e7e2df;
+    --gold: #ffd700;
+    --pure-white : #ffffff;
+
+    /* text colors */
+    --title-text-clr: #303030;
+    --normal-text-clr: #505050;
+    --light-text-clr : #707070;
+    
+    /* ============= LINEAR GRADIENTS ============= */
+    --bg-img-darken : linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
+    --scrollbar-anchor-hover: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+    --menu-sr : linear-gradient(to right, #434343 0%, black 100%);;
+
+    /* ============= BORDER RADIUS ============= */
+    --br-20 : 20px ;
+    --br-2-5 : 2.5px;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    
+    /*========== BACKGROUND POSITIONING ==========*/
+    --bg-no-repeat : no-repeat;
+    --bg-center-xy : center center;
+    --bg-size-cover : cover;
+
+    /*========== FONT SIZE ==========*/
+    --big-font-size: 1.625rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.15rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* header hight */
+    --header-height : 4.625rem;
+}
+
+/* Responsive topology */
+@media (max-width: 575.98px) { 
+:root {
+    /*========== FONT SIZE ==========*/
+    --big-font-size: 1.125rem;
+    --h1-font-size: 1rem;
+    --h2-font-size: 1rem;
+    --h3-font-size: 0.75rem;
+    --normal-font-size: .8rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* header hight */
+    --header-height : 4.625rem;
+}
+}
+
+html {scroll-behavior: smooth; height: 100%;}
+
+body {
+    font-family: 'Poppins','Roboto',sans-serif;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: 0.4s ease-in;
+    color: var(--primary-font-clr);
+    height: 100%;
+}
+
+img {width: 100%; height: auto;}
+
+a ,a:hover {text-decoration: none; color: inherit;}
+
+ul {list-style: none; margin: 0%; padding: 0%;}
+
+.overflow-x-hidden {overflow-x: hidden !important}
+
+.main-content {background-color : inherit; max-width: calc(100% - 80px);}
+
+/* FOR SCROLLBAR */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background-color: transparent;}
+::-webkit-scrollbar-thumb {border-radius: 100vh;background: var(--scrollbar-anchor-hover)}
+
+/* Preloader */
+#preloader {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 9999999;
+    top: 0%;
+    left: 0%;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+}
+
+.preloader {background: #fffafc}
+
+.menu-preloader {background: #ffffff}
+
+#preloader > img {max-width: 450px; vertical-align: center;}
+
+/* Thumbnail img */
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    height: 270px;
+}
+
+.menu-thumbnail {
+    color: var(--pure-white);
+    font-size: 2.5rem;
+    letter-spacing: 0.05em;
+    font-family: 'Raleway';
+    font-style: italic;
+}
+
+.thumbnail-txt {
+    position: absolute;
+    top: 50%;
+    vertical-align: middle;
+}
+
+/* scroll up element */
+.scroll-up {
+    position: fixed;
+    color: #ffffff;
+    bottom: 3rem;
+    right: 1.3rem;
+    border: none;
+    background-image: var(--scrollbar-anchor-hover);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--br-2-5);
+    opacity: 0.8;
+    z-index: 1000;
+    animation: scrollani 700ms infinite alternate ease-in;
+    transition: all 0.4s;
+}
+@keyframes scrollani {0% {transform: translateY(0.75rem);}100% {transform: none}}
+
+.scroll-up:hover {opacity: 1;}
+
+.checkout-steps > div {
+    border-top: 0.3rem #c0c0c0 solid;
+    color: #c0c0c0;
+    flex: 1;
+    padding: 1rem;
+}
+
+.checkout-steps > div.active {
+    border-top-color: #f08000;
+    color: #f08000 !important;
+    font-weight: var(--font-semi-bold);
+}
+
+/* tables  */
+.table-container::-webkit-scrollbar {
+    height: 5px;
+}
+
+.table-container{
+    min-height: 500px;
+}
+
+.table-date-col, .table-paid-col , .table-action-col, .table-menuname-col, .menulist-table-text {
+    min-width: 200px;
+}
+
+.productedit-image {
+    max-width: 360px;
+    max-height: 326px;
+}
+
+.edit-btn, .delete-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.menulist-table-text {max-width: 250px;}
+@media (max-width: 991.98px) {
+    .main-content {max-width: calc(100% - 40px)}
+}
+
+@media (max-width: 767.98px) {
+.thumbnail { height: 220px}
+
+.menu-thumbnail {font-size: 2.5rem}
+}
+
+@media (max-width: 575.98px) { 
+    .main-content  {max-width: 100%}
+
+    /* for Menu Thumbnail img */
+    .menu-thumbnail {font-size: 1.8rem}
+
+    .thumbnail {height: 180px}
+
+    .checkout-steps {font-size: var(--normal-font-size);}
+
+    .checkout-steps > div {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 333.98px) {
+    
+    /* for Menu Thumbnail img */
+    .thumbnail {height: 180px}
+}
+
+/* alert  */
+
+.success {
+    color: #20a020
+}
+
+.error {
+    color: #a02020
+}
+
+.alert {
+    border: 2px solid transparent;
+    border-radius: var(--br-2-5);
+}
+
+.alert-info {
+    color: #2020a0;
+    background-color: #e0e0ff;
+}
+
+.alert-danger {
+    color: #a02020;
+    background-color: #ffe0e0e0;
+}
